@@ -13,17 +13,15 @@ class EmplesListModelDecorator : DecoratorModelProtocol {
     typealias T = DataSourceItem
     var dataSource : Array<T> {
         get {
-            var __dataSource = Array<T>()
-            self.model.dataSource.forEach { (item) in
-                
+            
+            let __dataSource = self.model.dataSource.map { (item) -> T in
                 let cellModel = EmplesListCellModel()
                 cellModel.text = item.recAreaName
                 cellModel.phone = item.recAreaPhone
                 cellModel.imageURL = item.imageURL
-                let row = T(model: cellModel, rowHeight: 50.0, { [weak self] (model, index) in
+                return T(model: cellModel, rowHeight: 50.0, { [weak self] (model, index) in
                     self?.model.delegate?.select(item)
                 })
-                __dataSource.append(row)
             }
             return __dataSource
         }

@@ -18,16 +18,15 @@ class EmplesMenuModelDecorator : DecoratorModelProtocol {
     }
     
     private func initDataSource() {
-        self.model.dataSource.forEach { (text) in
-            
+        
+        dataSource = self.model.dataSource.map {
             let item = EmplesMenuCellModel()
-            item.text = text
-            let row = DataSourceItem(model: item, rowHeight: 50.0, { [weak self] (model, index) in
+            item.text = $0
+            return DataSourceItem(model: item, rowHeight: 50.0, { [weak self] (model, index) in
                 if let selsectedItem = MenuSelectedItem(rawValue: index) {
                     self?.model.delegate?.select(selsectedItem)
                 }
             })
-            dataSource.append(row)
         }
     }
 }

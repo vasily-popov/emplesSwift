@@ -8,7 +8,7 @@
 
 import Foundation
 
-class RecArea {
+struct RecArea {
     var orgRecAreaID: String?
     var lastUpdatedDate: String?
     var recAreaEmail: String?

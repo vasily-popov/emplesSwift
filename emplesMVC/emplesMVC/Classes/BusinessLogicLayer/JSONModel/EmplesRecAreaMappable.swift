@@ -53,7 +53,7 @@ class EmplesRecAreaMappable: Mappable {
     }
     
     func convert() -> RecArea {
-        let area = RecArea()
+        var area = RecArea()
         area.orgRecAreaID = self.orgRecAreaID
         area.lastUpdatedDate = self.lastUpdatedDate
         area.recAreaEmail = self.lastUpdatedDate
