@@ -10,8 +10,6 @@ import UIKit
 
 class EmplesGalleryView: BaseCollectionView {
     
-    var model: EmplesGridModelDecorator?
-    
     private lazy var collection: UICollectionView = {
         let layout = EmplesGalleryCollectionFlowLayout()
         let view = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
@@ -21,7 +19,7 @@ class EmplesGalleryView: BaseCollectionView {
     }()
 
     private lazy var dataSource:GenericGridViewSource = {
-        var __dataSource = GenericGridViewSource(with: model?.dataSource)
+        var __dataSource = GenericGridViewSource()
         return __dataSource
     }()
 
@@ -37,25 +35,27 @@ class EmplesGalleryView: BaseCollectionView {
         self.collection.delegate = self.delegate
         self.collection.dataSource = self.dataSource
         self.collection.register(EmplesGridViewCell.self)
-        self.controller?.viewDidLoad()
+        self.presenter?.viewDidLoad()
     }
     
-    private var __controller: ViewCollectionProtocol?
+    private var __presenter: PresenterUICycleProtocol?
 }
 
-extension EmplesGalleryView :EmplesCollectionViewProtocol {
+extension EmplesGalleryView :CollectionViewProtocol {
     
-    var controller: ViewCollectionProtocol? {
+    var presenter: PresenterUICycleProtocol? {
         get {
-            return __controller
+            return __presenter
         }
         set {
-            __controller = newValue
+            __presenter = newValue
         }
     }
     
-    func showData() {
-        self.dataSource.setDataSource(self.model!.dataSource)
-        self.collection.reloadData()
+    func showSourceItems(_ items:Array<Any>) {
+        if let items = items as? Array<DataGridSourceItem> {
+            self.dataSource.setDataSource(items)
+            self.collection.reloadData()
+        }
     }
 }

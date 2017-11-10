@@ -8,13 +8,9 @@
 
 import UIKit
 
-protocol ViewCollectionProtocol {
-    func viewDidLoad()
-}
+class EmplesCollectionPresenter: NSObject, PresenterUICycleProtocol {
 
-class EmplesCollectionController: NSObject, ViewCollectionProtocol {
-
-    weak var view: EmplesCollectionViewProtocol?
+    weak var view: CollectionViewProtocol?
     var router: EmplesItemRouter?
     private var model: EmplesAreasModel
     
@@ -27,11 +23,16 @@ class EmplesCollectionController: NSObject, ViewCollectionProtocol {
     func viewDidLoad() {
         
         self.view?.showProgressView()
-        self.model.fetchAreas()        
+        self.model.fetchAreas()
     }
+    
+    func prepareArray() -> Array<Any>? {
+        return nil
+    }
+    
 }
 
-extension EmplesCollectionController :EmplesAreaProtocolDelegate {
+extension EmplesCollectionPresenter :EmplesAreaProtocolDelegate {
     
     func finish(withResult result:Result<EmplesAreasModel>) {
         self.view?.hideProgressView()
@@ -39,8 +40,10 @@ extension EmplesCollectionController :EmplesAreaProtocolDelegate {
         case .failure(let error):
             self.router?.showAlertWithTitle(title: "Error", message: error.localizedDescription)
             break
-        case .success(_):
-            self.view?.showData()
+        case .success( _):
+            if let preparedArray = self.prepareArray() {
+                self.view?.showSourceItems(preparedArray)
+            }
         }
     }
     

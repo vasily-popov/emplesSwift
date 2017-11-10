@@ -10,8 +10,6 @@ import UIKit
 import iCarousel
 
 class EmplesCarouselView: BaseCollectionView {
-
-    var model : EmplesListModelDecorator?
     
     private lazy var carousel: iCarousel = {
         var view = iCarousel(frame: self.view.bounds)
@@ -21,7 +19,7 @@ class EmplesCarouselView: BaseCollectionView {
     }()
     
     private lazy var dataSource:CarouselViewSource = {
-        var __dataSource = CarouselViewSource(with: model?.dataSource)
+        var __dataSource = CarouselViewSource()
         return __dataSource
     }()
     
@@ -37,10 +35,10 @@ class EmplesCarouselView: BaseCollectionView {
         self.view.addSubview(self.carousel)
         self.carousel.delegate = self.delegate
         self.carousel.dataSource = self.dataSource
-        self.controller?.viewDidLoad()
+        self.presenter?.viewDidLoad()
     }
     
-    private var __controller: ViewCollectionProtocol?
+    private var __presenter: PresenterUICycleProtocol?
     
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -52,19 +50,22 @@ class EmplesCarouselView: BaseCollectionView {
 
 }
 
-extension EmplesCarouselView :EmplesCollectionViewProtocol {
+extension EmplesCarouselView :CollectionViewProtocol {
     
-    var controller: ViewCollectionProtocol? {
+    var presenter: PresenterUICycleProtocol? {
         get {
-            return __controller
+            return __presenter
         }
         set {
-            __controller = newValue
+            __presenter = newValue
         }
     }
     
-    func showData() {
-        self.dataSource.setDataSource(self.model!.dataSource)
-        self.carousel.reloadData()
+    func showSourceItems(_ items:Array<Any>) {
+        if let items = items as? Array<DataSourceItem> {
+            self.dataSource.setDataSource(items)
+            self.carousel.reloadData()
+        }
     }
+    
 }

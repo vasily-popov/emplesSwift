@@ -1,5 +1,5 @@
 //
-//  EmplesCollectionViewProtocol.swift
+//  CollectionViewProtocol
 //  emplesMVC
 //
 //  Created by Vasily Popov on 11/9/17.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-protocol EmplesCollectionViewProtocol : class {
+protocol CollectionViewProtocol : class {
 
-    var controller :ViewCollectionProtocol? {get set}
+    var presenter :PresenterUICycleProtocol? {get set}
     func showProgressView()
     func hideProgressView()
-    func showData()
+    func showSourceItems(_ items:Array<Any>)
 
 }
 

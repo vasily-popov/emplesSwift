@@ -18,21 +18,16 @@ class GalleryFactory : DependencyFactory {
         super.init()
     }
     
-    public func view() -> EmplesCollectionViewProtocol {
+    public func view() -> CollectionViewProtocol {
         return scoped(EmplesGalleryView()) { view in
-            view.model = self.decorator()
-            view.controller = self.controller()
+            view.presenter = self.presenter()
         }
     }
     
-    func decorator() -> EmplesGridModelDecorator {
-        return scoped(EmplesGridModelDecorator(collection.model()))
-    }
-    
-    func controller() -> EmplesGalleryController {
-        return scoped(EmplesGalleryController(collection.model())) { controller in
-            controller.view = self.view()
-            controller.router = self.collection.router()
+    func presenter() -> EmplesGalleryPresenter {
+        return scoped(EmplesGalleryPresenter(collection.model())) { presenter in
+            presenter.view = self.view()
+            presenter.router = self.collection.router()
         }
     }
 }

@@ -18,21 +18,16 @@ class StackFactory : DependencyFactory {
         super.init()
     }
     
-    public func view() -> EmplesCollectionViewProtocol {
+    public func view() -> CollectionViewProtocol {
         return scoped(EmplesStackedView()) { view in
-            view.model = self.decorator()
-            view.controller = self.controller()
+            view.presenter = self.presenter()
         }
     }
     
-    func decorator() -> EmplesListModelDecorator {
-        return scoped(EmplesListModelDecorator(collection.model()))
-    }
-    
-    func controller() -> EmplesStackedController {
-        return scoped(EmplesStackedController(collection.model())) { controller in
-            controller.view = self.view()
-            controller.router = self.collection.router()
+    func presenter() -> EmplesStackedPresenter {
+        return scoped(EmplesStackedPresenter(collection.model())) { presenter in
+            presenter.view = self.view()
+            presenter.router = self.collection.router()
         }
     }
 }

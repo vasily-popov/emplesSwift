@@ -17,8 +17,7 @@ class DetailFactory : DependencyFactory {
     
     public func view(_ area: RecArea) -> DetailView {
         return scoped(DetailView()) { view in
-            view.model = self.model(area)
-            view.controller = self.controller(area)
+            view.presenter = self.presenter(area)
         }
     }
     
@@ -26,9 +25,9 @@ class DetailFactory : DependencyFactory {
         return scoped(DetailAreaModel(area))
     }
     
-    func controller(_ area: RecArea) -> DetailController {
-        return scoped(DetailController(self.model(area))) { controller in
-            controller.view = self.view(area)
+    func presenter(_ area: RecArea) -> DetailPresenter {
+        return scoped(DetailPresenter(self.model(area))) { presenter in
+            presenter.view = self.view(area)
         }
     }
     

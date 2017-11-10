@@ -32,7 +32,7 @@ class CollectionFactory : DependencyFactory {
     }
     
     
-    public func view(item: MenuSelectedItem) -> EmplesCollectionViewProtocol {
+    public func view(item: MenuSelectedItem) -> CollectionViewProtocol {
         
         switch item {
         case .List:

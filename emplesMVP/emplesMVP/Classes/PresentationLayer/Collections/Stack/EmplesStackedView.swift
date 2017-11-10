@@ -11,9 +11,6 @@ import Koloda
 
 class EmplesStackedView: BaseCollectionView {
     
-    var model : EmplesListModelDecorator?
-    
-    
     private lazy var stack: KolodaView = {
         var view = StackKolodaView(frame: self.view.bounds)
         view.countOfVisibleCards = 4
@@ -22,7 +19,7 @@ class EmplesStackedView: BaseCollectionView {
     }()
     
     private lazy var dataSource:StackedViewSource = {
-        var __dataSource = StackedViewSource(with: model?.dataSource)
+        var __dataSource = StackedViewSource()
         return __dataSource
     }()
     
@@ -38,25 +35,27 @@ class EmplesStackedView: BaseCollectionView {
         self.view.addSubview(self.stack)
         self.stack.dataSource = self.dataSource
         self.stack.delegate = self.delegate
-        self.controller?.viewDidLoad()
+        self.presenter?.viewDidLoad()
     }
     
-    private var __controller: ViewCollectionProtocol?
+    private var __presenter: PresenterUICycleProtocol?
 }
 
-extension EmplesStackedView :EmplesCollectionViewProtocol {
+extension EmplesStackedView :CollectionViewProtocol {
     
-    var controller: ViewCollectionProtocol? {
+    var presenter: PresenterUICycleProtocol? {
         get {
-            return __controller
+            return __presenter
         }
         set {
-            __controller = newValue
+            __presenter = newValue
         }
     }
     
-    func showData() {
-        self.dataSource.setDataSource(self.model!.dataSource)
-        self.stack.reloadData()
+    func showSourceItems(_ items:Array<Any>) {
+        if let items = items as? Array<DataSourceItem> {
+            self.dataSource.setDataSource(items)
+            self.stack.reloadData()
+        }
     }
 }

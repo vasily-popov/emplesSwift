@@ -8,7 +8,7 @@
 
 import Foundation
 
-class EmplesMenuPresenter {
+class EmplesMenuPresenter :PresenterUICycleProtocol {
     
     public weak var view :EmplesMenuView?
     public var router :EmplesMenuRouter?

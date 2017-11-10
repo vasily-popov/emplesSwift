@@ -9,8 +9,6 @@
 import UIKit
 
 class EmplesListView: BaseCollectionView {
-
-    var model : EmplesListModelDecorator?
     
     private lazy var table: UITableView = {
         var view = UITableView(frame: self.view.bounds, style: .plain)
@@ -21,7 +19,7 @@ class EmplesListView: BaseCollectionView {
     }()
     
     private lazy var dataSource:GenericTableViewSource = {
-        var __dataSource = GenericTableViewSource(with: model?.dataSource)
+        var __dataSource = GenericTableViewSource()
         return __dataSource
     }()
     
@@ -37,29 +35,31 @@ class EmplesListView: BaseCollectionView {
         self.table.delegate = self.delegate
         self.table.dataSource = self.dataSource
         self.table.register(EmplesListCellView.self)
-        self.controller?.viewDidLoad()
+        self.presenter?.viewDidLoad()
     }
     
-    private var __controller: ViewCollectionProtocol?
+    private var __presenter: PresenterUICycleProtocol?
     
     deinit {
         print("EmplesListView deinit")
     }
 }
 
-extension EmplesListView :EmplesCollectionViewProtocol {
+extension EmplesListView :CollectionViewProtocol {
     
-    var controller: ViewCollectionProtocol? {
+    var presenter: PresenterUICycleProtocol? {
         get {
-            return __controller
+            return __presenter
         }
         set {
-            __controller = newValue
+            __presenter = newValue
         }
     }
     
-    func showData() {
-        self.dataSource.setDataSource(self.model!.dataSource)
-        self.table.reloadData()
+    func showSourceItems(_ items:Array<Any>) {
+        if let items = items as? Array<DataSourceItem> {
+            self.dataSource.setDataSource(items)
+            self.table.reloadData()
+        }
     }
 }

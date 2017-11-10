@@ -1,5 +1,5 @@
 //
-//  DetailController.swift
+//  DetailPresenter
 //  emplesMVC
 //
 //  Created by Vasily Popov on 11/10/17.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DetailController {
+class DetailPresenter {
     
     weak var view: DetailView?
     private let model: DetailAreaModel
@@ -17,5 +17,9 @@ class DetailController {
         self.model = model
     }
     
+    func viewDidLoad() {
+        self.view?.setTitleLabel(model.titleName?.uppercased())
+        self.view?.showSourceItems(model.dataSource)
+    }
 
 }

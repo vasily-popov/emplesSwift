@@ -10,8 +10,7 @@ import UIKit
 
 class DetailView: BaseCollectionView {
 
-    var model : DetailAreaModel?
-    var controller: DetailController?
+    var presenter: DetailPresenter?
     
     private lazy var table: UITableView = {
         var view = UITableView(frame: self.view.bounds, style: .plain)
@@ -22,7 +21,7 @@ class DetailView: BaseCollectionView {
     }()
     
     private lazy var dataSource:GenericTableViewSource = {
-        var __dataSource = GenericTableViewSource(with: model?.dataSource)
+        var __dataSource = GenericTableViewSource()
         return __dataSource
     }()
     
@@ -33,17 +32,23 @@ class DetailView: BaseCollectionView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = model?.titleName;
         self.view.addSubview(self.table)
         self.table.delegate = self.delegate
         self.table.dataSource = self.dataSource
         self.table.register(DetailMapViewCell.self)
         self.table.register(DetailDescriptionViewCell.self)
         self.table.register(DetailDirectionTextViewCell.self)
-        if let source = self.model?.dataSource {
-            self.dataSource.setDataSource(source)
-            self.table.reloadData()
-        }
+        self.presenter?.viewDidLoad()
+        
+    }
+    
+    func setTitleLabel(_ title:String?) {
+        self.title = title
+    }
+    
+    func showSourceItems(_ items:Array<DataSourceItem>) {
+        self.dataSource.setDataSource(items)
+        self.table.reloadData()
     }
 }
 
