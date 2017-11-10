@@ -10,4 +10,8 @@ import UIKit
 
 class EmplesListController: EmplesCollectionController {
 
+    deinit {
+        print("EmplesListController deinit")
+    }
+    
 }

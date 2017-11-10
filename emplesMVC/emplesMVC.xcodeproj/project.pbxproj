@@ -41,7 +41,7 @@
 		F08A4EFC1FB057F10035B8F4 /* BaseAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A4EFB1FB057F10035B8F4 /* BaseAppDelegate.swift */; };
 		F08A4EFE1FB05E710035B8F4 /* GoogleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A4EFD1FB05E710035B8F4 /* GoogleService.swift */; };
 		F08A4F001FB05E800035B8F4 /* AppearanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A4EFF1FB05E800035B8F4 /* AppearanceService.swift */; };
-		F08A4F021FB0642A0035B8F4 /* EmplesNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A4F011FB0642A0035B8F4 /* EmplesNavigationController.swift */; };
+		F08A4F021FB0642A0035B8F4 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08A4F011FB0642A0035B8F4 /* MainNavigationController.swift */; };
 		F0B4A4311FB4D92A00F2B502 /* EmplesCarouselController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4A4301FB4D92A00F2B502 /* EmplesCarouselController.swift */; };
 		F0B4A4331FB4D95000F2B502 /* EmplesCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4A4321FB4D95000F2B502 /* EmplesCarouselView.swift */; };
 		F0B4A4381FB4E34200F2B502 /* CarouselViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4A4371FB4E34200F2B502 /* CarouselViewSource.swift */; };
@@ -55,6 +55,16 @@
 		F0B4A4481FB5128000F2B502 /* DetailDirectionsCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4A4471FB5128000F2B502 /* DetailDirectionsCellModel.swift */; };
 		F0B4A44A1FB512E300F2B502 /* DetailDirectionTextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4A4491FB512E300F2B502 /* DetailDirectionTextViewCell.swift */; };
 		F0B4A44C1FB5138800F2B502 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4A44B1FB5138800F2B502 /* DetailController.swift */; };
+		F0B4A4541FB5CCFC00F2B502 /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4A4531FB5CCFC00F2B502 /* AppFactory.swift */; };
+		F0B4A4561FB5E04500F2B502 /* MenuFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4A4551FB5E04500F2B502 /* MenuFactory.swift */; };
+		F0B4A4591FB5E31500F2B502 /* CollectionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4A4581FB5E31500F2B502 /* CollectionFactory.swift */; };
+		F0B4A45B1FB5EDAF00F2B502 /* ListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4A45A1FB5EDAF00F2B502 /* ListFactory.swift */; };
+		F0B4A45D1FB5F40900F2B502 /* GridFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4A45C1FB5F40800F2B502 /* GridFactory.swift */; };
+		F0B4A45F1FB5F46E00F2B502 /* GalleryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4A45E1FB5F46E00F2B502 /* GalleryFactory.swift */; };
+		F0B4A4611FB5F51500F2B502 /* StackFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4A4601FB5F51500F2B502 /* StackFactory.swift */; };
+		F0B4A4631FB5F55C00F2B502 /* CarouselFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4A4621FB5F55C00F2B502 /* CarouselFactory.swift */; };
+		F0B4A4661FB5F93A00F2B502 /* DataLayerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4A4651FB5F93A00F2B502 /* DataLayerFactory.swift */; };
+		F0B4A46A1FB5FB6C00F2B502 /* DetailFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4A4691FB5FB6C00F2B502 /* DetailFactory.swift */; };
 		F0C338EC1FB439B20025ECDB /* DataGridSourceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C338EB1FB439B20025ECDB /* DataGridSourceItem.swift */; };
 		F0C338EE1FB43A9C0025ECDB /* GenericGridViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C338ED1FB43A9C0025ECDB /* GenericGridViewSource.swift */; };
 		F0C338F01FB43CEE0025ECDB /* EmplesCollectionViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C338EF1FB43CEE0025ECDB /* EmplesCollectionViewProtocol.swift */; };
@@ -135,7 +145,7 @@
 		F08A4EFB1FB057F10035B8F4 /* BaseAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAppDelegate.swift; sourceTree = "<group>"; };
 		F08A4EFD1FB05E710035B8F4 /* GoogleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleService.swift; sourceTree = "<group>"; };
 		F08A4EFF1FB05E800035B8F4 /* AppearanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceService.swift; sourceTree = "<group>"; };
-		F08A4F011FB0642A0035B8F4 /* EmplesNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmplesNavigationController.swift; sourceTree = "<group>"; };
+		F08A4F011FB0642A0035B8F4 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		F0B4A4301FB4D92A00F2B502 /* EmplesCarouselController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmplesCarouselController.swift; sourceTree = "<group>"; };
 		F0B4A4321FB4D95000F2B502 /* EmplesCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmplesCarouselView.swift; sourceTree = "<group>"; };
 		F0B4A4371FB4E34200F2B502 /* CarouselViewSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewSource.swift; sourceTree = "<group>"; };
@@ -149,6 +159,16 @@
 		F0B4A4471FB5128000F2B502 /* DetailDirectionsCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDirectionsCellModel.swift; sourceTree = "<group>"; };
 		F0B4A4491FB512E300F2B502 /* DetailDirectionTextViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDirectionTextViewCell.swift; sourceTree = "<group>"; };
 		F0B4A44B1FB5138800F2B502 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		F0B4A4531FB5CCFC00F2B502 /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
+		F0B4A4551FB5E04500F2B502 /* MenuFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFactory.swift; sourceTree = "<group>"; };
+		F0B4A4581FB5E31500F2B502 /* CollectionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionFactory.swift; sourceTree = "<group>"; };
+		F0B4A45A1FB5EDAF00F2B502 /* ListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFactory.swift; sourceTree = "<group>"; };
+		F0B4A45C1FB5F40800F2B502 /* GridFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridFactory.swift; sourceTree = "<group>"; };
+		F0B4A45E1FB5F46E00F2B502 /* GalleryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryFactory.swift; sourceTree = "<group>"; };
+		F0B4A4601FB5F51500F2B502 /* StackFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackFactory.swift; sourceTree = "<group>"; };
+		F0B4A4621FB5F55C00F2B502 /* CarouselFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselFactory.swift; sourceTree = "<group>"; };
+		F0B4A4651FB5F93A00F2B502 /* DataLayerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayerFactory.swift; sourceTree = "<group>"; };
+		F0B4A4691FB5FB6C00F2B502 /* DetailFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFactory.swift; sourceTree = "<group>"; };
 		F0C338EB1FB439B20025ECDB /* DataGridSourceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGridSourceItem.swift; sourceTree = "<group>"; };
 		F0C338ED1FB43A9C0025ECDB /* GenericGridViewSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericGridViewSource.swift; sourceTree = "<group>"; };
 		F0C338EF1FB43CEE0025ECDB /* EmplesCollectionViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmplesCollectionViewProtocol.swift; sourceTree = "<group>"; };
@@ -263,6 +283,7 @@
 		F08A4DDA1FB0557A0035B8F4 /* ApplicationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				F0B4A4521FB5CCE800F2B502 /* Assembly */,
 				F08A4DDB1FB0557A0035B8F4 /* AppDelegate */,
 				F08A4DE21FB0557B0035B8F4 /* UINavigationController */,
 			);
@@ -283,7 +304,7 @@
 		F08A4DE21FB0557B0035B8F4 /* UINavigationController */ = {
 			isa = PBXGroup;
 			children = (
-				F08A4F011FB0642A0035B8F4 /* EmplesNavigationController.swift */,
+				F08A4F011FB0642A0035B8F4 /* MainNavigationController.swift */,
 			);
 			path = UINavigationController;
 			sourceTree = "<group>";
@@ -291,6 +312,7 @@
 		F08A4DE51FB0557B0035B8F4 /* BusinessLogicLayer */ = {
 			isa = PBXGroup;
 			children = (
+				F0B4A4641FB5F83600F2B502 /* Assembly */,
 				F0C338F91FB448740025ECDB /* PONSO */,
 				F08A4DEA1FB0557B0035B8F4 /* Filesystem */,
 				F08A4DED1FB0557B0035B8F4 /* JSONModel */,
@@ -390,14 +412,9 @@
 		F08A4E1B1FB0557B0035B8F4 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
-				F08A4E1C1FB0557B0035B8F4 /* Carousel */,
-				F08A4E281FB0557B0035B8F4 /* Common */,
-				F08A4E2E1FB0557B0035B8F4 /* Detail */,
-				F08A4E4A1FB0557B0035B8F4 /* Gallery */,
-				F08A4E521FB0557B0035B8F4 /* Grid */,
-				F08A4E631FB0557B0035B8F4 /* List */,
+				F0B4A4571FB5E26900F2B502 /* Assembly */,
+				F0B4A4671FB5FB1900F2B502 /* Collections */,
 				F08A4E761FB0557B0035B8F4 /* Menu */,
-				F08A4E8C1FB0557B0035B8F4 /* Stack */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
@@ -646,6 +663,59 @@
 			path = Menu;
 			sourceTree = "<group>";
 		};
+		F0B4A4521FB5CCE800F2B502 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				F0B4A4531FB5CCFC00F2B502 /* AppFactory.swift */,
+				F0B4A4551FB5E04500F2B502 /* MenuFactory.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		F0B4A4571FB5E26900F2B502 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				F0B4A4681FB5FB5200F2B502 /* Detail */,
+				F0B4A4581FB5E31500F2B502 /* CollectionFactory.swift */,
+				F0B4A45A1FB5EDAF00F2B502 /* ListFactory.swift */,
+				F0B4A45C1FB5F40800F2B502 /* GridFactory.swift */,
+				F0B4A45E1FB5F46E00F2B502 /* GalleryFactory.swift */,
+				F0B4A4601FB5F51500F2B502 /* StackFactory.swift */,
+				F0B4A4621FB5F55C00F2B502 /* CarouselFactory.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		F0B4A4641FB5F83600F2B502 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				F0B4A4651FB5F93A00F2B502 /* DataLayerFactory.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		F0B4A4671FB5FB1900F2B502 /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				F08A4E2E1FB0557B0035B8F4 /* Detail */,
+				F08A4E281FB0557B0035B8F4 /* Common */,
+				F08A4E1C1FB0557B0035B8F4 /* Carousel */,
+				F08A4E4A1FB0557B0035B8F4 /* Gallery */,
+				F08A4E521FB0557B0035B8F4 /* Grid */,
+				F08A4E631FB0557B0035B8F4 /* List */,
+				F08A4E8C1FB0557B0035B8F4 /* Stack */,
+			);
+			path = Collections;
+			sourceTree = "<group>";
+		};
+		F0B4A4681FB5FB5200F2B502 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F0B4A4691FB5FB6C00F2B502 /* DetailFactory.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		F0C338F91FB448740025ECDB /* PONSO */ = {
 			isa = PBXGroup;
 			children = (
@@ -783,6 +853,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-emplesMVC/Pods-emplesMVC-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FieryCrucible/FieryCrucible.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ZLSwipeableView/ZLSwipeableView.framework",
@@ -790,6 +861,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FieryCrucible.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZLSwipeableView.framework",
@@ -827,6 +899,7 @@
 			files = (
 				F0B4A43E1FB4F6FE00F2B502 /* DetailAreaModel.swift in Sources */,
 				F0B4A44A1FB512E300F2B502 /* DetailDirectionTextViewCell.swift in Sources */,
+				F0B4A4541FB5CCFC00F2B502 /* AppFactory.swift in Sources */,
 				F0C339071FB48C400025ECDB /* EmplesGridView.swift in Sources */,
 				F0C339091FB49EC10025ECDB /* EmplesGridModelDecorator.swift in Sources */,
 				F0EF17301FB3AEB1007427A1 /* EmplesMenuCellModel.swift in Sources */,
@@ -836,7 +909,7 @@
 				F02A6F091FB395ED00B523B3 /* EmplesMenuModel.swift in Sources */,
 				F02A6F131FB3A96400B523B3 /* EmplesMenuModelDecorator.swift in Sources */,
 				F0C339031FB453800025ECDB /* EmplesListView.swift in Sources */,
-				F08A4F021FB0642A0035B8F4 /* EmplesNavigationController.swift in Sources */,
+				F08A4F021FB0642A0035B8F4 /* MainNavigationController.swift in Sources */,
 				F0C338F61FB441C60025ECDB /* EmplesItemRouter.swift in Sources */,
 				F08A4EFE1FB05E710035B8F4 /* GoogleService.swift in Sources */,
 				F0838C671FB2532000976C49 /* LocalizedStrings.swift in Sources */,
@@ -856,7 +929,10 @@
 				F02A6F0F1FB3A50000B523B3 /* DataSourceItem.swift in Sources */,
 				F0C3391F1FB4B50F0025ECDB /* StackedViewSource.swift in Sources */,
 				F0838C631FB2529700976C49 /* ColorStrings.swift in Sources */,
+				F0B4A45B1FB5EDAF00F2B502 /* ListFactory.swift in Sources */,
+				F0B4A46A1FB5FB6C00F2B502 /* DetailFactory.swift in Sources */,
 				F0C3391D1FB4AAF10025ECDB /* StackedViewAnimator.swift in Sources */,
+				F0B4A4561FB5E04500F2B502 /* MenuFactory.swift in Sources */,
 				F0D8FC781FB225EC002DBDC6 /* EmplesFSJsonReader.swift in Sources */,
 				F0C339151FB4A3FE0025ECDB /* EmplesGalleryController.swift in Sources */,
 				F0B4A4481FB5128000F2B502 /* DetailDirectionsCellModel.swift in Sources */,
@@ -873,8 +949,10 @@
 				F0C338FD1FB44C650025ECDB /* EmplesListCellModel.swift in Sources */,
 				F0C3390F1FB4A1130025ECDB /* EmplesGridViewCell.swift in Sources */,
 				F0C338FB1FB4489C0025ECDB /* RecArea.swift in Sources */,
+				F0B4A45D1FB5F40900F2B502 /* GridFactory.swift in Sources */,
 				F0838C5D1FB2466500976C49 /* DataAreaRequestClient.swift in Sources */,
 				F0838C611FB24CB800976C49 /* EmplesMenuView.swift in Sources */,
+				F0B4A4631FB5F55C00F2B502 /* CarouselFactory.swift in Sources */,
 				F0B4A4441FB510DF00F2B502 /* DetailDescriptionCellModel.swift in Sources */,
 				F02A6F0D1FB39CA000B523B3 /* GenericTableViewSource.swift in Sources */,
 				F0C338F81FB444AA0025ECDB /* EmplesListModelDecorator.swift in Sources */,
@@ -886,16 +964,20 @@
 				F0C338FF1FB44E450025ECDB /* EmplesListCellView.swift in Sources */,
 				F0C3390D1FB4A0A30025ECDB /* EmplesGridCellModel.swift in Sources */,
 				F0C338F01FB43CEE0025ECDB /* EmplesCollectionViewProtocol.swift in Sources */,
+				F0B4A45F1FB5F46E00F2B502 /* GalleryFactory.swift in Sources */,
 				F0838C5F1FB247F600976C49 /* UIColor+Hex.swift in Sources */,
 				F0EF17361FB3B9E3007427A1 /* ReusableView.swift in Sources */,
 				F0EF173A1FB3C750007427A1 /* EmplesMenuRouter.swift in Sources */,
 				F0C339231FB4B7410025ECDB /* EmplesItemView.swift in Sources */,
 				F0B4A4401FB50C3B00F2B502 /* DetailMapCellModel.swift in Sources */,
 				F02A6F021FB3911C00B523B3 /* ViewCellModelProtocol.swift in Sources */,
+				F0B4A4661FB5F93A00F2B502 /* DataLayerFactory.swift in Sources */,
 				F0B4A4331FB4D95000F2B502 /* EmplesCarouselView.swift in Sources */,
 				F0838C651FB252E000976C49 /* FileNamesStrings.swift in Sources */,
 				F0D8FC7A1FB23945002DBDC6 /* String+Localizable.swift in Sources */,
+				F0B4A4591FB5E31500F2B502 /* CollectionFactory.swift in Sources */,
 				F0EF17381FB3C548007427A1 /* EmplesMenuController.swift in Sources */,
+				F0B4A4611FB5F51500F2B502 /* StackFactory.swift in Sources */,
 				F0838C591FB245A200976C49 /* DataRequestProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  EmplesNavigationController.swift
+//  MainNavigationController
 //  emplesMVC
 //
 //  Created by Vasily Popov on 11/6/17.
@@ -8,8 +8,13 @@
 
 import UIKit
 
-class EmplesNavigationController: UINavigationController {
+class MainNavigationController: UINavigationController {
 
+    convenience init() {
+        self.init(nibName: nil, bundle: nil)
+        delegate = self
+    }
+    
     override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
         delegate = self
@@ -21,7 +26,7 @@ class EmplesNavigationController: UINavigationController {
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super .init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         delegate = self
     }
     
@@ -33,12 +38,12 @@ class EmplesNavigationController: UINavigationController {
     }
 }
 
-extension EmplesNavigationController : UINavigationControllerDelegate
+extension MainNavigationController : UINavigationControllerDelegate
 {
     static let kBackButton = "back-arrow"
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         if self.viewControllers.count > 1 {
-            let image = UIImage(named: EmplesNavigationController.kBackButton)
+            let image = UIImage(named: MainNavigationController.kBackButton)
             let backItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(backButtonClicked(_:)))
             viewController.navigationItem.leftBarButtonItem = backItem;
             self.interactivePopGestureRecognizer?.delegate = viewController as? UIGestureRecognizerDelegate

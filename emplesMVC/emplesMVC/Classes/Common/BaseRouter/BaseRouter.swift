@@ -24,6 +24,10 @@ class BaseRouter {
     weak var viewController: UINavigationController?
     weak var window: UIWindow?
     
+    convenience init() {
+        self.init(nil)
+    }
+    
     required init(_ viewController:UINavigationController?, window:UIWindow? = nil) {
         self.viewController = viewController
         self.window = window
@@ -37,7 +41,7 @@ extension BaseRouter : RouterProtocol {
     }
     
     func setRootViewController(vc:UIViewController) {
-        self.viewController = EmplesNavigationController(rootViewController: vc)
+        self.viewController = MainNavigationController(rootViewController: vc)
         self.window?.rootViewController = self.viewController
     }
     

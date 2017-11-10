@@ -10,14 +10,11 @@ import UIKit
 
 class EmplesItemRouter: BaseRouter {
 
+    var detailFactory: DetailFactory!
+    
     func showDetail(of item:RecArea) {
         
-        let model = DetailAreaModel(item)
-        let controller = DetailController(model)
-        let view = DetailView()
-        view.model = model
-        view.controller = controller
-        controller.view = view
+        let view = detailFactory.view(item)
         self.viewController?.pushViewController(view, animated: true)
     }
     

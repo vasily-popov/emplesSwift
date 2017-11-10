@@ -41,6 +41,10 @@ class EmplesListView: BaseCollectionView {
     }
     
     private var __controller: ViewCollectionProtocol?
+    
+    deinit {
+        print("EmplesListView deinit")
+    }
 }
 
 extension EmplesListView :EmplesCollectionViewProtocol {

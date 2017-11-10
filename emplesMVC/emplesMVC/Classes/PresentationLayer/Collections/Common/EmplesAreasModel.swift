@@ -40,4 +40,8 @@ class EmplesAreasModel: NSObject{
             }
         }
     }
+    
+    deinit {
+        print("EmplesAreasModel deinit")
+    }
 }

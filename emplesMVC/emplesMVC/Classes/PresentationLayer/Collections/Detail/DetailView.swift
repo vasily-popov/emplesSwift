@@ -45,7 +45,5 @@ class DetailView: BaseCollectionView {
             self.table.reloadData()
         }
     }
-    
-    
 }
 

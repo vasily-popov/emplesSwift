@@ -32,4 +32,8 @@ class EmplesListModelDecorator : DecoratorModelProtocol {
     required init(_ model: EmplesAreasModel) {
         self.model = model
     }
+    
+    deinit {
+        print("EmplesListModelDecorator deinit")
+    }
 }

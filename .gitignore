@@ -8,7 +8,6 @@ Pods
 *.gcno
 *.gcda
 *.xcscmblueprint
-Podfile.lock
 # fastlane specific
 fastlane/report.xml
 # deliver temporary files
