@@ -1,0 +1,15 @@
+platform :ios, '9.0'
+inhibit_all_warnings!
+use_frameworks!
+
+# Disable sending stats
+ENV['COCOAPODS_DISABLE_STATS'] = 'true'
+
+target 'emplesMVP' do
+    pod 'FieryCrucible'
+    pod 'ObjectMapper', '~> 3.0.0'
+    pod 'Kingfisher', '~>4.2.0'
+    pod 'GoogleMaps'
+    pod 'iCarousel'
+    pod 'Koloda'
+end
