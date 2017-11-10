@@ -7,15 +7,16 @@
 //
 
 import UIKit
-import ZLSwipeableView
+import Koloda
 
 class EmplesStackedView: BaseCollectionView {
     
     var model : EmplesListModelDecorator?
     
-    private lazy var stack: ZLSwipeableView = {
-        var view = ZLSwipeableView(frame: self.view.bounds)
-        view.numberOfActiveViews = 4
+    
+    private lazy var stack: KolodaView = {
+        var view = StackKolodaView(frame: self.view.bounds)
+        view.countOfVisibleCards = 4
         view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         return view
     }()
@@ -25,23 +26,19 @@ class EmplesStackedView: BaseCollectionView {
         return __dataSource
     }()
     
+    private lazy var delegate:StackedViewDelegate = {
+        var __delegate = StackedViewDelegate(with: self.dataSource)
+        return __delegate
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Stack".localized.localizedUppercase;
         self.view.backgroundColor = UIColor(named: ColorStrings.emplesGreenColor)
         self.view.addSubview(self.stack)
         self.stack.dataSource = self.dataSource
-        self.stack.viewAnimator = StackedViewAnimator()
+        self.stack.delegate = self.delegate
         self.controller?.viewDidLoad()
-    }
-    
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super .viewWillTransition(to: size, with: coordinator)
-        
-        self.stack.discardAllViews()
-        coordinator .animate(alongsideTransition: { (context) in
-            self.stack.loadViewsIfNeeded()
-        })
     }
     
     private var __controller: ViewCollectionProtocol?
@@ -60,6 +57,6 @@ extension EmplesStackedView :EmplesCollectionViewProtocol {
     
     func showData() {
         self.dataSource.setDataSource(self.model!.dataSource)
-        self.stack.loadViewsIfNeeded()
+        self.stack.reloadData()
     }
 }

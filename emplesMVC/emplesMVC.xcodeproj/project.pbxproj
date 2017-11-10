@@ -66,6 +66,8 @@
 		F0B4A4661FB5F93A00F2B502 /* DataLayerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4A4651FB5F93A00F2B502 /* DataLayerFactory.swift */; };
 		F0B4A46A1FB5FB6C00F2B502 /* DetailFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4A4691FB5FB6C00F2B502 /* DetailFactory.swift */; };
 		F0B4A46C1FB601C200F2B502 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F0B4A46B1FB601C100F2B502 /* README.md */; };
+		F0B4A46E1FB6116F00F2B502 /* StackedViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4A46D1FB6116F00F2B502 /* StackedViewDelegate.swift */; };
+		F0B4A4711FB6152A00F2B502 /* StackKolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4A4701FB6152A00F2B502 /* StackKolodaView.swift */; };
 		F0C338EC1FB439B20025ECDB /* DataGridSourceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C338EB1FB439B20025ECDB /* DataGridSourceItem.swift */; };
 		F0C338EE1FB43A9C0025ECDB /* GenericGridViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C338ED1FB43A9C0025ECDB /* GenericGridViewSource.swift */; };
 		F0C338F01FB43CEE0025ECDB /* EmplesCollectionViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C338EF1FB43CEE0025ECDB /* EmplesCollectionViewProtocol.swift */; };
@@ -90,7 +92,6 @@
 		F0C339171FB4A4D20025ECDB /* EmplesGalleryCollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C339161FB4A4D20025ECDB /* EmplesGalleryCollectionFlowLayout.swift */; };
 		F0C339191FB4A8710025ECDB /* EmplesStackedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C339181FB4A8710025ECDB /* EmplesStackedController.swift */; };
 		F0C3391B1FB4A8CF0025ECDB /* EmplesStackedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C3391A1FB4A8CF0025ECDB /* EmplesStackedView.swift */; };
-		F0C3391D1FB4AAF10025ECDB /* StackedViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C3391C1FB4AAF10025ECDB /* StackedViewAnimator.swift */; };
 		F0C3391F1FB4B50F0025ECDB /* StackedViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C3391E1FB4B50F0025ECDB /* StackedViewSource.swift */; };
 		F0C339231FB4B7410025ECDB /* EmplesItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C339221FB4B7410025ECDB /* EmplesItemView.swift */; };
 		F0D8FC761FB2238D002DBDC6 /* EmplesRecAreaMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D8FC751FB2238D002DBDC6 /* EmplesRecAreaMappable.swift */; };
@@ -171,6 +172,8 @@
 		F0B4A4651FB5F93A00F2B502 /* DataLayerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayerFactory.swift; sourceTree = "<group>"; };
 		F0B4A4691FB5FB6C00F2B502 /* DetailFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFactory.swift; sourceTree = "<group>"; };
 		F0B4A46B1FB601C100F2B502 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F0B4A46D1FB6116F00F2B502 /* StackedViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackedViewDelegate.swift; sourceTree = "<group>"; };
+		F0B4A4701FB6152A00F2B502 /* StackKolodaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackKolodaView.swift; sourceTree = "<group>"; };
 		F0C338EB1FB439B20025ECDB /* DataGridSourceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGridSourceItem.swift; sourceTree = "<group>"; };
 		F0C338ED1FB43A9C0025ECDB /* GenericGridViewSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericGridViewSource.swift; sourceTree = "<group>"; };
 		F0C338EF1FB43CEE0025ECDB /* EmplesCollectionViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmplesCollectionViewProtocol.swift; sourceTree = "<group>"; };
@@ -195,7 +198,6 @@
 		F0C339161FB4A4D20025ECDB /* EmplesGalleryCollectionFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmplesGalleryCollectionFlowLayout.swift; sourceTree = "<group>"; };
 		F0C339181FB4A8710025ECDB /* EmplesStackedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmplesStackedController.swift; sourceTree = "<group>"; };
 		F0C3391A1FB4A8CF0025ECDB /* EmplesStackedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmplesStackedView.swift; sourceTree = "<group>"; };
-		F0C3391C1FB4AAF10025ECDB /* StackedViewAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackedViewAnimator.swift; sourceTree = "<group>"; };
 		F0C3391E1FB4B50F0025ECDB /* StackedViewSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackedViewSource.swift; sourceTree = "<group>"; };
 		F0C339221FB4B7410025ECDB /* EmplesItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmplesItemView.swift; sourceTree = "<group>"; };
 		F0D8FC751FB2238D002DBDC6 /* EmplesRecAreaMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmplesRecAreaMappable.swift; sourceTree = "<group>"; };
@@ -575,7 +577,7 @@
 		F08A4E8C1FB0557B0035B8F4 /* Stack */ = {
 			isa = PBXGroup;
 			children = (
-				F08A4E8D1FB0557B0035B8F4 /* Animator */,
+				F0B4A46F1FB6150000F2B502 /* CustomView */,
 				F08A4E941FB0557B0035B8F4 /* Source */,
 				F0C339181FB4A8710025ECDB /* EmplesStackedController.swift */,
 				F0C3391A1FB4A8CF0025ECDB /* EmplesStackedView.swift */,
@@ -583,18 +585,11 @@
 			path = Stack;
 			sourceTree = "<group>";
 		};
-		F08A4E8D1FB0557B0035B8F4 /* Animator */ = {
-			isa = PBXGroup;
-			children = (
-				F0C3391C1FB4AAF10025ECDB /* StackedViewAnimator.swift */,
-			);
-			path = Animator;
-			sourceTree = "<group>";
-		};
 		F08A4E941FB0557B0035B8F4 /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				F0C3391E1FB4B50F0025ECDB /* StackedViewSource.swift */,
+				F0B4A46D1FB6116F00F2B502 /* StackedViewDelegate.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -717,6 +712,14 @@
 				F0B4A4691FB5FB6C00F2B502 /* DetailFactory.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		F0B4A46F1FB6150000F2B502 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				F0B4A4701FB6152A00F2B502 /* StackKolodaView.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 		F0C338F91FB448740025ECDB /* PONSO */ = {
@@ -859,17 +862,19 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-emplesMVC/Pods-emplesMVC-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FieryCrucible/FieryCrucible.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/ZLSwipeableView/ZLSwipeableView.framework",
 				"${BUILT_PRODUCTS_DIR}/iCarousel/iCarousel.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FieryCrucible.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Koloda.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZLSwipeableView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iCarousel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -935,7 +940,6 @@
 				F0838C631FB2529700976C49 /* ColorStrings.swift in Sources */,
 				F0B4A45B1FB5EDAF00F2B502 /* ListFactory.swift in Sources */,
 				F0B4A46A1FB5FB6C00F2B502 /* DetailFactory.swift in Sources */,
-				F0C3391D1FB4AAF10025ECDB /* StackedViewAnimator.swift in Sources */,
 				F0B4A4561FB5E04500F2B502 /* MenuFactory.swift in Sources */,
 				F0D8FC781FB225EC002DBDC6 /* EmplesFSJsonReader.swift in Sources */,
 				F0C339151FB4A3FE0025ECDB /* EmplesGalleryController.swift in Sources */,
@@ -955,10 +959,12 @@
 				F0C338FB1FB4489C0025ECDB /* RecArea.swift in Sources */,
 				F0B4A45D1FB5F40900F2B502 /* GridFactory.swift in Sources */,
 				F0838C5D1FB2466500976C49 /* DataAreaRequestClient.swift in Sources */,
+				F0B4A46E1FB6116F00F2B502 /* StackedViewDelegate.swift in Sources */,
 				F0838C611FB24CB800976C49 /* EmplesMenuView.swift in Sources */,
 				F0B4A4631FB5F55C00F2B502 /* CarouselFactory.swift in Sources */,
 				F0B4A4441FB510DF00F2B502 /* DetailDescriptionCellModel.swift in Sources */,
 				F02A6F0D1FB39CA000B523B3 /* GenericTableViewSource.swift in Sources */,
+				F0B4A4711FB6152A00F2B502 /* StackKolodaView.swift in Sources */,
 				F0C338F81FB444AA0025ECDB /* EmplesListModelDecorator.swift in Sources */,
 				F0838C5B1FB245C700976C49 /* Result.swift in Sources */,
 				F08A4DC81FB0532A0035B8F4 /* AppDelegate.swift in Sources */,

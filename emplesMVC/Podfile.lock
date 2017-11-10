@@ -7,25 +7,28 @@ PODS:
     - GoogleMaps/Base
   - iCarousel (1.8.3)
   - Kingfisher (4.2.0)
+  - Koloda (4.3.1):
+    - pop (~> 1.0)
   - ObjectMapper (3.0.0)
-  - ZLSwipeableView (0.0.8)
+  - pop (1.0.10)
 
 DEPENDENCIES:
   - FieryCrucible
   - GoogleMaps
   - iCarousel
   - Kingfisher (~> 4.2.0)
+  - Koloda
   - ObjectMapper (~> 3.0.0)
-  - ZLSwipeableView
 
 SPEC CHECKSUMS:
   FieryCrucible: 066a11813aa50ca2240c79239d85bfab45d23b35
   GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
   Kingfisher: 9ee7e788d8ba07c3f21ce0d43f33cec310a4f781
+  Koloda: 0d39b2aa188ccd1fac48d752acaf9802e683c625
   ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
-  ZLSwipeableView: df385760ff4838935cdbcb62878ac5acd7355949
+  pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
 
-PODFILE CHECKSUM: dbb7990c7d69f2c6292a7c1fbac8c77f62005aa3
+PODFILE CHECKSUM: e8052890c733eaa2985c80b18ddaf8a9021e73f7
 
 COCOAPODS: 1.3.1
