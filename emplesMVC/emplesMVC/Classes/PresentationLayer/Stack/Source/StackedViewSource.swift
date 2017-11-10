@@ -40,9 +40,13 @@ extension StackedViewSource:ZLSwipeableViewDataSource {
             self.currentIndex = 0;
         }
         
-        let frame = CGRect(x:0, y:0,
-                          width: swipeableView.frame.size.width * 0.8,
-                          height: swipeableView.frame.size.height * 0.8)
+        var frame :CGRect
+        if swipeableView.frame.width > swipeableView.frame.height {
+            frame = CGRect(x: 0, y: 0, width: swipeableView.frame.size.width * 0.6, height: swipeableView.frame.size.height * 0.8)
+        }
+        else {
+            frame = CGRect(x: 0, y: 0, width: swipeableView.frame.size.width * 0.8, height: swipeableView.frame.size.height * 0.6)
+        }
         
         guard let view = Bundle.main.loadNibNamed(EmplesItemView.nameOfClass, owner: self, options: nil)?.first as? EmplesItemView else {
             return UIView()

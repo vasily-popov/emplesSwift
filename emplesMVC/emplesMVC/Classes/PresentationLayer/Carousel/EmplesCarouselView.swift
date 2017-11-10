@@ -41,6 +41,14 @@ class EmplesCarouselView: BaseCollectionView {
     }
     
     private var __controller: ViewCollectionProtocol?
+    
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super .viewWillTransition(to: size, with: coordinator)
+        coordinator.animate(alongsideTransition: { (context) in
+            self.carousel.reloadData()
+        })
+    }
 
 }
 

@@ -45,8 +45,12 @@ extension CarouselViewSource: iCarouselDataSource {
             if let loadedView = Bundle.main.loadNibNamed(EmplesItemView.nameOfClass, owner: self, options: nil)?.first as? EmplesItemView {
                 itemView = loadedView
                 let screenSize = UIScreen.main.bounds
-                let size = CGRect(x: 0, y: 0, width: screenSize.width * 3/4, height: screenSize.height * 3/4)
-                itemView?.frame = size
+                if screenSize.width > screenSize.height {
+                    itemView?.frame = CGRect(x: 0, y: 0, width: screenSize.width * 0.6, height: screenSize.height * 0.8)
+                }
+                else {
+                    itemView?.frame = CGRect(x: 0, y: 0, width: screenSize.width * 0.8, height: screenSize.height * 0.6)
+                }
             }
         }
         let row = elements[index];
