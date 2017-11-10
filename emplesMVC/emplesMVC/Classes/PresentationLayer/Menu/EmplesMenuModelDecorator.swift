@@ -10,24 +10,25 @@ import Foundation
 
 
 class EmplesMenuModelDecorator : DecoratorModelProtocol {
-    var dataSource = Array<DataSourceItem>()
-    let model: EmplesMenuModel
+    
+    typealias T = DataSourceItem
+    var dataSource : Array<T> {
+        get {
+            let __dataSource = self.model.dataSource.map { (text) -> T in
+                let item = EmplesMenuCellModel()
+                item.text = text
+                return T(model: item, rowHeight: 50.0, { [weak self] (model, index) in
+                    if let selsectedItem = MenuSelectedItem(rawValue: index) {
+                        self?.model.delegate?.select(selsectedItem)
+                    }
+                })
+            }
+            return __dataSource
+        }
+    }
+    private let model: EmplesMenuModel
     required init(model: EmplesMenuModel) {
         self.model = model
-        self.initDataSource()
-    }
-    
-    private func initDataSource() {
-        
-        dataSource = self.model.dataSource.map {
-            let item = EmplesMenuCellModel()
-            item.text = $0
-            return DataSourceItem(model: item, rowHeight: 50.0, { [weak self] (model, index) in
-                if let selsectedItem = MenuSelectedItem(rawValue: index) {
-                    self?.model.delegate?.select(selsectedItem)
-                }
-            })
-        }
     }
 }
 

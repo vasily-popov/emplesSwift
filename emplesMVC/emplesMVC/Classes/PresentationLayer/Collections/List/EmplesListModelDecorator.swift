@@ -28,7 +28,7 @@ class EmplesListModelDecorator : DecoratorModelProtocol {
     }
     
     
-    let model: EmplesAreasModel
+    private let model: EmplesAreasModel
     required init(_ model: EmplesAreasModel) {
         self.model = model
     }

@@ -65,6 +65,7 @@
 		F0B4A4631FB5F55C00F2B502 /* CarouselFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4A4621FB5F55C00F2B502 /* CarouselFactory.swift */; };
 		F0B4A4661FB5F93A00F2B502 /* DataLayerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4A4651FB5F93A00F2B502 /* DataLayerFactory.swift */; };
 		F0B4A46A1FB5FB6C00F2B502 /* DetailFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4A4691FB5FB6C00F2B502 /* DetailFactory.swift */; };
+		F0B4A46C1FB601C200F2B502 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F0B4A46B1FB601C100F2B502 /* README.md */; };
 		F0C338EC1FB439B20025ECDB /* DataGridSourceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C338EB1FB439B20025ECDB /* DataGridSourceItem.swift */; };
 		F0C338EE1FB43A9C0025ECDB /* GenericGridViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C338ED1FB43A9C0025ECDB /* GenericGridViewSource.swift */; };
 		F0C338F01FB43CEE0025ECDB /* EmplesCollectionViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C338EF1FB43CEE0025ECDB /* EmplesCollectionViewProtocol.swift */; };
@@ -169,6 +170,7 @@
 		F0B4A4621FB5F55C00F2B502 /* CarouselFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselFactory.swift; sourceTree = "<group>"; };
 		F0B4A4651FB5F93A00F2B502 /* DataLayerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayerFactory.swift; sourceTree = "<group>"; };
 		F0B4A4691FB5FB6C00F2B502 /* DetailFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFactory.swift; sourceTree = "<group>"; };
+		F0B4A46B1FB601C100F2B502 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F0C338EB1FB439B20025ECDB /* DataGridSourceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGridSourceItem.swift; sourceTree = "<group>"; };
 		F0C338ED1FB43A9C0025ECDB /* GenericGridViewSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericGridViewSource.swift; sourceTree = "<group>"; };
 		F0C338EF1FB43CEE0025ECDB /* EmplesCollectionViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmplesCollectionViewProtocol.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 		F08A4DBB1FB0532A0035B8F4 = {
 			isa = PBXGroup;
 			children = (
+				F0B4A46B1FB601C100F2B502 /* README.md */,
 				F08A4DC61FB0532A0035B8F4 /* emplesMVC */,
 				F08A4DC51FB0532A0035B8F4 /* Products */,
 				F332418FD6284558EF032FEF /* Pods */,
@@ -814,6 +817,7 @@
 				F08A4ECC1FB0557B0035B8F4 /* DetailDirectionTextViewCell.xib in Resources */,
 				F08A4EF21FB0557B0035B8F4 /* background.png in Resources */,
 				F08A4ED81FB0557B0035B8F4 /* EmplesGridViewCell.xib in Resources */,
+				F0B4A46C1FB601C200F2B502 /* README.md in Resources */,
 				F08A4EF91FB0557B0035B8F4 /* RecAreaAddress.json in Resources */,
 				F08A4EC91FB0557B0035B8F4 /* DetailDescriptionViewCell.xib in Resources */,
 				F08A4EF81FB0557B0035B8F4 /* RecArea.json in Resources */,
