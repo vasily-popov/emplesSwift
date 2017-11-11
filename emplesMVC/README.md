@@ -10,7 +10,7 @@
 * It should be a plain `Swift` class/struct and not reference any `iOS` framework classes - this makes it easier to reuse
 * it uses `Model` to fetch data source, manupulate it using `DecoratorModelProtocol` and set it to view
 * `Assembly` - injects the dependency object graph into the scene (view controller)
-* You could very easily use a DI (dependency injection) library. `FieryCrucible` used here
+* You could very easily use a DI (dependency injection) library. [FieryCrucible](https://github.com/jkolb/FieryCrucible) is used here. used here
 * `Router` - contains navigation / flow logic from one scene (view controller) to another
 * In some communities / blog posts it might be referred to as a `FlowController`
 
