@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import Dip
 
 class EmplesItemRouter: BaseRouter {
 
-    var detailFactory: DetailFactory!
+    var module: DependencyContainer!
     
     func showDetail(of item:RecArea) {
         
-        let view = detailFactory.view(item)
-        self.viewController?.pushViewController(view, animated: true)
+        if let view = try? module.resolve() as DetailView,
+            let model = try? module.resolve() as DetailAreaModel {
+            model.model = item
+            self.viewController?.pushViewController(view, animated: true)
+        }
     }
     
 }

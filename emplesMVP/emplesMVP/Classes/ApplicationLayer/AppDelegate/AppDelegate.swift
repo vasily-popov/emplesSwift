@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Dip
 
 @UIApplicationMain
 
 class AppDelegate: BaseAppDelegate {
     
-    var factory: AppDelegateFactory!
+    private let container = DependencyContainer.configure()
     
     override var services: [ApplicationService] {
         return [
@@ -24,19 +25,11 @@ class AppDelegate: BaseAppDelegate {
     override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool
     {
         _ = super.application(application, didFinishLaunchingWithOptions: launchOptions)
-        factory = AppDelegateFactory()
-        factory.application().launch()
+        
+        self.window = try! container.resolve() as UIWindow
+        self.window?.rootViewController = try! container.resolve() as MainNavigationController
+        self.window?.makeKeyAndVisible()
         return true
     }
 }
-
-class MainApplication {
-    var factory: AppDelegateFactory!
-    
-    func launch() {
-        factory.mainWindow().makeKeyAndVisible()
-    }
-}
-
-
 

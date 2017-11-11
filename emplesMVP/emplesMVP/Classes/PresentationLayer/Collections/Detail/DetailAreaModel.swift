@@ -13,43 +13,42 @@ class DetailAreaModel {
     
     var titleName: String? {
         get {
-            return self.model.recAreaName
+            return self.model?.recAreaName
         }
     }
     
-    var dataSource: Array<DataSourceItem> = []
-    
-    let model: RecArea
-    required init(_ model: RecArea) {
-        self.model = model
-        self.createDataSource()
-    }
-    
-    func createDataSource() {
-        
+    lazy var dataSource: Array<DataSourceItem> = {
         let screenHeight = UIScreen.main.bounds.height
         var array = Array<DataSourceItem>()
-        if let lat = self.model.latitude, let long = self.model.longitude {
+        if let lat = self.model?.latitude, let long = self.model?.longitude {
             let coordinate = CLLocationCoordinate2DMake(Double(lat), Double(long))
             let item = DetailMapCellModel(coordinate)
             let row = DataSourceItem(model: item, rowHeight: screenHeight/3, nil)
             array.append(row)
         }
-        if let areaDescription = self.model.recAreaDescription {
+        if let areaDescription = self.model?.recAreaDescription {
             let item = DetailDescriptionCellModel()
             item.descriptionText = areaDescription
-            item.imageURL = self.model.imageURL
+            item.imageURL = self.model?.imageURL
             let row = DataSourceItem(model: item, rowHeight: UITableViewAutomaticDimension, nil)
             array.append(row)
         }
-        if let areaDirections = self.model.recAreaDirections {
+        if let areaDirections = self.model?.recAreaDirections {
             let item = DetailDirectionsCellModel()
             item.directionText = areaDirections
             let row = DataSourceItem(model: item, rowHeight: UITableViewAutomaticDimension, nil)
             array.append(row)
         }
-        self.dataSource += array
-        
-    }
+        return array
+    }()
     
+    var model: RecArea?
+    
+    required init() {
+    }
+
+    convenience init(_ model: RecArea) {
+        self.init()
+        self.model = model
+    }
 }

@@ -6,7 +6,7 @@ use_frameworks!
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
 
 target 'emplesMVP' do
-    pod 'FieryCrucible'
+    pod 'Dip'
     pod 'ObjectMapper', '~> 3.0.0'
     pod 'Kingfisher', '~>4.2.0'
     pod 'GoogleMaps'

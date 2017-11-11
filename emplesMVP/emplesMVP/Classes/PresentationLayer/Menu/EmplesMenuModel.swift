@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import Dip
 
-enum MenuSelectedItem: Int {
+enum MenuSelectedItem: Int, DependencyTagConvertible {
     case List = 0
     case Grid
     case Stack
     case Gallery
-    case Carusel
+    case Carousel
 }
 
 protocol EmplesMenuSelectProtocol : class {

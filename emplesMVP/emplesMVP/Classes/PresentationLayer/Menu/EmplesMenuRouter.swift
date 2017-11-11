@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import Dip
 
 class EmplesMenuRouter : BaseRouter {
     
-    var collectionFactory: CollectionFactory!
+    var module: DependencyContainer!
     
     func navigate(item:MenuSelectedItem) {
         
-        if let view = collectionFactory.view(item: item) as? UIViewController {
+        let collectionView = try? module.resolve(tag: item) as CollectionViewProtocol
+        if let view = collectionView  as? UIViewController {
             self.viewController?.pushViewController(view, animated: true)
         }
     }
