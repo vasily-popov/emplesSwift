@@ -9,21 +9,18 @@
 import UIKit
 
 class EmplesListPresenter: EmplesCollectionPresenter {
-
-    var decorator:EmplesListModelDecorator?
     
-    required init(_ model: EmplesAreasModel) {
-        super.init(model)
-        self.decorator = EmplesListModelDecorator(model)
+    override func prepareArray(_ area:Array<RecArea>) -> Array<Any>? {
+        
+        let source = area.map { (item) -> DataSourceItem in
+            let cellModel = EmplesListCellModel()
+            cellModel.text = item.recAreaName
+            cellModel.phone = item.recAreaPhone
+            cellModel.imageURL = item.imageURL
+            return DataSourceItem(model: cellModel, rowHeight: 50.0) { [weak self] (model, index) in
+                self?.select(item)
+            }
+        }
+        return source
     }
-    
-    override func prepareArray() -> Array<Any>? {
-        return decorator?.dataSource
-    }
-    
-    deinit {
-        print("EmplesListController deinit")
-    }
-    
-    
 }

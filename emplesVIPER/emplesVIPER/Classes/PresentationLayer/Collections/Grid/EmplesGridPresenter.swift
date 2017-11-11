@@ -10,15 +10,16 @@ import UIKit
 
 class EmplesGridPresenter: EmplesCollectionPresenter {
     
-    var decorator:EmplesGridModelDecorator?
-    
-    required init(_ model: EmplesAreasModel) {
-        super.init(model)
-        self.decorator = EmplesGridModelDecorator(model)
-    }
-    
-    override func prepareArray() -> Array<Any>? {
-        return decorator?.dataSource
+    override func prepareArray(_ area:Array<RecArea>) -> Array<Any>? {
+        let source = area.map { (item) -> DataGridSourceItem in
+            let cellModel = EmplesGridCellModel()
+            cellModel.text = item.recAreaName
+            cellModel.imageURL = item.imageURL
+            return DataGridSourceItem(model: cellModel) { [weak self] (model, index) in
+                self?.select(item)
+            }
+        }
+        return source
     }
 }
 

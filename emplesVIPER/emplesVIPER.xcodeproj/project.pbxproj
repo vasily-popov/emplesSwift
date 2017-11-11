@@ -23,17 +23,9 @@
 		F075AF141FB7691200ACCC16 /* CollectionModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AE8E1FB7691200ACCC16 /* CollectionModule.swift */; };
 		F075AF151FB7691200ACCC16 /* CompositionRootModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AE8F1FB7691200ACCC16 /* CompositionRootModule.swift */; };
 		F075AF161FB7691200ACCC16 /* DetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AE901FB7691200ACCC16 /* DetailModule.swift */; };
-		F075AF171FB7691200ACCC16 /* DataAreaRequestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AE921FB7691200ACCC16 /* DataAreaRequestClient.swift */; };
-		F075AF181FB7691200ACCC16 /* DataRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AE931FB7691200ACCC16 /* DataRequestProtocol.swift */; };
-		F075AF191FB7691200ACCC16 /* EmplesFSJsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AE951FB7691200ACCC16 /* EmplesFSJsonReader.swift */; };
-		F075AF1A1FB7691200ACCC16 /* EmplesRecAreaMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AE971FB7691200ACCC16 /* EmplesRecAreaMappable.swift */; };
-		F075AF1B1FB7691200ACCC16 /* RecArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AE991FB7691200ACCC16 /* RecArea.swift */; };
-		F075AF1C1FB7691200ACCC16 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AE9A1FB7691200ACCC16 /* Result.swift */; };
 		F075AF1D1FB7691200ACCC16 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AE9D1FB7691200ACCC16 /* BaseRouter.swift */; };
-		F075AF1E1FB7691200ACCC16 /* DecoratorModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AE9E1FB7691200ACCC16 /* DecoratorModelProtocol.swift */; };
 		F075AF1F1FB7691200ACCC16 /* GenericGridViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AEA01FB7691200ACCC16 /* GenericGridViewDelegate.swift */; };
 		F075AF201FB7691200ACCC16 /* GenericGridViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AEA11FB7691200ACCC16 /* GenericGridViewSource.swift */; };
-		F075AF211FB7691200ACCC16 /* DataSourceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AEA31FB7691200ACCC16 /* DataSourceItem.swift */; };
 		F075AF221FB7691200ACCC16 /* GenericTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AEA41FB7691200ACCC16 /* GenericTableViewDelegate.swift */; };
 		F075AF231FB7691200ACCC16 /* GenericTableViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AEA51FB7691200ACCC16 /* GenericTableViewSource.swift */; };
 		F075AF241FB7691200ACCC16 /* DataGridSourceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AEA71FB7691200ACCC16 /* DataGridSourceItem.swift */; };
@@ -46,7 +38,6 @@
 		F075AF2B1FB7691200ACCC16 /* CarouselViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AEB21FB7691200ACCC16 /* CarouselViewSource.swift */; };
 		F075AF2C1FB7691200ACCC16 /* BaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AEB41FB7691200ACCC16 /* BaseCollectionView.swift */; };
 		F075AF2D1FB7691200ACCC16 /* CollectionViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AEB51FB7691200ACCC16 /* CollectionViewProtocol.swift */; };
-		F075AF2E1FB7691200ACCC16 /* EmplesAreasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AEB61FB7691200ACCC16 /* EmplesAreasModel.swift */; };
 		F075AF2F1FB7691200ACCC16 /* EmplesCollectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AEB71FB7691200ACCC16 /* EmplesCollectionPresenter.swift */; };
 		F075AF301FB7691200ACCC16 /* EmplesItemRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AEB81FB7691200ACCC16 /* EmplesItemRouter.swift */; };
 		F075AF311FB7691200ACCC16 /* PresenterUICycleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AEB91FB7691200ACCC16 /* PresenterUICycleProtocol.swift */; };
@@ -56,10 +47,8 @@
 		F075AF351FB7691200ACCC16 /* EmplesGalleryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AEBF1FB7691200ACCC16 /* EmplesGalleryPresenter.swift */; };
 		F075AF361FB7691200ACCC16 /* EmplesGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AEC01FB7691200ACCC16 /* EmplesGalleryView.swift */; };
 		F075AF371FB7691200ACCC16 /* EmplesGalleryCollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AEC21FB7691200ACCC16 /* EmplesGalleryCollectionFlowLayout.swift */; };
-		F075AF381FB7691200ACCC16 /* EmplesGridModelDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AEC41FB7691200ACCC16 /* EmplesGridModelDecorator.swift */; };
 		F075AF391FB7691200ACCC16 /* EmplesGridPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AEC51FB7691200ACCC16 /* EmplesGridPresenter.swift */; };
 		F075AF3A1FB7691200ACCC16 /* EmplesGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AEC61FB7691200ACCC16 /* EmplesGridView.swift */; };
-		F075AF3B1FB7691200ACCC16 /* EmplesListModelDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AEC81FB7691200ACCC16 /* EmplesListModelDecorator.swift */; };
 		F075AF3C1FB7691200ACCC16 /* EmplesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AEC91FB7691200ACCC16 /* EmplesListPresenter.swift */; };
 		F075AF3D1FB7691200ACCC16 /* EmplesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AECA1FB7691200ACCC16 /* EmplesListView.swift */; };
 		F075AF3E1FB7691200ACCC16 /* StackKolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AECD1FB7691200ACCC16 /* StackKolodaView.swift */; };
@@ -67,7 +56,6 @@
 		F075AF401FB7691200ACCC16 /* EmplesStackedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AECF1FB7691200ACCC16 /* EmplesStackedView.swift */; };
 		F075AF411FB7691200ACCC16 /* StackedViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AED11FB7691200ACCC16 /* StackedViewDelegate.swift */; };
 		F075AF421FB7691200ACCC16 /* StackedViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AED21FB7691200ACCC16 /* StackedViewSource.swift */; };
-		F075AF431FB7691200ACCC16 /* EmplesMenuModelDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AED51FB7691200ACCC16 /* EmplesMenuModelDecorator.swift */; };
 		F075AF441FB7691200ACCC16 /* EmplesMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AED61FB7691200ACCC16 /* EmplesMenuModel.swift */; };
 		F075AF451FB7691200ACCC16 /* EmplesMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AED71FB7691200ACCC16 /* EmplesMenuPresenter.swift */; };
 		F075AF461FB7691200ACCC16 /* EmplesMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AED81FB7691200ACCC16 /* EmplesMenuRouter.swift */; };
@@ -98,6 +86,16 @@
 		F075AF601FB7691200ACCC16 /* RecArea.json in Resources */ = {isa = PBXBuildFile; fileRef = F075AF011FB7691200ACCC16 /* RecArea.json */; };
 		F075AF611FB7691200ACCC16 /* RecAreaAddress.json in Resources */ = {isa = PBXBuildFile; fileRef = F075AF021FB7691200ACCC16 /* RecAreaAddress.json */; };
 		F075AF621FB7691200ACCC16 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F075AF041FB7691200ACCC16 /* Localizable.strings */; };
+		F0DE0C9E1FB773FE00B11CCB /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DE0C881FB773FE00B11CCB /* Result.swift */; };
+		F0DE0C9F1FB773FE00B11CCB /* RecArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DE0C8A1FB773FE00B11CCB /* RecArea.swift */; };
+		F0DE0CA21FB773FE00B11CCB /* EmplesFSJsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DE0C931FB773FE00B11CCB /* EmplesFSJsonReader.swift */; };
+		F0DE0CA41FB773FE00B11CCB /* DataFilePersistenceGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DE0C9A1FB773FE00B11CCB /* DataFilePersistenceGateway.swift */; };
+		F0DE0CA51FB773FE00B11CCB /* DataRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DE0C9B1FB773FE00B11CCB /* DataRequestProtocol.swift */; };
+		F0DE0CA61FB773FE00B11CCB /* EmplesRecAreaMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DE0C9D1FB773FE00B11CCB /* EmplesRecAreaMappable.swift */; };
+		F0DE0CA81FB7764900B11CCB /* DataAreaGatewayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DE0CA71FB7764900B11CCB /* DataAreaGatewayProtocol.swift */; };
+		F0DE0CAA1FB779C200B11CCB /* DisplayAreaCollectionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DE0CA91FB779C200B11CCB /* DisplayAreaCollectionUseCase.swift */; };
+		F0DE0CAC1FB77C4D00B11CCB /* DisplayAreaCollectionUseCaseImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DE0CAB1FB77C4D00B11CCB /* DisplayAreaCollectionUseCaseImplementation.swift */; };
+		F0DE0CAE1FB7A53900B11CCB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F0DE0CAD1FB7A53900B11CCB /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,17 +118,9 @@
 		F075AE8E1FB7691200ACCC16 /* CollectionModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionModule.swift; sourceTree = "<group>"; };
 		F075AE8F1FB7691200ACCC16 /* CompositionRootModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositionRootModule.swift; sourceTree = "<group>"; };
 		F075AE901FB7691200ACCC16 /* DetailModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailModule.swift; sourceTree = "<group>"; };
-		F075AE921FB7691200ACCC16 /* DataAreaRequestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAreaRequestClient.swift; sourceTree = "<group>"; };
-		F075AE931FB7691200ACCC16 /* DataRequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRequestProtocol.swift; sourceTree = "<group>"; };
-		F075AE951FB7691200ACCC16 /* EmplesFSJsonReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesFSJsonReader.swift; sourceTree = "<group>"; };
-		F075AE971FB7691200ACCC16 /* EmplesRecAreaMappable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesRecAreaMappable.swift; sourceTree = "<group>"; };
-		F075AE991FB7691200ACCC16 /* RecArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecArea.swift; sourceTree = "<group>"; };
-		F075AE9A1FB7691200ACCC16 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		F075AE9D1FB7691200ACCC16 /* BaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
-		F075AE9E1FB7691200ACCC16 /* DecoratorModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecoratorModelProtocol.swift; sourceTree = "<group>"; };
 		F075AEA01FB7691200ACCC16 /* GenericGridViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericGridViewDelegate.swift; sourceTree = "<group>"; };
 		F075AEA11FB7691200ACCC16 /* GenericGridViewSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericGridViewSource.swift; sourceTree = "<group>"; };
-		F075AEA31FB7691200ACCC16 /* DataSourceItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceItem.swift; sourceTree = "<group>"; };
 		F075AEA41FB7691200ACCC16 /* GenericTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTableViewDelegate.swift; sourceTree = "<group>"; };
 		F075AEA51FB7691200ACCC16 /* GenericTableViewSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTableViewSource.swift; sourceTree = "<group>"; };
 		F075AEA71FB7691200ACCC16 /* DataGridSourceItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataGridSourceItem.swift; sourceTree = "<group>"; };
@@ -143,7 +133,6 @@
 		F075AEB21FB7691200ACCC16 /* CarouselViewSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselViewSource.swift; sourceTree = "<group>"; };
 		F075AEB41FB7691200ACCC16 /* BaseCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionView.swift; sourceTree = "<group>"; };
 		F075AEB51FB7691200ACCC16 /* CollectionViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewProtocol.swift; sourceTree = "<group>"; };
-		F075AEB61FB7691200ACCC16 /* EmplesAreasModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesAreasModel.swift; sourceTree = "<group>"; };
 		F075AEB71FB7691200ACCC16 /* EmplesCollectionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesCollectionPresenter.swift; sourceTree = "<group>"; };
 		F075AEB81FB7691200ACCC16 /* EmplesItemRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesItemRouter.swift; sourceTree = "<group>"; };
 		F075AEB91FB7691200ACCC16 /* PresenterUICycleProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterUICycleProtocol.swift; sourceTree = "<group>"; };
@@ -153,10 +142,8 @@
 		F075AEBF1FB7691200ACCC16 /* EmplesGalleryPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesGalleryPresenter.swift; sourceTree = "<group>"; };
 		F075AEC01FB7691200ACCC16 /* EmplesGalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesGalleryView.swift; sourceTree = "<group>"; };
 		F075AEC21FB7691200ACCC16 /* EmplesGalleryCollectionFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesGalleryCollectionFlowLayout.swift; sourceTree = "<group>"; };
-		F075AEC41FB7691200ACCC16 /* EmplesGridModelDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesGridModelDecorator.swift; sourceTree = "<group>"; };
 		F075AEC51FB7691200ACCC16 /* EmplesGridPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesGridPresenter.swift; sourceTree = "<group>"; };
 		F075AEC61FB7691200ACCC16 /* EmplesGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesGridView.swift; sourceTree = "<group>"; };
-		F075AEC81FB7691200ACCC16 /* EmplesListModelDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesListModelDecorator.swift; sourceTree = "<group>"; };
 		F075AEC91FB7691200ACCC16 /* EmplesListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesListPresenter.swift; sourceTree = "<group>"; };
 		F075AECA1FB7691200ACCC16 /* EmplesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesListView.swift; sourceTree = "<group>"; };
 		F075AECD1FB7691200ACCC16 /* StackKolodaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackKolodaView.swift; sourceTree = "<group>"; };
@@ -164,7 +151,6 @@
 		F075AECF1FB7691200ACCC16 /* EmplesStackedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesStackedView.swift; sourceTree = "<group>"; };
 		F075AED11FB7691200ACCC16 /* StackedViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackedViewDelegate.swift; sourceTree = "<group>"; };
 		F075AED21FB7691200ACCC16 /* StackedViewSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackedViewSource.swift; sourceTree = "<group>"; };
-		F075AED51FB7691200ACCC16 /* EmplesMenuModelDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesMenuModelDecorator.swift; sourceTree = "<group>"; };
 		F075AED61FB7691200ACCC16 /* EmplesMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesMenuModel.swift; sourceTree = "<group>"; };
 		F075AED71FB7691200ACCC16 /* EmplesMenuPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesMenuPresenter.swift; sourceTree = "<group>"; };
 		F075AED81FB7691200ACCC16 /* EmplesMenuRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesMenuRouter.swift; sourceTree = "<group>"; };
@@ -198,6 +184,16 @@
 		F075AF051FB7691200ACCC16 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F075AF061FB7691200ACCC16 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F075AF071FB7691200ACCC16 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F0DE0C881FB773FE00B11CCB /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		F0DE0C8A1FB773FE00B11CCB /* RecArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecArea.swift; sourceTree = "<group>"; };
+		F0DE0C931FB773FE00B11CCB /* EmplesFSJsonReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesFSJsonReader.swift; sourceTree = "<group>"; };
+		F0DE0C9A1FB773FE00B11CCB /* DataFilePersistenceGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataFilePersistenceGateway.swift; sourceTree = "<group>"; };
+		F0DE0C9B1FB773FE00B11CCB /* DataRequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRequestProtocol.swift; sourceTree = "<group>"; };
+		F0DE0C9D1FB773FE00B11CCB /* EmplesRecAreaMappable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesRecAreaMappable.swift; sourceTree = "<group>"; };
+		F0DE0CA71FB7764900B11CCB /* DataAreaGatewayProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAreaGatewayProtocol.swift; sourceTree = "<group>"; };
+		F0DE0CA91FB779C200B11CCB /* DisplayAreaCollectionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayAreaCollectionUseCase.swift; sourceTree = "<group>"; };
+		F0DE0CAB1FB77C4D00B11CCB /* DisplayAreaCollectionUseCaseImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayAreaCollectionUseCaseImplementation.swift; sourceTree = "<group>"; };
+		F0DE0CAD1FB7A53900B11CCB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +228,7 @@
 		F075AE5C1FB768F300ACCC16 = {
 			isa = PBXGroup;
 			children = (
+				F0DE0CAD1FB7A53900B11CCB /* README.md */,
 				F075AE671FB768F300ACCC16 /* emplesVIPER */,
 				F075AE661FB768F300ACCC16 /* Products */,
 				C6E543BE444F0723554DBC66 /* Pods */,
@@ -342,45 +339,18 @@
 		F075AE911FB7691200ACCC16 /* BusinessLogicLayer */ = {
 			isa = PBXGroup;
 			children = (
-				F075AE921FB7691200ACCC16 /* DataAreaRequestClient.swift */,
-				F075AE931FB7691200ACCC16 /* DataRequestProtocol.swift */,
-				F075AE941FB7691200ACCC16 /* Filesystem */,
-				F075AE961FB7691200ACCC16 /* JSONModel */,
-				F075AE981FB7691200ACCC16 /* PONSO */,
-				F075AE9A1FB7691200ACCC16 /* Result.swift */,
+				F0DE0C891FB773FE00B11CCB /* Entity */,
+				F0DE0C8F1FB773FE00B11CCB /* Gateways */,
+				F0DE0C881FB773FE00B11CCB /* Result.swift */,
+				F0DE0C8B1FB773FE00B11CCB /* UseCase */,
 			);
 			path = BusinessLogicLayer;
-			sourceTree = "<group>";
-		};
-		F075AE941FB7691200ACCC16 /* Filesystem */ = {
-			isa = PBXGroup;
-			children = (
-				F075AE951FB7691200ACCC16 /* EmplesFSJsonReader.swift */,
-			);
-			path = Filesystem;
-			sourceTree = "<group>";
-		};
-		F075AE961FB7691200ACCC16 /* JSONModel */ = {
-			isa = PBXGroup;
-			children = (
-				F075AE971FB7691200ACCC16 /* EmplesRecAreaMappable.swift */,
-			);
-			path = JSONModel;
-			sourceTree = "<group>";
-		};
-		F075AE981FB7691200ACCC16 /* PONSO */ = {
-			isa = PBXGroup;
-			children = (
-				F075AE991FB7691200ACCC16 /* RecArea.swift */,
-			);
-			path = PONSO;
 			sourceTree = "<group>";
 		};
 		F075AE9B1FB7691200ACCC16 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				F075AE9C1FB7691200ACCC16 /* BaseRouter */,
-				F075AE9E1FB7691200ACCC16 /* DecoratorModelProtocol.swift */,
 				F075AE9F1FB7691200ACCC16 /* GenericCollectionSource */,
 				F075AEA21FB7691200ACCC16 /* GenericTableSource */,
 				F075AEA61FB7691200ACCC16 /* SourceItems */,
@@ -410,7 +380,6 @@
 		F075AEA21FB7691200ACCC16 /* GenericTableSource */ = {
 			isa = PBXGroup;
 			children = (
-				F075AEA31FB7691200ACCC16 /* DataSourceItem.swift */,
 				F075AEA41FB7691200ACCC16 /* GenericTableViewDelegate.swift */,
 				F075AEA51FB7691200ACCC16 /* GenericTableViewSource.swift */,
 			);
@@ -473,7 +442,6 @@
 			children = (
 				F075AEB41FB7691200ACCC16 /* BaseCollectionView.swift */,
 				F075AEB51FB7691200ACCC16 /* CollectionViewProtocol.swift */,
-				F075AEB61FB7691200ACCC16 /* EmplesAreasModel.swift */,
 				F075AEB71FB7691200ACCC16 /* EmplesCollectionPresenter.swift */,
 				F075AEB81FB7691200ACCC16 /* EmplesItemRouter.swift */,
 				F075AEB91FB7691200ACCC16 /* PresenterUICycleProtocol.swift */,
@@ -512,7 +480,6 @@
 		F075AEC31FB7691200ACCC16 /* Grid */ = {
 			isa = PBXGroup;
 			children = (
-				F075AEC41FB7691200ACCC16 /* EmplesGridModelDecorator.swift */,
 				F075AEC51FB7691200ACCC16 /* EmplesGridPresenter.swift */,
 				F075AEC61FB7691200ACCC16 /* EmplesGridView.swift */,
 			);
@@ -522,7 +489,6 @@
 		F075AEC71FB7691200ACCC16 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				F075AEC81FB7691200ACCC16 /* EmplesListModelDecorator.swift */,
 				F075AEC91FB7691200ACCC16 /* EmplesListPresenter.swift */,
 				F075AECA1FB7691200ACCC16 /* EmplesListView.swift */,
 			);
@@ -560,21 +526,12 @@
 		F075AED31FB7691200ACCC16 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				F075AED41FB7691200ACCC16 /* Decorator */,
 				F075AED61FB7691200ACCC16 /* EmplesMenuModel.swift */,
 				F075AED71FB7691200ACCC16 /* EmplesMenuPresenter.swift */,
 				F075AED81FB7691200ACCC16 /* EmplesMenuRouter.swift */,
 				F075AED91FB7691200ACCC16 /* EmplesMenuView.swift */,
 			);
 			path = Menu;
-			sourceTree = "<group>";
-		};
-		F075AED41FB7691200ACCC16 /* Decorator */ = {
-			isa = PBXGroup;
-			children = (
-				F075AED51FB7691200ACCC16 /* EmplesMenuModelDecorator.swift */,
-			);
-			path = Decorator;
 			sourceTree = "<group>";
 		};
 		F075AEDA1FB7691200ACCC16 /* UIControls */ = {
@@ -721,6 +678,67 @@
 			path = Strings;
 			sourceTree = "<group>";
 		};
+		F0DE0C891FB773FE00B11CCB /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				F0DE0C8A1FB773FE00B11CCB /* RecArea.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		F0DE0C8B1FB773FE00B11CCB /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				F0DE0CA91FB779C200B11CCB /* DisplayAreaCollectionUseCase.swift */,
+				F0DE0CAB1FB77C4D00B11CCB /* DisplayAreaCollectionUseCaseImplementation.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		F0DE0C8F1FB773FE00B11CCB /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				F0DE0C901FB773FE00B11CCB /* FilePersistence */,
+				F0DE0C981FB773FE00B11CCB /* GatewayProtocol */,
+				F0DE0C9C1FB773FE00B11CCB /* JSONModel */,
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
+		F0DE0C901FB773FE00B11CCB /* FilePersistence */ = {
+			isa = PBXGroup;
+			children = (
+				F0DE0C9A1FB773FE00B11CCB /* DataFilePersistenceGateway.swift */,
+				F0DE0C941FB773FE00B11CCB /* FileReader */,
+			);
+			path = FilePersistence;
+			sourceTree = "<group>";
+		};
+		F0DE0C941FB773FE00B11CCB /* FileReader */ = {
+			isa = PBXGroup;
+			children = (
+				F0DE0C931FB773FE00B11CCB /* EmplesFSJsonReader.swift */,
+			);
+			path = FileReader;
+			sourceTree = "<group>";
+		};
+		F0DE0C981FB773FE00B11CCB /* GatewayProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				F0DE0C9B1FB773FE00B11CCB /* DataRequestProtocol.swift */,
+				F0DE0CA71FB7764900B11CCB /* DataAreaGatewayProtocol.swift */,
+			);
+			path = GatewayProtocol;
+			sourceTree = "<group>";
+		};
+		F0DE0C9C1FB773FE00B11CCB /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				F0DE0C9D1FB773FE00B11CCB /* EmplesRecAreaMappable.swift */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -789,6 +807,7 @@
 				F075AF5D1FB7691200ACCC16 /* LaunchScreen.storyboard in Resources */,
 				F075AF5A1FB7691200ACCC16 /* EmplesItemView.xib in Resources */,
 				F075AF611FB7691200ACCC16 /* RecAreaAddress.json in Resources */,
+				F0DE0CAE1FB7A53900B11CCB /* README.md in Resources */,
 				F075AF5F1FB7691200ACCC16 /* Assets.xcassets in Resources */,
 				F075AF5C1FB7691200ACCC16 /* background.png in Resources */,
 				F075AF601FB7691200ACCC16 /* RecArea.json in Resources */,
@@ -828,7 +847,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-emplesVIPER/Pods-emplesVIPER-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FieryCrucible/FieryCrucible.framework",
+				"${BUILT_PRODUCTS_DIR}/Dip/Dip.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
@@ -837,7 +856,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FieryCrucible.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Dip.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Koloda.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
@@ -877,23 +896,20 @@
 				F075AF0F1FB7691200ACCC16 /* AppDelegate.swift in Sources */,
 				F075AF2B1FB7691200ACCC16 /* CarouselViewSource.swift in Sources */,
 				F075AF401FB7691200ACCC16 /* EmplesStackedView.swift in Sources */,
-				F075AF211FB7691200ACCC16 /* DataSourceItem.swift in Sources */,
-				F075AF171FB7691200ACCC16 /* DataAreaRequestClient.swift in Sources */,
 				F075AF471FB7691200ACCC16 /* EmplesMenuView.swift in Sources */,
 				F075AF4B1FB7691200ACCC16 /* DetailDirectionsCellModel.swift in Sources */,
 				F075AF2D1FB7691200ACCC16 /* CollectionViewProtocol.swift in Sources */,
 				F075AF141FB7691200ACCC16 /* CollectionModule.swift in Sources */,
-				F075AF1E1FB7691200ACCC16 /* DecoratorModelProtocol.swift in Sources */,
 				F075AF511FB7691200ACCC16 /* EmplesGridViewCell.swift in Sources */,
+				F0DE0C9E1FB773FE00B11CCB /* Result.swift in Sources */,
 				F075AF311FB7691200ACCC16 /* PresenterUICycleProtocol.swift in Sources */,
+				F0DE0CA61FB773FE00B11CCB /* EmplesRecAreaMappable.swift in Sources */,
 				F075AF441FB7691200ACCC16 /* EmplesMenuModel.swift in Sources */,
 				F075AF4F1FB7691200ACCC16 /* DetailMapViewCell.swift in Sources */,
 				F075AF3D1FB7691200ACCC16 /* EmplesListView.swift in Sources */,
-				F075AF1B1FB7691200ACCC16 /* RecArea.swift in Sources */,
+				F0DE0C9F1FB773FE00B11CCB /* RecArea.swift in Sources */,
 				F075AF101FB7691200ACCC16 /* AppearanceService.swift in Sources */,
 				F075AF0E1FB7691200ACCC16 /* UIColor+Hex.swift in Sources */,
-				F075AF3B1FB7691200ACCC16 /* EmplesListModelDecorator.swift in Sources */,
-				F075AF1A1FB7691200ACCC16 /* EmplesRecAreaMappable.swift in Sources */,
 				F075AF1D1FB7691200ACCC16 /* BaseRouter.swift in Sources */,
 				F075AF2F1FB7691200ACCC16 /* EmplesCollectionPresenter.swift in Sources */,
 				F075AF281FB7691200ACCC16 /* EmplesCarouselPresenter.swift in Sources */,
@@ -906,11 +922,10 @@
 				F075AF541FB7691200ACCC16 /* EmplesListCellView.swift in Sources */,
 				F075AF481FB7691200ACCC16 /* DetailDescriptionCellModel.swift in Sources */,
 				F075AF2A1FB7691200ACCC16 /* CarouselViewDelegate.swift in Sources */,
-				F075AF381FB7691200ACCC16 /* EmplesGridModelDecorator.swift in Sources */,
 				F075AF391FB7691200ACCC16 /* EmplesGridPresenter.swift in Sources */,
+				F0DE0CA41FB773FE00B11CCB /* DataFilePersistenceGateway.swift in Sources */,
 				F075AF231FB7691200ACCC16 /* GenericTableViewSource.swift in Sources */,
-				F075AF191FB7691200ACCC16 /* EmplesFSJsonReader.swift in Sources */,
-				F075AF2E1FB7691200ACCC16 /* EmplesAreasModel.swift in Sources */,
+				F0DE0CAC1FB77C4D00B11CCB /* DisplayAreaCollectionUseCaseImplementation.swift in Sources */,
 				F075AF0A1FB7691200ACCC16 /* LocalizedStrings.swift in Sources */,
 				F075AF3A1FB7691200ACCC16 /* EmplesGridView.swift in Sources */,
 				F075AF491FB7691200ACCC16 /* DetailDescriptionViewCell.swift in Sources */,
@@ -922,6 +937,7 @@
 				F075AF371FB7691200ACCC16 /* EmplesGalleryCollectionFlowLayout.swift in Sources */,
 				F075AF221FB7691200ACCC16 /* GenericTableViewDelegate.swift in Sources */,
 				F075AF3C1FB7691200ACCC16 /* EmplesListPresenter.swift in Sources */,
+				F0DE0CA21FB773FE00B11CCB /* EmplesFSJsonReader.swift in Sources */,
 				F075AF151FB7691200ACCC16 /* CompositionRootModule.swift in Sources */,
 				F075AF4C1FB7691200ACCC16 /* DetailDirectionTextViewCell.swift in Sources */,
 				F075AF341FB7691200ACCC16 /* DetailView.swift in Sources */,
@@ -929,8 +945,8 @@
 				F075AF4E1FB7691200ACCC16 /* DetailMapCellModel.swift in Sources */,
 				F075AF0B1FB7691200ACCC16 /* NSObject+Name.swift in Sources */,
 				F075AF571FB7691200ACCC16 /* EmplesMenuViewCell.swift in Sources */,
-				F075AF181FB7691200ACCC16 /* DataRequestProtocol.swift in Sources */,
 				F075AF1F1FB7691200ACCC16 /* GenericGridViewDelegate.swift in Sources */,
+				F0DE0CA51FB773FE00B11CCB /* DataRequestProtocol.swift in Sources */,
 				F075AF091FB7691200ACCC16 /* FileNamesStrings.swift in Sources */,
 				F075AF301FB7691200ACCC16 /* EmplesItemRouter.swift in Sources */,
 				F075AF251FB7691200ACCC16 /* DataSourceItem.swift in Sources */,
@@ -942,12 +958,12 @@
 				F075AF261FB7691200ACCC16 /* ViewCellModelProtocol.swift in Sources */,
 				F075AF561FB7691200ACCC16 /* EmplesMenuCellModel.swift in Sources */,
 				F075AF421FB7691200ACCC16 /* StackedViewSource.swift in Sources */,
-				F075AF431FB7691200ACCC16 /* EmplesMenuModelDecorator.swift in Sources */,
+				F0DE0CA81FB7764900B11CCB /* DataAreaGatewayProtocol.swift in Sources */,
 				F075AF5B1FB7691200ACCC16 /* EProgressView.swift in Sources */,
 				F075AF501FB7691200ACCC16 /* EmplesGridCellModel.swift in Sources */,
 				F075AF411FB7691200ACCC16 /* StackedViewDelegate.swift in Sources */,
 				F075AF2C1FB7691200ACCC16 /* BaseCollectionView.swift in Sources */,
-				F075AF1C1FB7691200ACCC16 /* Result.swift in Sources */,
+				F0DE0CAA1FB779C200B11CCB /* DisplayAreaCollectionUseCase.swift in Sources */,
 				F075AF111FB7691200ACCC16 /* BaseAppDelegate.swift in Sources */,
 				F075AF271FB7691200ACCC16 /* ViewCellProtocol.swift in Sources */,
 				F075AF361FB7691200ACCC16 /* EmplesGalleryView.swift in Sources */,

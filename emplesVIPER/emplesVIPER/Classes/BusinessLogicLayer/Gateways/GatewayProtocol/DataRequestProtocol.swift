@@ -8,7 +8,6 @@
 
 import ObjectMapper
 
-protocol DataRequestProtocol
-{
+protocol DataRequestProtocol {
     func fetchAllAreas(with response:((Result<[Mappable]>) -> Void))
 }

@@ -13,16 +13,14 @@ class EmplesMenuPresenter :PresenterUICycleProtocol {
     public weak var view :EmplesMenuView?
     public var router :EmplesMenuRouter?
     private var model: EmplesMenuModel!
-    private var decorator :EmplesMenuModelDecorator!
     
     required init(_ model: EmplesMenuModel) {
         self.model = model
         self.model.delegate = self
-        self.decorator = EmplesMenuModelDecorator(model: self.model)
     }
     
     func viewDidLoad() {
-        self.view?.setSource(self.decorator.dataSource)
+        self.view?.setSource(self.model.dataSource)
     }
 }
 

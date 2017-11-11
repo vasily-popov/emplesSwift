@@ -12,7 +12,7 @@ typealias DataSourceItemSelect = ((ViewCellModelProtocol, Int) -> Void)
 
 struct DataSourceItem {
     let model :ViewCellModelProtocol
-    let selectAction : DataSourceItemSelect?
+    var selectAction : DataSourceItemSelect?
     let rowHeight : CGFloat
     init(model:ViewCellModelProtocol, rowHeight:CGFloat = 60.0, _ selectAction:DataSourceItemSelect?) {
         self.model = model

@@ -17,7 +17,6 @@ let collectionModule = DependencyContainer() { container in
             router.window = menuRouter.window
             router.module = detailModule
     }
-    container.register(.shared) {EmplesAreasModel($0) as EmplesAreasModel}
     
     container.register(tag: MenuSelectedItem.List) { try listModule.resolve() as CollectionViewProtocol as CollectionViewProtocol }
     container.register(tag: MenuSelectedItem.Grid) { try gridModule.resolve() as CollectionViewProtocol as CollectionViewProtocol }
@@ -36,10 +35,11 @@ let carouselModule = DependencyContainer() { container in
         .resolvingProperties { container, view in
             view.presenter = try container.resolve() as EmplesCarouselPresenter
     }
-    container.register() {EmplesCarouselPresenter($0) as EmplesCarouselPresenter}
+    container.register() {EmplesCarouselPresenter() as EmplesCarouselPresenter}
         .resolvingProperties { container, presenter in
             presenter.view = try container.resolve() as CollectionViewProtocol
             presenter.router = try container.resolve() as EmplesItemRouter
+            presenter.displayCollectionUseCase = try container.resolve()
     }
 }
 
@@ -49,10 +49,11 @@ let galleryModule = DependencyContainer() { container in
         .resolvingProperties { container, view in
             view.presenter = try container.resolve() as EmplesGalleryPresenter
     }
-    container.register() {EmplesGalleryPresenter($0) as EmplesGalleryPresenter}
+    container.register() {EmplesGalleryPresenter() as EmplesGalleryPresenter}
         .resolvingProperties { container, presenter in
             presenter.view = try container.resolve() as CollectionViewProtocol
             presenter.router = try container.resolve() as EmplesItemRouter
+            presenter.displayCollectionUseCase = try container.resolve()
     }
 }
 
@@ -62,10 +63,11 @@ let gridModule = DependencyContainer() { container in
         .resolvingProperties { container, view in
             view.presenter = try container.resolve() as EmplesGridPresenter
     }
-    container.register() {EmplesGridPresenter($0) as EmplesGridPresenter}
+    container.register() {EmplesGridPresenter() as EmplesGridPresenter}
         .resolvingProperties { container, presenter in
             presenter.view = try container.resolve() as CollectionViewProtocol
             presenter.router = try container.resolve() as EmplesItemRouter
+            presenter.displayCollectionUseCase = try container.resolve()
     }
 }
 
@@ -75,10 +77,11 @@ let listModule = DependencyContainer() { container in
         .resolvingProperties { container, view in
             view.presenter = try container.resolve() as EmplesListPresenter
     }
-    container.register() {EmplesListPresenter($0) as EmplesListPresenter}
+    container.register() {EmplesListPresenter() as EmplesListPresenter}
         .resolvingProperties { container, presenter in
             presenter.view = try container.resolve() as CollectionViewProtocol
             presenter.router = try container.resolve() as EmplesItemRouter
+            presenter.displayCollectionUseCase = try container.resolve()
     }
 }
 
@@ -88,10 +91,11 @@ let stackModule = DependencyContainer() { container in
         .resolvingProperties { container, view in
             view.presenter = try container.resolve() as EmplesStackedPresenter
     }
-    container.register() {EmplesStackedPresenter($0) as EmplesStackedPresenter}
+    container.register() {EmplesStackedPresenter() as EmplesStackedPresenter}
         .resolvingProperties { container, presenter in
             presenter.view = try container.resolve() as CollectionViewProtocol
             presenter.router = try container.resolve() as EmplesItemRouter
+            presenter.displayCollectionUseCase = try container.resolve()
     }
 }
 

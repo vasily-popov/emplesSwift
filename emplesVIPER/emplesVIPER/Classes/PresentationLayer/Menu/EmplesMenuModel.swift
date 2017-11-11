@@ -23,7 +23,7 @@ protocol EmplesMenuSelectProtocol : class {
 }
 
 class EmplesMenuModel {
-    var dataSource: Array<String> = {
+    private var source: Array<String> = {
         return [LocalizedStrings.kListString.localized,
                 LocalizedStrings.kGridString.localized,
                 LocalizedStrings.kStackString.localized,
@@ -32,6 +32,18 @@ class EmplesMenuModel {
                 ]
     }()
     
+    lazy var dataSource:Array<DataSourceItem> = {
+        return self.source.map({ (text) -> DataSourceItem in
+            let item = EmplesMenuCellModel()
+            item.text = text
+            return DataSourceItem(model: item, rowHeight: 50.0, { [weak self] (model, index) in
+                if let selsectedItem = MenuSelectedItem(rawValue: index) {
+                    self?.delegate?.select(selsectedItem)
+                }
+            })
+        })
+    }()
+    
     weak var delegate: EmplesMenuSelectProtocol?
-
 }
+

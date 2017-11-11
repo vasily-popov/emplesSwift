@@ -51,6 +51,7 @@ let menuModule = DependencyContainer() { container in
 let dataLayerModule = DependencyContainer() { container in
     
     container.register(.singleton) {EmplesFSJsonReader() as DataRequestProtocol}
-    container.register(.singleton) {DataAreaRequestClient(with:$0) as DataAreaRequestClient}
+    container.register(.singleton) {DataFilePersistenceGateway(with: $0) as DataAreaGatewayProtocol}
+    container.register() {DisplayAreaCollectionUseCaseImplementation(with: $0) as DisplayAreaCollectionUseCase}
 }
 

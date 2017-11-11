@@ -9,15 +9,17 @@
 import Foundation
 import ObjectMapper
 
-class DataAreaRequestClient {
+class DataFilePersistenceGateway {
     
     var factory :DataRequestProtocol
     
     required init(with factory:DataRequestProtocol) {
         self.factory = factory
     }
-    
-    public func getAreas(with response:@escaping ((Result<[Mappable]>) -> Void)) {
+}
+
+extension DataFilePersistenceGateway : DataAreaGatewayProtocol {
+    func getAreas(with response: @escaping DataAreaGatewayResponse) {
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
             self?.factory.fetchAllAreas(with: { (result) in
                 DispatchQueue.main.async {
@@ -26,7 +28,5 @@ class DataAreaRequestClient {
                 
             })
         }
-        
-        
     }
 }
