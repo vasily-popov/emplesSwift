@@ -7,16 +7,14 @@
 //
 
 import UIKit
-import Dip
+import Swinject
 
 class EmplesMenuRouter : BaseRouter {
     
-    var module: DependencyContainer!
+    var assembler: CollectionAssembler!
     
     func navigate(item:MenuSelectedItem) {
-        
-        let collectionView = try? module.resolve(tag: item) as CollectionViewProtocol
-        if let view = collectionView  as? UIViewController {
+        if let view = assembler.resolver.resolve(CollectionViewProtocol.self, name: String(describing: item)) as? UIViewController {
             self.viewController?.pushViewController(view, animated: true)
         }
     }

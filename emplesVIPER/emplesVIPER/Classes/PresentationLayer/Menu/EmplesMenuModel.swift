@@ -7,9 +7,8 @@
 //
 
 import Foundation
-import Dip
 
-enum MenuSelectedItem: Int, DependencyTagConvertible {
+enum MenuSelectedItem: Int {
     case List = 0
     case Grid
     case Stack

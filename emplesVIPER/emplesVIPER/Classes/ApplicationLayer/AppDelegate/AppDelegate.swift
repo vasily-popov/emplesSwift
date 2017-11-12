@@ -7,13 +7,11 @@
 //
 
 import UIKit
-import Dip
+import Swinject
 
 @UIApplicationMain
 
 class AppDelegate: BaseAppDelegate {
-    
-    private let container = DependencyContainer.configure()
     
     override var services: [ApplicationService] {
         return [
@@ -22,12 +20,12 @@ class AppDelegate: BaseAppDelegate {
         ]
     }
     
+    var rootAssembler = RootAssembler()
     override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool
     {
+        _ = RootAssembler.rootAssembler()
         _ = super.application(application, didFinishLaunchingWithOptions: launchOptions)
-        
-        self.window = try! container.resolve() as UIWindow
-        self.window?.rootViewController = try! container.resolve() as MainNavigationController
+        self.window = rootAssembler.assembler.resolver.resolve(UIWindow.self)!
         self.window?.makeKeyAndVisible()
         return true
     }

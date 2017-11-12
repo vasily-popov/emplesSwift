@@ -20,9 +20,6 @@
 		F075AF111FB7691200ACCC16 /* BaseAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AE891FB7691200ACCC16 /* BaseAppDelegate.swift */; };
 		F075AF121FB7691200ACCC16 /* GoogleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AE8A1FB7691200ACCC16 /* GoogleService.swift */; };
 		F075AF131FB7691200ACCC16 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AE8C1FB7691200ACCC16 /* MainNavigationController.swift */; };
-		F075AF141FB7691200ACCC16 /* CollectionModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AE8E1FB7691200ACCC16 /* CollectionModule.swift */; };
-		F075AF151FB7691200ACCC16 /* CompositionRootModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AE8F1FB7691200ACCC16 /* CompositionRootModule.swift */; };
-		F075AF161FB7691200ACCC16 /* DetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AE901FB7691200ACCC16 /* DetailModule.swift */; };
 		F075AF1D1FB7691200ACCC16 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AE9D1FB7691200ACCC16 /* BaseRouter.swift */; };
 		F075AF1F1FB7691200ACCC16 /* GenericGridViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AEA01FB7691200ACCC16 /* GenericGridViewDelegate.swift */; };
 		F075AF201FB7691200ACCC16 /* GenericGridViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F075AEA11FB7691200ACCC16 /* GenericGridViewSource.swift */; };
@@ -96,6 +93,11 @@
 		F0DE0CAA1FB779C200B11CCB /* DisplayAreaCollectionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DE0CA91FB779C200B11CCB /* DisplayAreaCollectionUseCase.swift */; };
 		F0DE0CAC1FB77C4D00B11CCB /* DisplayAreaCollectionUseCaseImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DE0CAB1FB77C4D00B11CCB /* DisplayAreaCollectionUseCaseImplementation.swift */; };
 		F0DE0CAE1FB7A53900B11CCB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F0DE0CAD1FB7A53900B11CCB /* README.md */; };
+		F0DE0CB21FB8E52F00B11CCB /* RootAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DE0CB11FB8E52F00B11CCB /* RootAssembler.swift */; };
+		F0DE0CB41FB8E58F00B11CCB /* RootViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DE0CB31FB8E58F00B11CCB /* RootViewAssembly.swift */; };
+		F0DE0CB71FB8E61100B11CCB /* BusinessLayerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DE0CB61FB8E61100B11CCB /* BusinessLayerAssembly.swift */; };
+		F0DE0CBC1FB8E73100B11CCB /* CollectionAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DE0CBB1FB8E73100B11CCB /* CollectionAssembler.swift */; };
+		F0DE0CBE1FB8FCA100B11CCB /* DetailAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DE0CBD1FB8FCA100B11CCB /* DetailAssembler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,9 +117,6 @@
 		F075AE891FB7691200ACCC16 /* BaseAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAppDelegate.swift; sourceTree = "<group>"; };
 		F075AE8A1FB7691200ACCC16 /* GoogleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleService.swift; sourceTree = "<group>"; };
 		F075AE8C1FB7691200ACCC16 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
-		F075AE8E1FB7691200ACCC16 /* CollectionModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionModule.swift; sourceTree = "<group>"; };
-		F075AE8F1FB7691200ACCC16 /* CompositionRootModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositionRootModule.swift; sourceTree = "<group>"; };
-		F075AE901FB7691200ACCC16 /* DetailModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailModule.swift; sourceTree = "<group>"; };
 		F075AE9D1FB7691200ACCC16 /* BaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		F075AEA01FB7691200ACCC16 /* GenericGridViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericGridViewDelegate.swift; sourceTree = "<group>"; };
 		F075AEA11FB7691200ACCC16 /* GenericGridViewSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericGridViewSource.swift; sourceTree = "<group>"; };
@@ -194,6 +193,11 @@
 		F0DE0CA91FB779C200B11CCB /* DisplayAreaCollectionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayAreaCollectionUseCase.swift; sourceTree = "<group>"; };
 		F0DE0CAB1FB77C4D00B11CCB /* DisplayAreaCollectionUseCaseImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayAreaCollectionUseCaseImplementation.swift; sourceTree = "<group>"; };
 		F0DE0CAD1FB7A53900B11CCB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F0DE0CB11FB8E52F00B11CCB /* RootAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootAssembler.swift; sourceTree = "<group>"; };
+		F0DE0CB31FB8E58F00B11CCB /* RootViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewAssembly.swift; sourceTree = "<group>"; };
+		F0DE0CB61FB8E61100B11CCB /* BusinessLayerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessLayerAssembly.swift; sourceTree = "<group>"; };
+		F0DE0CBB1FB8E73100B11CCB /* CollectionAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAssembler.swift; sourceTree = "<group>"; };
+		F0DE0CBD1FB8FCA100B11CCB /* DetailAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAssembler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,7 +293,6 @@
 			isa = PBXGroup;
 			children = (
 				F075AE851FB7691200ACCC16 /* ApplicationLayer */,
-				F075AE8D1FB7691200ACCC16 /* Assembly */,
 				F075AE911FB7691200ACCC16 /* BusinessLogicLayer */,
 				F075AE9B1FB7691200ACCC16 /* Common */,
 				F075AEAB1FB7691200ACCC16 /* PresentationLayer */,
@@ -301,6 +304,7 @@
 		F075AE851FB7691200ACCC16 /* ApplicationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				F0DE0CB81FB8E64400B11CCB /* Assembly */,
 				F075AE861FB7691200ACCC16 /* AppDelegate */,
 				F075AE8B1FB7691200ACCC16 /* UINavigationController */,
 			);
@@ -310,10 +314,9 @@
 		F075AE861FB7691200ACCC16 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
+				F0DE0CB91FB8E68800B11CCB /* Services */,
 				F075AE871FB7691200ACCC16 /* AppDelegate.swift */,
-				F075AE881FB7691200ACCC16 /* AppearanceService.swift */,
 				F075AE891FB7691200ACCC16 /* BaseAppDelegate.swift */,
-				F075AE8A1FB7691200ACCC16 /* GoogleService.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -326,19 +329,10 @@
 			path = UINavigationController;
 			sourceTree = "<group>";
 		};
-		F075AE8D1FB7691200ACCC16 /* Assembly */ = {
-			isa = PBXGroup;
-			children = (
-				F075AE8E1FB7691200ACCC16 /* CollectionModule.swift */,
-				F075AE8F1FB7691200ACCC16 /* CompositionRootModule.swift */,
-				F075AE901FB7691200ACCC16 /* DetailModule.swift */,
-			);
-			path = Assembly;
-			sourceTree = "<group>";
-		};
 		F075AE911FB7691200ACCC16 /* BusinessLogicLayer */ = {
 			isa = PBXGroup;
 			children = (
+				F0DE0CB51FB8E60400B11CCB /* Assembler */,
 				F0DE0C891FB773FE00B11CCB /* Entity */,
 				F0DE0C8F1FB773FE00B11CCB /* Gateways */,
 				F0DE0C881FB773FE00B11CCB /* Result.swift */,
@@ -398,6 +392,7 @@
 		F075AEAB1FB7691200ACCC16 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				F0DE0CBA1FB8E71300B11CCB /* Assembler */,
 				F075AEAC1FB7691200ACCC16 /* Collections */,
 				F075AED31FB7691200ACCC16 /* Menu */,
 			);
@@ -739,6 +734,41 @@
 			path = JSONModel;
 			sourceTree = "<group>";
 		};
+		F0DE0CB51FB8E60400B11CCB /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				F0DE0CB61FB8E61100B11CCB /* BusinessLayerAssembly.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		F0DE0CB81FB8E64400B11CCB /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				F0DE0CB11FB8E52F00B11CCB /* RootAssembler.swift */,
+				F0DE0CB31FB8E58F00B11CCB /* RootViewAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		F0DE0CB91FB8E68800B11CCB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F075AE881FB7691200ACCC16 /* AppearanceService.swift */,
+				F075AE8A1FB7691200ACCC16 /* GoogleService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F0DE0CBA1FB8E71300B11CCB /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				F0DE0CBB1FB8E73100B11CCB /* CollectionAssembler.swift */,
+				F0DE0CBD1FB8FCA100B11CCB /* DetailAssembler.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -847,19 +877,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-emplesVIPER/Pods-emplesVIPER-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Dip/Dip.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/iCarousel/iCarousel.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Dip.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Koloda.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iCarousel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
@@ -899,12 +929,12 @@
 				F075AF471FB7691200ACCC16 /* EmplesMenuView.swift in Sources */,
 				F075AF4B1FB7691200ACCC16 /* DetailDirectionsCellModel.swift in Sources */,
 				F075AF2D1FB7691200ACCC16 /* CollectionViewProtocol.swift in Sources */,
-				F075AF141FB7691200ACCC16 /* CollectionModule.swift in Sources */,
 				F075AF511FB7691200ACCC16 /* EmplesGridViewCell.swift in Sources */,
 				F0DE0C9E1FB773FE00B11CCB /* Result.swift in Sources */,
 				F075AF311FB7691200ACCC16 /* PresenterUICycleProtocol.swift in Sources */,
 				F0DE0CA61FB773FE00B11CCB /* EmplesRecAreaMappable.swift in Sources */,
 				F075AF441FB7691200ACCC16 /* EmplesMenuModel.swift in Sources */,
+				F0DE0CB21FB8E52F00B11CCB /* RootAssembler.swift in Sources */,
 				F075AF4F1FB7691200ACCC16 /* DetailMapViewCell.swift in Sources */,
 				F075AF3D1FB7691200ACCC16 /* EmplesListView.swift in Sources */,
 				F0DE0C9F1FB773FE00B11CCB /* RecArea.swift in Sources */,
@@ -933,12 +963,14 @@
 				F075AF291FB7691200ACCC16 /* EmplesCarouselView.swift in Sources */,
 				F075AF241FB7691200ACCC16 /* DataGridSourceItem.swift in Sources */,
 				F075AF3E1FB7691200ACCC16 /* StackKolodaView.swift in Sources */,
+				F0DE0CB71FB8E61100B11CCB /* BusinessLayerAssembly.swift in Sources */,
+				F0DE0CB41FB8E58F00B11CCB /* RootViewAssembly.swift in Sources */,
 				F075AF131FB7691200ACCC16 /* MainNavigationController.swift in Sources */,
+				F0DE0CBE1FB8FCA100B11CCB /* DetailAssembler.swift in Sources */,
 				F075AF371FB7691200ACCC16 /* EmplesGalleryCollectionFlowLayout.swift in Sources */,
 				F075AF221FB7691200ACCC16 /* GenericTableViewDelegate.swift in Sources */,
 				F075AF3C1FB7691200ACCC16 /* EmplesListPresenter.swift in Sources */,
 				F0DE0CA21FB773FE00B11CCB /* EmplesFSJsonReader.swift in Sources */,
-				F075AF151FB7691200ACCC16 /* CompositionRootModule.swift in Sources */,
 				F075AF4C1FB7691200ACCC16 /* DetailDirectionTextViewCell.swift in Sources */,
 				F075AF341FB7691200ACCC16 /* DetailView.swift in Sources */,
 				F075AF321FB7691200ACCC16 /* DetailAreaModel.swift in Sources */,
@@ -951,9 +983,9 @@
 				F075AF301FB7691200ACCC16 /* EmplesItemRouter.swift in Sources */,
 				F075AF251FB7691200ACCC16 /* DataSourceItem.swift in Sources */,
 				F075AF3F1FB7691200ACCC16 /* EmplesStackedPresenter.swift in Sources */,
-				F075AF161FB7691200ACCC16 /* DetailModule.swift in Sources */,
 				F075AF351FB7691200ACCC16 /* EmplesGalleryPresenter.swift in Sources */,
 				F075AF201FB7691200ACCC16 /* GenericGridViewSource.swift in Sources */,
+				F0DE0CBC1FB8E73100B11CCB /* CollectionAssembler.swift in Sources */,
 				F075AF0D1FB7691200ACCC16 /* String+Localizable.swift in Sources */,
 				F075AF261FB7691200ACCC16 /* ViewCellModelProtocol.swift in Sources */,
 				F075AF561FB7691200ACCC16 /* EmplesMenuCellModel.swift in Sources */,
