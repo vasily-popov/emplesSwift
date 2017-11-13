@@ -59,9 +59,6 @@ class CollectionRootAssembly: Assembly {
 class CarouselAssembly: Assembly {
     
     func assemble(container: Container) {
-        container.register(EmplesCarouselView.self) { _ in EmplesCarouselView() }.initCompleted { (r, view) in
-            view.presenter = r.resolve(EmplesCarouselPresenter.self)
-        }
         container.register(EmplesCarouselPresenter.self) { _ in EmplesCarouselPresenter() }.initCompleted { (r, presenter) in
             presenter.view = r.resolve(CollectionViewProtocol.self,
                                        name: String(describing: MenuSelectedItem.Carousel))
@@ -74,9 +71,6 @@ class CarouselAssembly: Assembly {
 class GalleryAssembly: Assembly {
     
     func assemble(container: Container) {
-        container.register(EmplesGalleryView.self) { _ in EmplesGalleryView() }.initCompleted { (r, view) in
-            view.presenter = r.resolve(EmplesGalleryPresenter.self)
-        }
         container.register(EmplesGalleryPresenter.self) { _ in EmplesGalleryPresenter() }.initCompleted { (r, presenter) in
             presenter.view = r.resolve(CollectionViewProtocol.self,
                                        name: String(describing: MenuSelectedItem.Gallery))
@@ -89,9 +83,6 @@ class GalleryAssembly: Assembly {
 class GridAssembly: Assembly {
     
     func assemble(container: Container) {
-        container.register(EmplesGridView.self) { _ in EmplesGridView() }.initCompleted { (r, view) in
-            view.presenter = r.resolve(EmplesGridPresenter.self)
-        }
         container.register(EmplesGridPresenter.self) { _ in EmplesGridPresenter() }.initCompleted { (r, presenter) in
             presenter.view = r.resolve(CollectionViewProtocol.self,
                                        name: String(describing: MenuSelectedItem.Grid))
@@ -104,9 +95,6 @@ class GridAssembly: Assembly {
 class ListAssembly: Assembly {
     
     func assemble(container: Container) {
-        container.register(EmplesListView.self) { _ in EmplesListView() }.initCompleted { (r, view) in
-            view.presenter = r.resolve(EmplesListPresenter.self)
-        }
         container.register(EmplesListPresenter.self) { _ in EmplesListPresenter() }.initCompleted { (r, presenter) in
             presenter.view = r.resolve(CollectionViewProtocol.self,
                                        name: String(describing: MenuSelectedItem.List))
@@ -119,9 +107,6 @@ class ListAssembly: Assembly {
 class StackAssembly: Assembly {
     
     func assemble(container: Container) {
-        container.register(EmplesStackedView.self) { _ in EmplesStackedView() }.initCompleted { (r, view) in
-            view.presenter = r.resolve(EmplesStackedPresenter.self)
-        }
         container.register(EmplesStackedPresenter.self) { _ in EmplesStackedPresenter() }.initCompleted { (r, presenter) in
             presenter.view = r.resolve(CollectionViewProtocol.self,
                                        name: String(describing: MenuSelectedItem.Stack))
