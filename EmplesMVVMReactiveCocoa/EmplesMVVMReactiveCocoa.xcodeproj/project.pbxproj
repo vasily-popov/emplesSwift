@@ -10,7 +10,6 @@
 		C1ED65CE615D0E15BC351C69 /* Pods_EmplesMVVMReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC80E1276AA81CAE91AA5BC /* Pods_EmplesMVVMReactiveCocoa.framework */; };
 		F06AE22A1FB9FF7A00B4B53B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F06AE1981FB9FF7900B4B53B /* Assets.xcassets */; };
 		F06AE22B1FB9FF7A00B4B53B /* RecArea.json in Resources */ = {isa = PBXBuildFile; fileRef = F06AE19A1FB9FF7900B4B53B /* RecArea.json */; };
-		F06AE22C1FB9FF7A00B4B53B /* RecAreaAddress.json in Resources */ = {isa = PBXBuildFile; fileRef = F06AE19B1FB9FF7900B4B53B /* RecAreaAddress.json */; };
 		F06AE22D1FB9FF7A00B4B53B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F06AE19D1FB9FF7900B4B53B /* Localizable.strings */; };
 		F06AE22E1FB9FF7A00B4B53B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1A41FB9FF7900B4B53B /* AppDelegate.swift */; };
 		F06AE22F1FB9FF7A00B4B53B /* BaseAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1A51FB9FF7900B4B53B /* BaseAppDelegate.swift */; };
@@ -40,32 +39,32 @@
 		F06AE2471FB9FF7A00B4B53B /* ViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1CE1FB9FF7900B4B53B /* ViewCellProtocol.swift */; };
 		F06AE2481FB9FF7A00B4B53B /* CollectionAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1D11FB9FF7900B4B53B /* CollectionAssembler.swift */; };
 		F06AE2491FB9FF7A00B4B53B /* DetailAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1D21FB9FF7900B4B53B /* DetailAssembler.swift */; };
-		F06AE24A1FB9FF7A00B4B53B /* EmplesCarouselPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1D51FB9FF7900B4B53B /* EmplesCarouselPresenter.swift */; };
+		F06AE24A1FB9FF7A00B4B53B /* EmplesCarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1D51FB9FF7900B4B53B /* EmplesCarouselViewModel.swift */; };
 		F06AE24B1FB9FF7A00B4B53B /* EmplesCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1D61FB9FF7900B4B53B /* EmplesCarouselView.swift */; };
 		F06AE24C1FB9FF7A00B4B53B /* CarouselViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1D81FB9FF7900B4B53B /* CarouselViewDelegate.swift */; };
 		F06AE24D1FB9FF7A00B4B53B /* CarouselViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1D91FB9FF7900B4B53B /* CarouselViewSource.swift */; };
 		F06AE24E1FB9FF7A00B4B53B /* BaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1DB1FB9FF7900B4B53B /* BaseCollectionView.swift */; };
 		F06AE24F1FB9FF7A00B4B53B /* CollectionViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1DC1FB9FF7900B4B53B /* CollectionViewProtocol.swift */; };
-		F06AE2501FB9FF7A00B4B53B /* EmplesCollectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1DD1FB9FF7900B4B53B /* EmplesCollectionPresenter.swift */; };
+		F06AE2501FB9FF7A00B4B53B /* EmplesCollectionViewModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1DD1FB9FF7900B4B53B /* EmplesCollectionViewModelBase.swift */; };
 		F06AE2511FB9FF7A00B4B53B /* EmplesItemRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1DE1FB9FF7900B4B53B /* EmplesItemRouter.swift */; };
-		F06AE2521FB9FF7A00B4B53B /* PresenterUICycleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1DF1FB9FF7900B4B53B /* PresenterUICycleProtocol.swift */; };
+		F06AE2521FB9FF7A00B4B53B /* LifeCycleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1DF1FB9FF7900B4B53B /* LifeCycleProtocol.swift */; };
 		F06AE2531FB9FF7A00B4B53B /* DetailAreaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1E11FB9FF7900B4B53B /* DetailAreaModel.swift */; };
-		F06AE2541FB9FF7A00B4B53B /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1E21FB9FF7900B4B53B /* DetailPresenter.swift */; };
+		F06AE2541FB9FF7A00B4B53B /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1E21FB9FF7900B4B53B /* DetailViewModel.swift */; };
 		F06AE2551FB9FF7A00B4B53B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1E31FB9FF7900B4B53B /* DetailView.swift */; };
-		F06AE2561FB9FF7A00B4B53B /* EmplesGalleryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1E51FB9FF7900B4B53B /* EmplesGalleryPresenter.swift */; };
+		F06AE2561FB9FF7A00B4B53B /* EmplesGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1E51FB9FF7900B4B53B /* EmplesGalleryViewModel.swift */; };
 		F06AE2571FB9FF7A00B4B53B /* EmplesGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1E61FB9FF7900B4B53B /* EmplesGalleryView.swift */; };
 		F06AE2581FB9FF7A00B4B53B /* EmplesGalleryCollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1E81FB9FF7900B4B53B /* EmplesGalleryCollectionFlowLayout.swift */; };
-		F06AE2591FB9FF7A00B4B53B /* EmplesGridPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1EA1FB9FF7900B4B53B /* EmplesGridPresenter.swift */; };
+		F06AE2591FB9FF7A00B4B53B /* EmplesGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1EA1FB9FF7900B4B53B /* EmplesGridViewModel.swift */; };
 		F06AE25A1FB9FF7A00B4B53B /* EmplesGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1EB1FB9FF7900B4B53B /* EmplesGridView.swift */; };
-		F06AE25B1FB9FF7A00B4B53B /* EmplesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1ED1FB9FF7900B4B53B /* EmplesListPresenter.swift */; };
+		F06AE25B1FB9FF7A00B4B53B /* EmplesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1ED1FB9FF7900B4B53B /* EmplesListViewModel.swift */; };
 		F06AE25C1FB9FF7A00B4B53B /* EmplesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1EE1FB9FF7900B4B53B /* EmplesListView.swift */; };
 		F06AE25D1FB9FF7A00B4B53B /* StackKolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1F11FB9FF7900B4B53B /* StackKolodaView.swift */; };
-		F06AE25E1FB9FF7A00B4B53B /* EmplesStackedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1F21FB9FF7900B4B53B /* EmplesStackedPresenter.swift */; };
+		F06AE25E1FB9FF7A00B4B53B /* EmplesStackedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1F21FB9FF7900B4B53B /* EmplesStackedViewModel.swift */; };
 		F06AE25F1FB9FF7A00B4B53B /* EmplesStackedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1F31FB9FF7900B4B53B /* EmplesStackedView.swift */; };
 		F06AE2601FB9FF7A00B4B53B /* StackedViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1F51FB9FF7900B4B53B /* StackedViewDelegate.swift */; };
 		F06AE2611FB9FF7A00B4B53B /* StackedViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1F61FB9FF7900B4B53B /* StackedViewSource.swift */; };
 		F06AE2621FB9FF7A00B4B53B /* EmplesMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1F81FB9FF7A00B4B53B /* EmplesMenuModel.swift */; };
-		F06AE2631FB9FF7A00B4B53B /* EmplesMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1F91FB9FF7A00B4B53B /* EmplesMenuPresenter.swift */; };
+		F06AE2631FB9FF7A00B4B53B /* EmplesMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1F91FB9FF7A00B4B53B /* EmplesMenuViewModel.swift */; };
 		F06AE2641FB9FF7A00B4B53B /* EmplesMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1FA1FB9FF7A00B4B53B /* EmplesMenuRouter.swift */; };
 		F06AE2651FB9FF7A00B4B53B /* EmplesMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE1FB1FB9FF7A00B4B53B /* EmplesMenuView.swift */; };
 		F06AE2661FB9FF7A00B4B53B /* DetailDescriptionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE2001FB9FF7A00B4B53B /* DetailDescriptionCellModel.swift */; };
@@ -90,7 +89,6 @@
 		F06AE2791FB9FF7A00B4B53B /* EProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE21A1FB9FF7A00B4B53B /* EProgressView.swift */; };
 		F06AE27A1FB9FF7A00B4B53B /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = F06AE21C1FB9FF7A00B4B53B /* background.png */; };
 		F06AE27B1FB9FF7A00B4B53B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F06AE21D1FB9FF7A00B4B53B /* LaunchScreen.storyboard */; };
-		F06AE27C1FB9FF7A00B4B53B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F06AE21F1FB9FF7A00B4B53B /* Info.plist */; };
 		F06AE27D1FB9FF7A00B4B53B /* ColorStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE2221FB9FF7A00B4B53B /* ColorStrings.swift */; };
 		F06AE27E1FB9FF7A00B4B53B /* FileNamesStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE2231FB9FF7A00B4B53B /* FileNamesStrings.swift */; };
 		F06AE27F1FB9FF7A00B4B53B /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AE2241FB9FF7A00B4B53B /* LocalizedStrings.swift */; };
@@ -139,32 +137,32 @@
 		F06AE1CE1FB9FF7900B4B53B /* ViewCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCellProtocol.swift; sourceTree = "<group>"; };
 		F06AE1D11FB9FF7900B4B53B /* CollectionAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionAssembler.swift; sourceTree = "<group>"; };
 		F06AE1D21FB9FF7900B4B53B /* DetailAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailAssembler.swift; sourceTree = "<group>"; };
-		F06AE1D51FB9FF7900B4B53B /* EmplesCarouselPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesCarouselPresenter.swift; sourceTree = "<group>"; };
+		F06AE1D51FB9FF7900B4B53B /* EmplesCarouselViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesCarouselViewModel.swift; sourceTree = "<group>"; };
 		F06AE1D61FB9FF7900B4B53B /* EmplesCarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesCarouselView.swift; sourceTree = "<group>"; };
 		F06AE1D81FB9FF7900B4B53B /* CarouselViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselViewDelegate.swift; sourceTree = "<group>"; };
 		F06AE1D91FB9FF7900B4B53B /* CarouselViewSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselViewSource.swift; sourceTree = "<group>"; };
 		F06AE1DB1FB9FF7900B4B53B /* BaseCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionView.swift; sourceTree = "<group>"; };
 		F06AE1DC1FB9FF7900B4B53B /* CollectionViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewProtocol.swift; sourceTree = "<group>"; };
-		F06AE1DD1FB9FF7900B4B53B /* EmplesCollectionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesCollectionPresenter.swift; sourceTree = "<group>"; };
+		F06AE1DD1FB9FF7900B4B53B /* EmplesCollectionViewModelBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesCollectionViewModelBase.swift; sourceTree = "<group>"; };
 		F06AE1DE1FB9FF7900B4B53B /* EmplesItemRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesItemRouter.swift; sourceTree = "<group>"; };
-		F06AE1DF1FB9FF7900B4B53B /* PresenterUICycleProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterUICycleProtocol.swift; sourceTree = "<group>"; };
+		F06AE1DF1FB9FF7900B4B53B /* LifeCycleProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeCycleProtocol.swift; sourceTree = "<group>"; };
 		F06AE1E11FB9FF7900B4B53B /* DetailAreaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailAreaModel.swift; sourceTree = "<group>"; };
-		F06AE1E21FB9FF7900B4B53B /* DetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		F06AE1E21FB9FF7900B4B53B /* DetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		F06AE1E31FB9FF7900B4B53B /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		F06AE1E51FB9FF7900B4B53B /* EmplesGalleryPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesGalleryPresenter.swift; sourceTree = "<group>"; };
+		F06AE1E51FB9FF7900B4B53B /* EmplesGalleryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesGalleryViewModel.swift; sourceTree = "<group>"; };
 		F06AE1E61FB9FF7900B4B53B /* EmplesGalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesGalleryView.swift; sourceTree = "<group>"; };
 		F06AE1E81FB9FF7900B4B53B /* EmplesGalleryCollectionFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesGalleryCollectionFlowLayout.swift; sourceTree = "<group>"; };
-		F06AE1EA1FB9FF7900B4B53B /* EmplesGridPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesGridPresenter.swift; sourceTree = "<group>"; };
+		F06AE1EA1FB9FF7900B4B53B /* EmplesGridViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesGridViewModel.swift; sourceTree = "<group>"; };
 		F06AE1EB1FB9FF7900B4B53B /* EmplesGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesGridView.swift; sourceTree = "<group>"; };
-		F06AE1ED1FB9FF7900B4B53B /* EmplesListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesListPresenter.swift; sourceTree = "<group>"; };
+		F06AE1ED1FB9FF7900B4B53B /* EmplesListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesListViewModel.swift; sourceTree = "<group>"; };
 		F06AE1EE1FB9FF7900B4B53B /* EmplesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesListView.swift; sourceTree = "<group>"; };
 		F06AE1F11FB9FF7900B4B53B /* StackKolodaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackKolodaView.swift; sourceTree = "<group>"; };
-		F06AE1F21FB9FF7900B4B53B /* EmplesStackedPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesStackedPresenter.swift; sourceTree = "<group>"; };
+		F06AE1F21FB9FF7900B4B53B /* EmplesStackedViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesStackedViewModel.swift; sourceTree = "<group>"; };
 		F06AE1F31FB9FF7900B4B53B /* EmplesStackedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesStackedView.swift; sourceTree = "<group>"; };
 		F06AE1F51FB9FF7900B4B53B /* StackedViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackedViewDelegate.swift; sourceTree = "<group>"; };
 		F06AE1F61FB9FF7900B4B53B /* StackedViewSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackedViewSource.swift; sourceTree = "<group>"; };
 		F06AE1F81FB9FF7A00B4B53B /* EmplesMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesMenuModel.swift; sourceTree = "<group>"; };
-		F06AE1F91FB9FF7A00B4B53B /* EmplesMenuPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesMenuPresenter.swift; sourceTree = "<group>"; };
+		F06AE1F91FB9FF7A00B4B53B /* EmplesMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesMenuViewModel.swift; sourceTree = "<group>"; };
 		F06AE1FA1FB9FF7A00B4B53B /* EmplesMenuRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesMenuRouter.swift; sourceTree = "<group>"; };
 		F06AE1FB1FB9FF7A00B4B53B /* EmplesMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesMenuView.swift; sourceTree = "<group>"; };
 		F06AE2001FB9FF7A00B4B53B /* DetailDescriptionCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailDescriptionCellModel.swift; sourceTree = "<group>"; };
@@ -480,7 +478,7 @@
 		F06AE1D41FB9FF7900B4B53B /* Carousel */ = {
 			isa = PBXGroup;
 			children = (
-				F06AE1D51FB9FF7900B4B53B /* EmplesCarouselPresenter.swift */,
+				F06AE1D51FB9FF7900B4B53B /* EmplesCarouselViewModel.swift */,
 				F06AE1D61FB9FF7900B4B53B /* EmplesCarouselView.swift */,
 				F06AE1D71FB9FF7900B4B53B /* Source */,
 			);
@@ -501,9 +499,9 @@
 			children = (
 				F06AE1DB1FB9FF7900B4B53B /* BaseCollectionView.swift */,
 				F06AE1DC1FB9FF7900B4B53B /* CollectionViewProtocol.swift */,
-				F06AE1DD1FB9FF7900B4B53B /* EmplesCollectionPresenter.swift */,
+				F06AE1DD1FB9FF7900B4B53B /* EmplesCollectionViewModelBase.swift */,
 				F06AE1DE1FB9FF7900B4B53B /* EmplesItemRouter.swift */,
-				F06AE1DF1FB9FF7900B4B53B /* PresenterUICycleProtocol.swift */,
+				F06AE1DF1FB9FF7900B4B53B /* LifeCycleProtocol.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -512,7 +510,7 @@
 			isa = PBXGroup;
 			children = (
 				F06AE1E11FB9FF7900B4B53B /* DetailAreaModel.swift */,
-				F06AE1E21FB9FF7900B4B53B /* DetailPresenter.swift */,
+				F06AE1E21FB9FF7900B4B53B /* DetailViewModel.swift */,
 				F06AE1E31FB9FF7900B4B53B /* DetailView.swift */,
 			);
 			path = Detail;
@@ -521,7 +519,7 @@
 		F06AE1E41FB9FF7900B4B53B /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
-				F06AE1E51FB9FF7900B4B53B /* EmplesGalleryPresenter.swift */,
+				F06AE1E51FB9FF7900B4B53B /* EmplesGalleryViewModel.swift */,
 				F06AE1E61FB9FF7900B4B53B /* EmplesGalleryView.swift */,
 				F06AE1E71FB9FF7900B4B53B /* FlowLayout */,
 			);
@@ -539,7 +537,7 @@
 		F06AE1E91FB9FF7900B4B53B /* Grid */ = {
 			isa = PBXGroup;
 			children = (
-				F06AE1EA1FB9FF7900B4B53B /* EmplesGridPresenter.swift */,
+				F06AE1EA1FB9FF7900B4B53B /* EmplesGridViewModel.swift */,
 				F06AE1EB1FB9FF7900B4B53B /* EmplesGridView.swift */,
 			);
 			path = Grid;
@@ -548,7 +546,7 @@
 		F06AE1EC1FB9FF7900B4B53B /* List */ = {
 			isa = PBXGroup;
 			children = (
-				F06AE1ED1FB9FF7900B4B53B /* EmplesListPresenter.swift */,
+				F06AE1ED1FB9FF7900B4B53B /* EmplesListViewModel.swift */,
 				F06AE1EE1FB9FF7900B4B53B /* EmplesListView.swift */,
 			);
 			path = List;
@@ -558,7 +556,7 @@
 			isa = PBXGroup;
 			children = (
 				F06AE1F01FB9FF7900B4B53B /* CustomView */,
-				F06AE1F21FB9FF7900B4B53B /* EmplesStackedPresenter.swift */,
+				F06AE1F21FB9FF7900B4B53B /* EmplesStackedViewModel.swift */,
 				F06AE1F31FB9FF7900B4B53B /* EmplesStackedView.swift */,
 				F06AE1F41FB9FF7900B4B53B /* Source */,
 			);
@@ -586,7 +584,7 @@
 			isa = PBXGroup;
 			children = (
 				F06AE1F81FB9FF7A00B4B53B /* EmplesMenuModel.swift */,
-				F06AE1F91FB9FF7A00B4B53B /* EmplesMenuPresenter.swift */,
+				F06AE1F91FB9FF7A00B4B53B /* EmplesMenuViewModel.swift */,
 				F06AE1FA1FB9FF7A00B4B53B /* EmplesMenuRouter.swift */,
 				F06AE1FB1FB9FF7A00B4B53B /* EmplesMenuView.swift */,
 			);
@@ -840,14 +838,12 @@
 				F06AE22D1FB9FF7A00B4B53B /* Localizable.strings in Resources */,
 				F06AE2731FB9FF7A00B4B53B /* EmplesListCellView.xib in Resources */,
 				F06AE2761FB9FF7A00B4B53B /* EmplesMenuViewCell.xib in Resources */,
-				F06AE22C1FB9FF7A00B4B53B /* RecAreaAddress.json in Resources */,
 				F06AE26B1FB9FF7A00B4B53B /* DetailDirectionTextViewCell.xib in Resources */,
 				F06AE22B1FB9FF7A00B4B53B /* RecArea.json in Resources */,
 				F06AE27B1FB9FF7A00B4B53B /* LaunchScreen.storyboard in Resources */,
 				F06AE2851FB9FFF200B4B53B /* README.md in Resources */,
 				F06AE27A1FB9FF7A00B4B53B /* background.png in Resources */,
 				F06AE2781FB9FF7A00B4B53B /* EmplesItemView.xib in Resources */,
-				F06AE27C1FB9FF7A00B4B53B /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -936,9 +932,9 @@
 				F06AE2721FB9FF7A00B4B53B /* EmplesListCellView.swift in Sources */,
 				F06AE2821FB9FF7A00B4B53B /* String+Localizable.swift in Sources */,
 				F06AE2441FB9FF7A00B4B53B /* DataGridSourceItem.swift in Sources */,
-				F06AE2631FB9FF7A00B4B53B /* EmplesMenuPresenter.swift in Sources */,
+				F06AE2631FB9FF7A00B4B53B /* EmplesMenuViewModel.swift in Sources */,
 				F06AE2311FB9FF7A00B4B53B /* GoogleService.swift in Sources */,
-				F06AE24A1FB9FF7A00B4B53B /* EmplesCarouselPresenter.swift in Sources */,
+				F06AE24A1FB9FF7A00B4B53B /* EmplesCarouselViewModel.swift in Sources */,
 				F06AE23A1FB9FF7A00B4B53B /* DataRequestProtocol.swift in Sources */,
 				F06AE2491FB9FF7A00B4B53B /* DetailAssembler.swift in Sources */,
 				F06AE2621FB9FF7A00B4B53B /* EmplesMenuModel.swift in Sources */,
@@ -955,11 +951,11 @@
 				F06AE2511FB9FF7A00B4B53B /* EmplesItemRouter.swift in Sources */,
 				F06AE24C1FB9FF7A00B4B53B /* CarouselViewDelegate.swift in Sources */,
 				F06AE25C1FB9FF7A00B4B53B /* EmplesListView.swift in Sources */,
-				F06AE25E1FB9FF7A00B4B53B /* EmplesStackedPresenter.swift in Sources */,
+				F06AE25E1FB9FF7A00B4B53B /* EmplesStackedViewModel.swift in Sources */,
 				F06AE24F1FB9FF7A00B4B53B /* CollectionViewProtocol.swift in Sources */,
 				F06AE2471FB9FF7A00B4B53B /* ViewCellProtocol.swift in Sources */,
 				F06AE2381FB9FF7A00B4B53B /* EmplesFSJsonReader.swift in Sources */,
-				F06AE2561FB9FF7A00B4B53B /* EmplesGalleryPresenter.swift in Sources */,
+				F06AE2561FB9FF7A00B4B53B /* EmplesGalleryViewModel.swift in Sources */,
 				F06AE2391FB9FF7A00B4B53B /* DataAreaGatewayProtocol.swift in Sources */,
 				F06AE26E1FB9FF7A00B4B53B /* EmplesGridCellModel.swift in Sources */,
 				F06AE2641FB9FF7A00B4B53B /* EmplesMenuRouter.swift in Sources */,
@@ -970,7 +966,7 @@
 				F06AE23C1FB9FF7A00B4B53B /* Result.swift in Sources */,
 				F06AE2811FB9FF7A00B4B53B /* ReusableView.swift in Sources */,
 				F06AE2751FB9FF7A00B4B53B /* EmplesMenuViewCell.swift in Sources */,
-				F06AE25B1FB9FF7A00B4B53B /* EmplesListPresenter.swift in Sources */,
+				F06AE25B1FB9FF7A00B4B53B /* EmplesListViewModel.swift in Sources */,
 				F06AE2671FB9FF7A00B4B53B /* DetailDescriptionViewCell.swift in Sources */,
 				F06AE2651FB9FF7A00B4B53B /* EmplesMenuView.swift in Sources */,
 				F06AE25F1FB9FF7A00B4B53B /* EmplesStackedView.swift in Sources */,
@@ -981,19 +977,19 @@
 				F06AE26A1FB9FF7A00B4B53B /* DetailDirectionTextViewCell.swift in Sources */,
 				F06AE25A1FB9FF7A00B4B53B /* EmplesGridView.swift in Sources */,
 				F06AE2831FB9FF7A00B4B53B /* UIColor+Hex.swift in Sources */,
-				F06AE2541FB9FF7A00B4B53B /* DetailPresenter.swift in Sources */,
+				F06AE2541FB9FF7A00B4B53B /* DetailViewModel.swift in Sources */,
 				F06AE24E1FB9FF7A00B4B53B /* BaseCollectionView.swift in Sources */,
 				F06AE2711FB9FF7A00B4B53B /* EmplesListCellModel.swift in Sources */,
 				F06AE27D1FB9FF7A00B4B53B /* ColorStrings.swift in Sources */,
-				F06AE2501FB9FF7A00B4B53B /* EmplesCollectionPresenter.swift in Sources */,
+				F06AE2501FB9FF7A00B4B53B /* EmplesCollectionViewModelBase.swift in Sources */,
 				F06AE23B1FB9FF7A00B4B53B /* EmplesRecAreaMappable.swift in Sources */,
 				F06AE2431FB9FF7A00B4B53B /* GenericTableViewSource.swift in Sources */,
 				F06AE2341FB9FF7A00B4B53B /* MainNavigationController.swift in Sources */,
 				F06AE2451FB9FF7A00B4B53B /* DataSourceItem.swift in Sources */,
-				F06AE2591FB9FF7A00B4B53B /* EmplesGridPresenter.swift in Sources */,
+				F06AE2591FB9FF7A00B4B53B /* EmplesGridViewModel.swift in Sources */,
 				F06AE2691FB9FF7A00B4B53B /* DetailDirectionsCellModel.swift in Sources */,
 				F06AE2581FB9FF7A00B4B53B /* EmplesGalleryCollectionFlowLayout.swift in Sources */,
-				F06AE2521FB9FF7A00B4B53B /* PresenterUICycleProtocol.swift in Sources */,
+				F06AE2521FB9FF7A00B4B53B /* LifeCycleProtocol.swift in Sources */,
 				F06AE2481FB9FF7A00B4B53B /* CollectionAssembler.swift in Sources */,
 				F06AE2331FB9FF7A00B4B53B /* RootViewAssembly.swift in Sources */,
 				F06AE2551FB9FF7A00B4B53B /* DetailView.swift in Sources */,

@@ -7,48 +7,48 @@
 //
 
 import UIKit
+import ReactiveSwift
 
-class DetailView: BaseCollectionView {
+class DetailView: UIViewController {
 
-    var presenter: DetailPresenter?
+    var viewModel: DetailViewModel?
+    private var disposables = CompositeDisposable()
     
     private lazy var table: UITableView = {
         var view = UITableView(frame: self.view.bounds, style: .plain)
         view.separatorStyle = .none
         view.backgroundColor = UIColor(named: ColorStrings.emplesGreenColor)
         view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        view.register(DetailMapViewCell.self)
+        view.register(DetailDescriptionViewCell.self)
+        view.register(DetailDirectionTextViewCell.self)
         return view
-    }()
-    
-    private lazy var dataSource:GenericTableViewSource = {
-        var __dataSource = GenericTableViewSource()
-        return __dataSource
-    }()
-    
-    private lazy var delegate:GenericTableViewDelegate = {
-        var __delegate = GenericTableViewDelegate(with: self.dataSource)
-        return __delegate
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(self.table)
-        self.table.delegate = self.delegate
-        self.table.dataSource = self.dataSource
-        self.table.register(DetailMapViewCell.self)
-        self.table.register(DetailDescriptionViewCell.self)
-        self.table.register(DetailDirectionTextViewCell.self)
-        self.presenter?.viewDidLoad()
+        self.bindViewModel()
+        self.viewModel?.viewDidLoad()
         
     }
     
-    func setTitleLabel(_ title:String?) {
-        self.title = title
+    func bindViewModel() {
+        self.title = self.viewModel?.title
+        self.table.dataSource  = self.viewModel?.dataSource
+        self.table.delegate = self.viewModel?.delegate
+        
+        let disposable = self.viewModel?.loadItemsAction.observeResult {[weak self] (result) in
+            if result.value != nil {
+                self?.table.reloadData()
+            }
+        }
+        disposables.add(disposable)
+        
     }
     
-    func showSourceItems(_ items:Array<DataSourceItem>) {
-        self.dataSource.setDataSource(items)
-        self.table.reloadData()
+    deinit {
+        disposables.dispose()
     }
 }
 

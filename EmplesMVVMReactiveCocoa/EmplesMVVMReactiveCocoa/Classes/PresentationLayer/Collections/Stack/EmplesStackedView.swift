@@ -18,44 +18,26 @@ class EmplesStackedView: BaseCollectionView {
         return view
     }()
     
-    private lazy var dataSource:StackedViewSource = {
-        var __dataSource = StackedViewSource()
-        return __dataSource
-    }()
-    
-    private lazy var delegate:StackedViewDelegate = {
-        var __delegate = StackedViewDelegate(with: self.dataSource)
-        return __delegate
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Stack".localized.localizedUppercase;
         self.view.backgroundColor = UIColor(named: ColorStrings.emplesGreenColor)
         self.view.addSubview(self.stack)
-        self.stack.dataSource = self.dataSource
-        self.stack.delegate = self.delegate
-        self.presenter?.viewDidLoad()
+        self.bindViewModel()
+        self.viewModel?.viewDidLoad()
     }
     
-    private var __presenter: PresenterUICycleProtocol?
+    func bindViewModel() {
+        
+        self.title = self.viewModel?.title
+        self.stack.dataSource  = self.viewModel?.dataSource as? StackedViewSource
+        self.stack.delegate = self.viewModel?.delegate as? StackedViewDelegate
+        
+        let disposable = self.viewModel?.loadItemsAction.observeResult {[weak self] (result) in
+            if result.value != nil {
+                self?.stack.reloadData()
+            }
+        }
+        disposables.add(disposable)
+    }
 }
 
-extension EmplesStackedView :CollectionViewProtocol {
-    
-    var presenter: PresenterUICycleProtocol? {
-        get {
-            return __presenter
-        }
-        set {
-            __presenter = newValue
-        }
-    }
-    
-    func showSourceItems(_ items:Array<Any>) {
-        if let items = items as? Array<DataSourceItem> {
-            self.dataSource.setDataSource(items)
-            self.stack.reloadData()
-        }
-    }
-}

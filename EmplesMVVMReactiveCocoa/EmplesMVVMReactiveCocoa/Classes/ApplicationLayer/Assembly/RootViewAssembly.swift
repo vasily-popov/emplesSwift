@@ -13,13 +13,13 @@ class RootViewAssembly: Assembly {
     func assemble(container: Container) {
         container.register(EmplesMenuView.self) { _ in EmplesMenuView() }
             .initCompleted { (r, view) in
-                view.presenter = r.resolve(EmplesMenuPresenter.self)
+                view.viewModel = r.resolve(EmplesMenuViewModel.self)
         }.inObjectScope(.container)
-        container.register(EmplesMenuPresenter.self) { r in
-            EmplesMenuPresenter(r.resolve(EmplesMenuModel.self)!) }
-            .initCompleted { (r, presenter) in
-                presenter.view = r.resolve(EmplesMenuView.self)
-                presenter.router = r.resolve(EmplesMenuRouter.self)
+        container.register(EmplesMenuViewModel.self) { r in
+            EmplesMenuViewModel(r.resolve(EmplesMenuModel.self)!) }
+            .initCompleted { (r, viewModel) in
+                viewModel.view = r.resolve(EmplesMenuView.self)
+                viewModel.router = r.resolve(EmplesMenuRouter.self)
         }
         container.register(EmplesMenuRouter.self) { _ in EmplesMenuRouter() }
             .initCompleted { (r, router) in

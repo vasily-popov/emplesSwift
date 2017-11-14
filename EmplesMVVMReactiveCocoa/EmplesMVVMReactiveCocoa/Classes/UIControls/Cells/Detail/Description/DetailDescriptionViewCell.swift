@@ -12,11 +12,25 @@ class DetailDescriptionViewCell: UITableViewCell {
     
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var iconView: UIImageView!
-    var model : DetailDescriptionCellModel? = nil
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    var viewModel: DetailDescriptionCellModel! {
+        didSet {
+            
+            textView.text = viewModel.descriptionText
+            textView.font = viewModel.font
+            textView.textColor = viewModel.textColor
+            
+            contentView.backgroundColor = viewModel.bgColor
+            
+            if let url = viewModel.imageURL {
+                iconView.kf.setImage(with: URL(string: url))
+            }
+        }
     }
 }
 
@@ -29,16 +43,7 @@ extension DetailDescriptionViewCell : ViewCellProtocol {
     func configureModel(_ newModel: ViewCellModelProtocol) {
         
         if let item = newModel as? DetailDescriptionCellModel {
-            self.model = item;
-            self.textView.text = self.model!.descriptionText
-            self.textView.font = self.model!.font
-            self.textView.textColor = self.model!.textColor
-            
-            self.contentView.backgroundColor = self.model!.bgColor;
-            
-            if let url = self.model?.imageURL {
-                self.iconView.kf.setImage(with: URL(string: url))
-            }
+            self.viewModel = item;
         }
     }
 }

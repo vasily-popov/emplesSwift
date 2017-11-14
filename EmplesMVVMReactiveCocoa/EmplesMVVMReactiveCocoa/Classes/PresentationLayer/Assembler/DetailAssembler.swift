@@ -24,13 +24,11 @@ class DetailAssembly: Assembly {
     func assemble(container: Container) {
         container.register(DetailView.self) { _ in DetailView() }
             .initCompleted { (r, view) in
-            view.presenter = r.resolve(DetailPresenter.self)
+            view.viewModel = r.resolve(DetailViewModel.self)
         }
 
-        container.register(DetailPresenter.self) { r in  DetailPresenter(r.resolve(DetailAreaModel.self)!)
-            }.initCompleted { (r, presenter) in
-                presenter.view = r.resolve(DetailView.self)
-        }
+        container.register(DetailViewModel.self) { r in  DetailViewModel(r.resolve(DetailAreaModel.self)!)
+            }
         container.register(DetailAreaModel.self) { _ in DetailAreaModel() }.inObjectScope(.weak)
     }
 }

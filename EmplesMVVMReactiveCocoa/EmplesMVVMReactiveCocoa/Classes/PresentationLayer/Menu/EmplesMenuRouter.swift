@@ -13,7 +13,7 @@ class EmplesMenuRouter : BaseRouter {
     
     var assembler: CollectionAssembler!
     
-    func navigate(item:MenuSelectedItem) {
+    func navigate(item:MenuScreen) {
         if let view = assembler.resolver.resolve(CollectionViewProtocol.self, name: String(describing: item)) as? UIViewController {
             self.viewController?.pushViewController(view, animated: true)
         }

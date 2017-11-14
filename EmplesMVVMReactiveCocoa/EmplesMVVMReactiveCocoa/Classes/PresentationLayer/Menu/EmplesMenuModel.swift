@@ -8,21 +8,16 @@
 
 import Foundation
 
-enum MenuSelectedItem: Int {
-    case List = 0
+enum MenuScreen : Int {
+    case List
     case Grid
     case Stack
     case Gallery
     case Carousel
 }
 
-protocol EmplesMenuSelectProtocol : class {
-    
-    func select(_ item:MenuSelectedItem)
-}
-
 class EmplesMenuModel {
-    private var source: Array<String> = {
+    var source: Array<String> = {
         return [LocalizedStrings.kListString.localized,
                 LocalizedStrings.kGridString.localized,
                 LocalizedStrings.kStackString.localized,
@@ -30,19 +25,5 @@ class EmplesMenuModel {
                 LocalizedStrings.kCarouselString.localized
                 ]
     }()
-    
-    lazy var dataSource:Array<DataSourceItem> = {
-        return self.source.map({ (text) -> DataSourceItem in
-            let item = EmplesMenuCellModel()
-            item.text = text
-            return DataSourceItem(model: item, rowHeight: 50.0, { [weak self] (model, index) in
-                if let selsectedItem = MenuSelectedItem(rawValue: index) {
-                    self?.delegate?.select(selsectedItem)
-                }
-            })
-        })
-    }()
-    
-    weak var delegate: EmplesMenuSelectProtocol?
 }
 

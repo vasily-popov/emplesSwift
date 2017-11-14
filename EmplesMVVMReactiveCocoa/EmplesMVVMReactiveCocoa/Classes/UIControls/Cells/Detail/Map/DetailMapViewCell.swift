@@ -20,7 +20,12 @@ class DetailMapViewCell: UITableViewCell {
         __map.translatesAutoresizingMaskIntoConstraints = false
         return __map
     }()
-    var model : DetailMapCellModel? = nil
+    
+    var viewModel: DetailMapCellModel! {
+        didSet {
+            updateMap(viewModel!.coordinate);
+        }
+    }
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -58,8 +63,7 @@ extension DetailMapViewCell : ViewCellProtocol {
     func configureModel(_ newModel: ViewCellModelProtocol) {
         
         if let item = newModel as? DetailMapCellModel {
-            self.model = item;
-            self.updateMap(self.model!.coordinate);
+            self.viewModel = item;
         }
     }
 }

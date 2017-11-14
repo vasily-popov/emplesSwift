@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import ReactiveSwift
 
-class BaseCollectionView: UIViewController {
+class BaseCollectionView: UIViewController, CollectionViewProtocol {
 
+    var viewModel: EmplesCollectionViewModelProtocol?
+    open var disposables = CompositeDisposable()
+    
     lazy var progressView: EProgressView = {
         return EProgressView(frame: CGRect.zero)
     }()
@@ -40,6 +44,10 @@ class BaseCollectionView: UIViewController {
     
     func hideProgressView() {
         //self.progressView.isHidden = true
+    }
+    
+    deinit {
+        disposables.dispose()
     }
 
 }

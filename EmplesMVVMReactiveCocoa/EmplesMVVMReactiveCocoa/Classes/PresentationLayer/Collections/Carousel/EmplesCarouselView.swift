@@ -18,28 +18,28 @@ class EmplesCarouselView: BaseCollectionView {
         return view
     }()
     
-    private lazy var dataSource:CarouselViewSource = {
-        var __dataSource = CarouselViewSource()
-        return __dataSource
-    }()
-    
-    private lazy var delegate:CarouselViewDelegate = {
-        var __delegate = CarouselViewDelegate(with: self.dataSource)
-        return __delegate
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Carousel".localized.localizedUppercase;
         self.view.backgroundColor = UIColor(named: ColorStrings.emplesGreenColor)
         self.view.addSubview(self.carousel)
-        self.carousel.delegate = self.delegate
-        self.carousel.dataSource = self.dataSource
-        self.presenter?.viewDidLoad()
+        self.bindViewModel()
+        self.viewModel?.viewDidLoad()
     }
     
-    private var __presenter: PresenterUICycleProtocol?
-    
+    func bindViewModel() {
+        
+        self.title = self.viewModel?.title
+        self.carousel.dataSource  = self.viewModel?.dataSource as? iCarouselDataSource
+        self.carousel.delegate = self.viewModel?.delegate as? iCarouselDelegate
+        
+        let disposable = self.viewModel?.loadItemsAction.observeResult {[weak self] (result) in
+            if result.value != nil {
+                self?.carousel.reloadData()
+            }
+        }
+        disposables.add(disposable)
+        
+    }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super .viewWillTransition(to: size, with: coordinator)
@@ -48,24 +48,4 @@ class EmplesCarouselView: BaseCollectionView {
         })
     }
 
-}
-
-extension EmplesCarouselView :CollectionViewProtocol {
-    
-    var presenter: PresenterUICycleProtocol? {
-        get {
-            return __presenter
-        }
-        set {
-            __presenter = newValue
-        }
-    }
-    
-    func showSourceItems(_ items:Array<Any>) {
-        if let items = items as? Array<DataSourceItem> {
-            self.dataSource.setDataSource(items)
-            self.carousel.reloadData()
-        }
-    }
-    
 }

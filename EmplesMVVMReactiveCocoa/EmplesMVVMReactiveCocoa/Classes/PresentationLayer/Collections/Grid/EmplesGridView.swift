@@ -20,50 +20,28 @@ class EmplesGridView: BaseCollectionView {
         let view = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         view.backgroundColor = UIColor(named: ColorStrings.emplesGreenColor)
         view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        view.register(EmplesGridViewCell.self)
         return view
     }()
     
-    private lazy var dataSource:GenericGridViewSource = {
-        var __dataSource = GenericGridViewSource()
-        return __dataSource
-    }()
-    
-    private lazy var delegate:GenericGridViewDelegate = {
-        var __delegate = GenericGridViewDelegate(with: self.dataSource)
-        return __delegate
-    }()
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Grid".localized.localizedUppercase;
         self.view.addSubview(self.collection)
-        self.collection.delegate = self.delegate
-        self.collection.dataSource = self.dataSource
-        self.collection.register(EmplesGridViewCell.self)
-        self.presenter?.viewDidLoad()
+        self.bindViewModel()
+        self.viewModel?.viewDidLoad()
     }
     
-    private var __presenter: PresenterUICycleProtocol?
+    func bindViewModel() {
+        self.title = self.viewModel?.title
+        self.collection.delegate = self.viewModel?.delegate as? GenericGridViewDelegate
+        self.collection.dataSource = self.viewModel?.dataSource as? GenericGridViewSource
+        let disposable = self.viewModel?.loadItemsAction.observeResult {[weak self] (result) in
+            if result.value != nil {
+                self?.collection.reloadData()
+            }
+        }
+        disposables.add(disposable)
+        
+    }
 }
 
-extension EmplesGridView :CollectionViewProtocol {
-    
-    var presenter: PresenterUICycleProtocol? {
-        get {
-            return __presenter
-        }
-        set {
-            __presenter = newValue
-        }
-    }
-    
-    func showSourceItems(_ items:Array<Any>) {
-        if let items = items as? Array<DataGridSourceItem> {
-            self.dataSource.setDataSource(items)
-            self.collection.reloadData()
-        }
-    }
-
-}

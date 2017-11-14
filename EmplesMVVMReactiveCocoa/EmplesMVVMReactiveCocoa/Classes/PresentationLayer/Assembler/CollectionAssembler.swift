@@ -34,24 +34,28 @@ class CollectionRootAssembly: Assembly {
             router.assembler = DetailAssembler(parent: r.resolve(CollectionAssembler.self)!.assembler)
         }
         
-        container.register(CollectionViewProtocol.self, name: String(describing: MenuSelectedItem.List)) { _ in EmplesListView() }
+        container.register(CollectionViewProtocol.self, name: String(describing: MenuScreen.List)) { _ in EmplesListView() }
             .initCompleted { (r, view) in
-            view.presenter = r.resolve(EmplesListPresenter.self)
+            view.viewModel = r.resolve(EmplesListViewModel.self)
         }
-        container.register(CollectionViewProtocol.self, name: String(describing: MenuSelectedItem.Grid)) { _ in EmplesGridView() }
+        
+        container.register(CollectionViewProtocol.self, name: String(describing: MenuScreen.Grid)) { _ in EmplesGridView() }
             .initCompleted { (r, view) in
-            view.presenter = r.resolve(EmplesGridPresenter.self)
+            view.viewModel = r.resolve(EmplesGridViewModel.self)
         }
-        container.register(CollectionViewProtocol.self, name: String(describing: MenuSelectedItem.Stack)) { _ in EmplesStackedView() }
+
+        container.register(CollectionViewProtocol.self, name: String(describing: MenuScreen.Stack)) { _ in EmplesStackedView() }
             .initCompleted { (r, view) in
-            view.presenter = r.resolve(EmplesStackedPresenter.self)
+            view.viewModel = r.resolve(EmplesStackedViewModel.self)
         }
-        container.register(CollectionViewProtocol.self, name: String(describing: MenuSelectedItem.Gallery)) { _ in EmplesGalleryView() }
+        
+        container.register(CollectionViewProtocol.self, name: String(describing: MenuScreen.Gallery)) { _ in EmplesGalleryView() }
             .initCompleted { (r, view) in
-            view.presenter = r.resolve(EmplesGalleryPresenter.self)
+            view.viewModel = r.resolve(EmplesGalleryViewModel.self)
         }
-        container.register(CollectionViewProtocol.self, name: String(describing: MenuSelectedItem.Carousel)) { _ in EmplesCarouselView() }.initCompleted { (r, view) in
-            view.presenter = r.resolve(EmplesCarouselPresenter.self)
+
+        container.register(CollectionViewProtocol.self, name: String(describing: MenuScreen.Carousel)) { _ in EmplesCarouselView() }.initCompleted { (r, view) in
+            view.viewModel = r.resolve(EmplesCarouselViewModel.self)
         }
     }
 }
@@ -59,9 +63,9 @@ class CollectionRootAssembly: Assembly {
 class CarouselAssembly: Assembly {
     
     func assemble(container: Container) {
-        container.register(EmplesCarouselPresenter.self) { _ in EmplesCarouselPresenter() }.initCompleted { (r, presenter) in
+        container.register(EmplesCarouselViewModel.self) { _ in EmplesCarouselViewModel() }.initCompleted { (r, presenter) in
             presenter.view = r.resolve(CollectionViewProtocol.self,
-                                       name: String(describing: MenuSelectedItem.Carousel))
+                                       name: String(describing: MenuScreen.Carousel))
             presenter.router = r.resolve(EmplesItemRouter.self)
             presenter.displayCollectionUseCase = r.resolve(DisplayAreaCollectionUseCase.self)
         }
@@ -71,9 +75,9 @@ class CarouselAssembly: Assembly {
 class GalleryAssembly: Assembly {
     
     func assemble(container: Container) {
-        container.register(EmplesGalleryPresenter.self) { _ in EmplesGalleryPresenter() }.initCompleted { (r, presenter) in
+        container.register(EmplesGalleryViewModel.self) { _ in EmplesGalleryViewModel() }.initCompleted { (r, presenter) in
             presenter.view = r.resolve(CollectionViewProtocol.self,
-                                       name: String(describing: MenuSelectedItem.Gallery))
+                                       name: String(describing: MenuScreen.Gallery))
             presenter.router = r.resolve(EmplesItemRouter.self)
             presenter.displayCollectionUseCase = r.resolve(DisplayAreaCollectionUseCase.self)
         }
@@ -83,9 +87,9 @@ class GalleryAssembly: Assembly {
 class GridAssembly: Assembly {
     
     func assemble(container: Container) {
-        container.register(EmplesGridPresenter.self) { _ in EmplesGridPresenter() }.initCompleted { (r, presenter) in
+        container.register(EmplesGridViewModel.self) { _ in EmplesGridViewModel() }.initCompleted { (r, presenter) in
             presenter.view = r.resolve(CollectionViewProtocol.self,
-                                       name: String(describing: MenuSelectedItem.Grid))
+                                       name: String(describing: MenuScreen.Grid))
             presenter.router = r.resolve(EmplesItemRouter.self)
             presenter.displayCollectionUseCase = r.resolve(DisplayAreaCollectionUseCase.self)
         }
@@ -95,9 +99,7 @@ class GridAssembly: Assembly {
 class ListAssembly: Assembly {
     
     func assemble(container: Container) {
-        container.register(EmplesListPresenter.self) { _ in EmplesListPresenter() }.initCompleted { (r, presenter) in
-            presenter.view = r.resolve(CollectionViewProtocol.self,
-                                       name: String(describing: MenuSelectedItem.List))
+        container.register(EmplesListViewModel.self) { _ in EmplesListViewModel() }.initCompleted { (r, presenter) in
             presenter.router = r.resolve(EmplesItemRouter.self)
             presenter.displayCollectionUseCase = r.resolve(DisplayAreaCollectionUseCase.self)
         }
@@ -107,9 +109,9 @@ class ListAssembly: Assembly {
 class StackAssembly: Assembly {
     
     func assemble(container: Container) {
-        container.register(EmplesStackedPresenter.self) { _ in EmplesStackedPresenter() }.initCompleted { (r, presenter) in
+        container.register(EmplesStackedViewModel.self) { _ in EmplesStackedViewModel() }.initCompleted { (r, presenter) in
             presenter.view = r.resolve(CollectionViewProtocol.self,
-                                       name: String(describing: MenuSelectedItem.Stack))
+                                       name: String(describing: MenuScreen.Stack))
             presenter.router = r.resolve(EmplesItemRouter.self)
             presenter.displayCollectionUseCase = r.resolve(DisplayAreaCollectionUseCase.self)
         }

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import ReactiveCocoa
+import ReactiveSwift
 
 class EmplesListView: BaseCollectionView {
     
@@ -15,51 +17,31 @@ class EmplesListView: BaseCollectionView {
         view.separatorStyle = .none
         view.backgroundColor = UIColor(named: ColorStrings.emplesGreenColor)
         view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        view.register(EmplesListCellView.self)
         return view
-    }()
-    
-    private lazy var dataSource:GenericTableViewSource = {
-        var __dataSource = GenericTableViewSource()
-        return __dataSource
-    }()
-    
-    private lazy var delegate:GenericTableViewDelegate = {
-        var __delegate = GenericTableViewDelegate(with: self.dataSource)
-        return __delegate
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "List".localized.localizedUppercase;
         self.view.addSubview(self.table)
-        self.table.delegate = self.delegate
-        self.table.dataSource = self.dataSource
-        self.table.register(EmplesListCellView.self)
-        self.presenter?.viewDidLoad()
+        self.bindViewModel()
+        self.viewModel?.viewDidLoad()
     }
     
-    private var __presenter: PresenterUICycleProtocol?
-    
-    deinit {
-        print("EmplesListView deinit")
+    func bindViewModel() {
+        
+        self.title = self.viewModel?.title
+        self.table.dataSource  = self.viewModel?.dataSource as? UITableViewDataSource
+        self.table.delegate = self.viewModel?.delegate as? UITableViewDelegate
+        
+        let disposable = self.viewModel?.loadItemsAction.observeResult {[weak self] (result) in
+            if result.value != nil {
+                self?.table.reloadData()
+            }
+        }
+        disposables.add(disposable)
+
     }
+    
 }
 
-extension EmplesListView :CollectionViewProtocol {
-    
-    var presenter: PresenterUICycleProtocol? {
-        get {
-            return __presenter
-        }
-        set {
-            __presenter = newValue
-        }
-    }
-    
-    func showSourceItems(_ items:Array<Any>) {
-        if let items = items as? Array<DataSourceItem> {
-            self.dataSource.setDataSource(items)
-            self.table.reloadData()
-        }
-    }
-}

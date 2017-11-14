@@ -10,10 +10,8 @@ import Foundation
 
 protocol CollectionViewProtocol : class {
 
-    var presenter :PresenterUICycleProtocol? {get set}
+    var viewModel :EmplesCollectionViewModelProtocol? {get set}
     func showProgressView()
     func hideProgressView()
-    func showSourceItems(_ items:Array<Any>)
-
 }
 
