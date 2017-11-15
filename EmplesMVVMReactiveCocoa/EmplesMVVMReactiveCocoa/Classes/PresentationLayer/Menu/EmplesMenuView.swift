@@ -13,8 +13,6 @@ import ReactiveSwift
 class EmplesMenuView: UIViewController {
     
     public var viewModel :EmplesMenuViewModelProtocol!
-    fileprivate var disposables = CompositeDisposable()
-    
     private lazy var table: UITableView = {
         var view = UITableView(frame: self.view.bounds, style: .plain)
         view.separatorStyle = .none
@@ -28,22 +26,20 @@ class EmplesMenuView: UIViewController {
         super.viewDidLoad()
         self.view.addSubview(self.table)
         self.bindViewModel()
-        self.viewModel.viewDidLoad()
     }
     
     func bindViewModel() {
         
-        self.title = viewModel.title
-        self.table.dataSource  = self.viewModel.dataSource
-        self.table.delegate = self.viewModel.delegate
-        let disposable = self.viewModel.reloadSignal.observeResult {[weak self] (result) in
-            self?.table.reloadData()
+        if let viewModel = viewModel {
+            
+            self.table.delegate = viewModel.delegate.value
+            self.table.dataSource = viewModel.dataSource.value
+            self.title = viewModel.title.value
+            
+            viewModel.reloadAction.on(value: {_ in
+                self.table.reloadData()
+            }).start()
         }
-        disposables.add(disposable)
-    }
-    
-    deinit {
-        disposables.dispose()
     }
 }
 

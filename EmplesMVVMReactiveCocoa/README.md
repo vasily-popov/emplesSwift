@@ -13,4 +13,6 @@
 * The `ViewModel` must only call methods on its delegate on the main thread (for safety)
 * The properties of the `ViewModel` must be of the same type as what they will be used for.
 
+* DI framework used - [Swinject](https://github.com/Swinject/Swinject)
+
 
