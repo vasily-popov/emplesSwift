@@ -11,7 +11,7 @@ import ReactiveCocoa
 import ReactiveSwift
 
 protocol EmplesMenuViewModelProtocol {
-    var title: Property<String?> {get}
+    var title: Property<String?> {get} //property is useless here and below because all data is not changed. Kept just as example. More info here https://github.com/ReactiveCocoa/ReactiveSwift/tree/master/Documentation
     var delegate: Property<GenericTableViewDelegate?> {get}
     var dataSource: Property<GenericTableViewSource?> {get}
     var reloadAction: SignalProducer<Bool, NSError> {get}
