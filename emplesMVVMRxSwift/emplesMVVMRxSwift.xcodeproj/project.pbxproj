@@ -39,6 +39,10 @@
 		F036FBB41FC0D62300C07492 /* EmplesStackedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036FBB21FC0D62300C07492 /* EmplesStackedView.swift */; };
 		F036FBB81FC0D98400C07492 /* EmplesItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036FBB61FC0D98400C07492 /* EmplesItemView.swift */; };
 		F036FBB91FC0D98400C07492 /* EmplesItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F036FBB71FC0D98400C07492 /* EmplesItemView.xib */; };
+		F036FBBF1FC0DAAC00C07492 /* EmplesCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036FBBA1FC0DAAC00C07492 /* EmplesCarouselView.swift */; };
+		F036FBC01FC0DAAC00C07492 /* EmplesCarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036FBBB1FC0DAAC00C07492 /* EmplesCarouselViewModel.swift */; };
+		F036FBC11FC0DAAC00C07492 /* CarouselViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036FBBD1FC0DAAC00C07492 /* CarouselViewDelegate.swift */; };
+		F036FBC21FC0DAAC00C07492 /* CarouselViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036FBBE1FC0DAAC00C07492 /* CarouselViewSource.swift */; };
 		F06AE2E41FBC919800B4B53B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F06AE2E31FBC919800B4B53B /* README.md */; };
 		F0EC6E441FBCE623000B2B3B /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = F0EC6DB21FBCE623000B2B3B /* background.png */; };
 		F0EC6E451FBCE623000B2B3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0EC6DB31FBCE623000B2B3B /* LaunchScreen.storyboard */; };
@@ -115,6 +119,10 @@
 		F036FBB21FC0D62300C07492 /* EmplesStackedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesStackedView.swift; sourceTree = "<group>"; };
 		F036FBB61FC0D98400C07492 /* EmplesItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesItemView.swift; sourceTree = "<group>"; };
 		F036FBB71FC0D98400C07492 /* EmplesItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmplesItemView.xib; sourceTree = "<group>"; };
+		F036FBBA1FC0DAAC00C07492 /* EmplesCarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesCarouselView.swift; sourceTree = "<group>"; };
+		F036FBBB1FC0DAAC00C07492 /* EmplesCarouselViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesCarouselViewModel.swift; sourceTree = "<group>"; };
+		F036FBBD1FC0DAAC00C07492 /* CarouselViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselViewDelegate.swift; sourceTree = "<group>"; };
+		F036FBBE1FC0DAAC00C07492 /* CarouselViewSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselViewSource.swift; sourceTree = "<group>"; };
 		F06AE2CE1FBC915100B4B53B /* emplesMVVMRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emplesMVVMRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F06AE2E31FBC919800B4B53B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F0EC6DB21FBCE623000B2B3B /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
@@ -226,16 +234,11 @@
 		F036FB671FC0994200C07492 /* Carousel */ = {
 			isa = PBXGroup;
 			children = (
-				F036FB681FC0994200C07492 /* Source */,
+				F036FBBA1FC0DAAC00C07492 /* EmplesCarouselView.swift */,
+				F036FBBB1FC0DAAC00C07492 /* EmplesCarouselViewModel.swift */,
+				F036FBBC1FC0DAAC00C07492 /* Source */,
 			);
 			path = Carousel;
-			sourceTree = "<group>";
-		};
-		F036FB681FC0994200C07492 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Source;
 			sourceTree = "<group>";
 		};
 		F036FB691FC0994200C07492 /* Common */ = {
@@ -366,6 +369,15 @@
 				F036FBB71FC0D98400C07492 /* EmplesItemView.xib */,
 			);
 			path = ItemView;
+			sourceTree = "<group>";
+		};
+		F036FBBC1FC0DAAC00C07492 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F036FBBD1FC0DAAC00C07492 /* CarouselViewDelegate.swift */,
+				F036FBBE1FC0DAAC00C07492 /* CarouselViewSource.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		F06AE2C51FBC915100B4B53B = {
@@ -885,15 +897,19 @@
 				F036FBB41FC0D62300C07492 /* EmplesStackedView.swift in Sources */,
 				F0EC6E681FBCE623000B2B3B /* DataGridSourceItem.swift in Sources */,
 				F0EC6E691FBCE623000B2B3B /* DataSourceItem.swift in Sources */,
+				F036FBBF1FC0DAAC00C07492 /* EmplesCarouselView.swift in Sources */,
 				F036FB971FC0BD2500C07492 /* EmplesGridView.swift in Sources */,
 				F0EC6E981FBCE623000B2B3B /* EmplesMenuCellViewModel.swift in Sources */,
 				F0EC6E571FBCE623000B2B3B /* RootViewAssembly.swift in Sources */,
 				F0EC6E4F1FBCE623000B2B3B /* ReusableView.swift in Sources */,
 				F036FB8D1FC09C4B00C07492 /* EmplesListCellView.swift in Sources */,
+				F036FBC01FC0DAAC00C07492 /* EmplesCarouselViewModel.swift in Sources */,
 				F0EC6E4D1FBCE623000B2B3B /* LocalizedStrings.swift in Sources */,
 				F0EC6E4E1FBCE623000B2B3B /* NSObject+Name.swift in Sources */,
+				F036FBC21FC0DAAC00C07492 /* CarouselViewSource.swift in Sources */,
 				F0EC6E6A1FBCE623000B2B3B /* ViewCellModelProtocol.swift in Sources */,
 				F036FB9D1FC0BDAB00C07492 /* EmplesGridViewCell.swift in Sources */,
+				F036FBC11FC0DAAC00C07492 /* CarouselViewDelegate.swift in Sources */,
 				F0EC6E5A1FBCE623000B2B3B /* RecArea.swift in Sources */,
 				F036FB601FC0876400C07492 /* MenuDataSource.swift in Sources */,
 				F0EC6E881FBCE623000B2B3B /* EmplesMenuView.swift in Sources */,

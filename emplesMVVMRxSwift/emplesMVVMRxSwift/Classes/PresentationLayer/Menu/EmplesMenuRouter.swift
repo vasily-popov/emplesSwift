@@ -38,14 +38,10 @@ class EmplesMenuRouter : BaseRouter {
             }
             break
         case .Carousel:
+            if let view = assembler.resolver.resolve(EmplesCarouselView.self, name: String(describing: item)) {
+                self.viewController?.pushViewController(view, animated: true)
+            }
             break
         }
-        
-        
-        /*
-        if let view = assembler.resolver.resolve(CollectionViewProtocol.self, name: String(describing: item)) as? UIViewController {
-            self.viewController?.pushViewController(view, animated: true)
-        }
- */
     }
 }
