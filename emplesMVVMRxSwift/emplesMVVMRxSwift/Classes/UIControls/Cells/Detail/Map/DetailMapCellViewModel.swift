@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class DetailMapCellModel {
+class DetailMapCellViewModel {
     
     var coordinate : CLLocationCoordinate2D
     
@@ -18,7 +18,7 @@ class DetailMapCellModel {
     }
 }
 
-extension DetailMapCellModel :ViewCellModelProtocol {
+extension DetailMapCellViewModel :ViewCellModelProtocol {
     var modelValue: Any? {
         return nil
     }

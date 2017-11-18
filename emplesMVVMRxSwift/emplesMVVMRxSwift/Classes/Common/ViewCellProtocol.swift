@@ -6,10 +6,9 @@
 //  Copyright © 2017 Vasily Popov. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
 protocol ViewCellProtocol {
     func update(with model: ViewCellModelProtocol)
 }
-

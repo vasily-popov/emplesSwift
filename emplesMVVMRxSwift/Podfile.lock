@@ -1,5 +1,4 @@
 PODS:
-  - Differentiator (3.0.2)
   - GoogleMaps (2.5.0):
     - GoogleMaps/Maps (= 2.5.0)
   - GoogleMaps/Base (2.5.0)
@@ -12,10 +11,6 @@ PODS:
   - pop (1.0.10)
   - RxCocoa (4.0.0):
     - RxSwift (~> 4.0)
-  - RxDataSources (3.0.2):
-    - Differentiator (~> 3.0)
-    - RxCocoa (~> 4.0)
-    - RxSwift (~> 4.0)
   - RxSwift (4.0.0)
   - Swinject (2.1.1)
   - Then (2.3.0)
@@ -26,24 +21,21 @@ DEPENDENCIES:
   - Kingfisher (~> 4.2.0)
   - Koloda
   - RxCocoa (~> 4.0)
-  - RxDataSources
   - RxSwift (~> 4.0)
   - Swinject
   - Then (= 2.3.0)
 
 SPEC CHECKSUMS:
-  Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
   GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
   Kingfisher: 9ee7e788d8ba07c3f21ce0d43f33cec310a4f781
   Koloda: 0d39b2aa188ccd1fac48d752acaf9802e683c625
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
-  RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
   RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
   Swinject: afea49fd95f392b41171669f165842879c48fad6
   Then: ee21c97b85ff6062b9b0080c9abb1eea46743345
 
-PODFILE CHECKSUM: c835cd4b967ebe1d2c6a159380d14d1934e165e2
+PODFILE CHECKSUM: 30ab58fc8212ac267a4c9d3ba11f6731be9d3b04
 
 COCOAPODS: 1.3.1

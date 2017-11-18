@@ -16,13 +16,13 @@
 * DI framework used - [Swinject](https://github.com/Swinject/Swinject)
 
 
- - Observables - it allows classes to subscribe for values emitted by another class over time.
- - An Observable can emit (and observers can receive) only three types of events:
- • A next event: An event which “carries” the latest (or "next") data value. This is the way observers “receive” values.
- • A completed event: This event terminates the event sequence with success. It means the Observable completed its life-cycle successfully and won’t emit any other events.
- • An error event: TheObservable terminates with an error and it will not emit other events.
- - Operators - map/filters/etc
- - Schedulers - equivalent of dispatch queues - SerialDispatchQueueScheduler, ConcurrentDispatchQueueScheduler, OperationQueueScheduler
-  - Subject acts as observers and subscribers at the same time
+* Observables - it allows classes to subscribe for values emitted by another class over time.
+* An Observable can emit (and observers can receive) only three types of events:
+* A next event: An event which “carries” the latest (or "next") data value. This is the way observers “receive” values.
+ * A completed event: This event terminates the event sequence with success. It means the Observable completed its life-cycle successfully and won’t emit any other events.
+ * An error event: TheObservable terminates with an error and it will not emit other events.
+ * Operators - map/filters/etc
+ * Schedulers - equivalent of dispatch queues - SerialDispatchQueueScheduler, ConcurrentDispatchQueueScheduler, OperationQueueScheduler
+  * Subject acts as observers and subscribers at the same time - Variable, BehaviorSubject, PublishSubject.
   
   

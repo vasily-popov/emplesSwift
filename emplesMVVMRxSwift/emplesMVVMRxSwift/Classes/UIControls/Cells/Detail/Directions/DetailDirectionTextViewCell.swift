@@ -17,7 +17,7 @@ class DetailDirectionTextViewCell: UITableViewCell {
         // Initialization code
     }
     
-    var viewModel: DetailDirectionsCellModel! {
+    var viewModel: DetailDirectionsCellViewModel! {
         didSet {
             
             textView.text = viewModel.directionText
@@ -35,9 +35,9 @@ extension DetailDirectionTextViewCell : NibLoadableView {
 
 extension DetailDirectionTextViewCell : ViewCellProtocol {
     
-    func configureModel(_ newModel: ViewCellModelProtocol) {
+    func update(with model: ViewCellModelProtocol) {
         
-        if let item = newModel as? DetailDirectionsCellModel {
+        if let item = model as? DetailDirectionsCellViewModel {
             self.viewModel = item;
         }
     }

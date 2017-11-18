@@ -21,7 +21,7 @@ class DetailMapViewCell: UITableViewCell {
         return __map
     }()
     
-    var viewModel: DetailMapCellModel! {
+    var viewModel: DetailMapCellViewModel! {
         didSet {
             updateMap(viewModel!.coordinate);
         }
@@ -60,9 +60,9 @@ class DetailMapViewCell: UITableViewCell {
 
 extension DetailMapViewCell : ViewCellProtocol {
     
-    func configureModel(_ newModel: ViewCellModelProtocol) {
+    func update(with model: ViewCellModelProtocol) {
         
-        if let item = newModel as? DetailMapCellModel {
+        if let item = model as? DetailMapCellViewModel {
             self.viewModel = item;
         }
     }

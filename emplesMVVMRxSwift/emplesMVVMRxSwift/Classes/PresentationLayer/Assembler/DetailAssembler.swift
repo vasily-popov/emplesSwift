@@ -22,7 +22,7 @@ class DetailAssembler {
 class DetailAssembly: Assembly {
     
     func assemble(container: Container) {
-        /*
+        
         container.register(DetailView.self) { _ in DetailView() }
             .initCompleted { (r, view) in
             view.viewModel = r.resolve(DetailViewModel.self)
@@ -31,6 +31,5 @@ class DetailAssembly: Assembly {
         container.register(DetailViewModel.self) { r in  DetailViewModel(r.resolve(DetailAreaModel.self)!)
             }
         container.register(DetailAreaModel.self) { _ in DetailAreaModel() }.inObjectScope(.weak)
- */
     }
 }

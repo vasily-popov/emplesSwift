@@ -14,7 +14,6 @@ target 'emplesMVVMRxSwift' do
     pod 'iCarousel'
     pod 'Koloda'
     pod 'Then', '2.3.0'
-    pod 'RxDataSources'
 
 end
 

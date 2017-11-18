@@ -18,7 +18,7 @@ class EmplesGridViewModel: EmplesGridViewModelProtocol {
     
     
     // MARK: - Input
-    public var router :EmplesItemRouter!
+    public var router :CollectionRouter!
     private var model: DisplayAreaCollectionUseCase!
     
     // MARK: - Outout

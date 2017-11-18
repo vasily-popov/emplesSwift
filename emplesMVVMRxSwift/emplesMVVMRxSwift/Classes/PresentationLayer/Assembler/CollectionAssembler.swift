@@ -28,7 +28,7 @@ class CollectionAssembler {
 class CollectionRootAssembly: Assembly {
     
     func assemble(container: Container) {
-        container.register(EmplesItemRouter.self) { _ in EmplesItemRouter() }.initCompleted { (r, router) in
+        container.register(CollectionRouter.self) { _ in CollectionRouter() }.initCompleted { (r, router) in
             router.viewController = r.resolve(MainNavigationController.self)
             router.window = r.resolve(UIWindow.self)
             router.assembler = DetailAssembler(parent: r.resolve(CollectionAssembler.self)!.assembler)
@@ -65,7 +65,7 @@ class CarouselAssembly: Assembly {
     func assemble(container: Container) {
         container.register(EmplesCarouselViewModel.self) { _ in EmplesCarouselViewModel(container.resolve(DisplayAreaCollectionUseCase.self)!) }
             .initCompleted { (r, presenter) in
-            presenter.router = r.resolve(EmplesItemRouter.self)
+            presenter.router = r.resolve(CollectionRouter.self)
         }
     }
 }
@@ -75,7 +75,7 @@ class GalleryAssembly: Assembly {
     func assemble(container: Container) {
         container.register(EmplesGalleryViewModel.self) { _ in EmplesGalleryViewModel(container.resolve(DisplayAreaCollectionUseCase.self)!) }
             .initCompleted { (r, presenter) in
-            presenter.router = r.resolve(EmplesItemRouter.self)
+            presenter.router = r.resolve(CollectionRouter.self)
         }
     }
 }
@@ -85,7 +85,7 @@ class GridAssembly: Assembly {
     func assemble(container: Container) {
         container.register(EmplesGridViewModel.self) { _ in EmplesGridViewModel(container.resolve(DisplayAreaCollectionUseCase.self)!) }
             .initCompleted { (r, presenter) in
-            presenter.router = r.resolve(EmplesItemRouter.self)
+            presenter.router = r.resolve(CollectionRouter.self)
         }
     }
 }
@@ -95,7 +95,7 @@ class ListAssembly: Assembly {
     func assemble(container: Container) {
         container.register(EmplesListViewModel.self) { _ in EmplesListViewModel(container.resolve(DisplayAreaCollectionUseCase.self)!) }
             .initCompleted { (r, presenter) in
-            presenter.router = r.resolve(EmplesItemRouter.self)
+            presenter.router = r.resolve(CollectionRouter.self)
         }
     }
 }
@@ -105,7 +105,7 @@ class StackAssembly: Assembly {
     func assemble(container: Container) {
         container.register(EmplesStackedViewModel.self) { _ in EmplesStackedViewModel(container.resolve(DisplayAreaCollectionUseCase.self)!) }
             .initCompleted { (r, presenter) in
-            presenter.router = r.resolve(EmplesItemRouter.self)
+            presenter.router = r.resolve(CollectionRouter.self)
         }
     }
 }

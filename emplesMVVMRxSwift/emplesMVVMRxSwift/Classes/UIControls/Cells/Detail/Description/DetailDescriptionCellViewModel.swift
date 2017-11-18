@@ -1,5 +1,5 @@
 //
-//  DetailDirectionsCellModel.swift
+//  DetailDescriptionCellModel.swift
 //  emplesMVC
 //
 //  Created by Vasily Popov on 11/10/17.
@@ -8,12 +8,13 @@
 
 import UIKit
 
-class DetailDirectionsCellModel {
+class DetailDescriptionCellViewModel {
     
     var bgColor : UIColor
     var font : UIFont
-    var directionText : String?
+    var descriptionText : String?
     var textColor : UIColor
+    var imageURL : String?
     
     init() {
         self.bgColor = UIColor.white
@@ -22,12 +23,13 @@ class DetailDirectionsCellModel {
     }
 }
 
-extension DetailDirectionsCellModel :ViewCellModelProtocol {
+extension DetailDescriptionCellViewModel :ViewCellModelProtocol {
     var modelValue: Any? {
-        return self.directionText
+        return self.descriptionText
     }
     
     var cellClassName: String {
-        return DetailDirectionTextViewCell.nameOfClass
+        return DetailDescriptionViewCell.nameOfClass
     }
 }
+

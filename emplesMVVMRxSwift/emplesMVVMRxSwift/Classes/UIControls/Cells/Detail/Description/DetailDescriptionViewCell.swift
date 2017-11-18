@@ -18,7 +18,7 @@ class DetailDescriptionViewCell: UITableViewCell {
         // Initialization code
     }
     
-    var viewModel: DetailDescriptionCellModel! {
+    var viewModel: DetailDescriptionCellViewModel! {
         didSet {
             
             textView.text = viewModel.descriptionText
@@ -40,9 +40,9 @@ extension DetailDescriptionViewCell : NibLoadableView {
 
 extension DetailDescriptionViewCell : ViewCellProtocol {
     
-    func configureModel(_ newModel: ViewCellModelProtocol) {
+    func update(with model: ViewCellModelProtocol) {
         
-        if let item = newModel as? DetailDescriptionCellModel {
+        if let item = model as? DetailDescriptionCellViewModel {
             self.viewModel = item;
         }
     }

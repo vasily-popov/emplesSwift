@@ -9,18 +9,17 @@
 import UIKit
 import Swinject
 
-class EmplesItemRouter: BaseRouter {
+class CollectionRouter: BaseRouter {
 
     var assembler: DetailAssembler!
     
     func showDetail(of item:RecArea) {
-        /*
+        
         if let view = assembler.resolver.resolve(DetailView.self),
             let area = assembler.resolver.resolve(DetailAreaModel.self) {
                 area.model = item
                 self.viewController?.pushViewController(view, animated: true)
         }
- */
     }
     
 }
