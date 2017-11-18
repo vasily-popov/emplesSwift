@@ -19,8 +19,8 @@ class CollectionAssembler {
         assembler = Assembler([CollectionRootAssembly(),
                                ListAssembly(),
                                GridAssembly(),
-                               //GalleryAssembly(),
-                               //StackAssembly(),
+                               GalleryAssembly(),
+                               StackAssembly(),
                                /*CarouselAssembly() */], parent:parent)
     }
 }
@@ -43,17 +43,17 @@ class CollectionRootAssembly: Assembly {
             .initCompleted { (r, view) in
             view.viewModel = r.resolve(EmplesGridViewModel.self)
         }
-/*
-        container.register(CollectionViewProtocol.self, name: String(describing: MenuScreen.Stack)) { _ in EmplesStackedView() }
+
+        container.register(EmplesStackedView.self, name: String(describing: MenuScreen.Stack)) { _ in EmplesStackedView() }
             .initCompleted { (r, view) in
             view.viewModel = r.resolve(EmplesStackedViewModel.self)
         }
-        
-        container.register(CollectionViewProtocol.self, name: String(describing: MenuScreen.Gallery)) { _ in EmplesGalleryView() }
+
+        container.register(EmplesGalleryView.self, name: String(describing: MenuScreen.Gallery)) { _ in EmplesGalleryView() }
             .initCompleted { (r, view) in
             view.viewModel = r.resolve(EmplesGalleryViewModel.self)
         }
-
+/*
         container.register(CollectionViewProtocol.self, name: String(describing: MenuScreen.Carousel)) { _ in EmplesCarouselView() }.initCompleted { (r, view) in
             view.viewModel = r.resolve(EmplesCarouselViewModel.self)
         }
@@ -72,19 +72,17 @@ class CarouselAssembly: Assembly {
         }
     }
 }
-
+*/
 class GalleryAssembly: Assembly {
     
     func assemble(container: Container) {
-        container.register(EmplesGalleryViewModel.self) { _ in EmplesGalleryViewModel() }.initCompleted { (r, presenter) in
-            presenter.view = r.resolve(CollectionViewProtocol.self,
-                                       name: String(describing: MenuScreen.Gallery))
+        container.register(EmplesGalleryViewModel.self) { _ in EmplesGalleryViewModel(container.resolve(DisplayAreaCollectionUseCase.self)!) }
+            .initCompleted { (r, presenter) in
             presenter.router = r.resolve(EmplesItemRouter.self)
-            presenter.displayCollectionUseCase = r.resolve(DisplayAreaCollectionUseCase.self)
         }
     }
 }
-*/
+
 class GridAssembly: Assembly {
     
     func assemble(container: Container) {
@@ -104,16 +102,13 @@ class ListAssembly: Assembly {
         }
     }
 }
-/*
+
 class StackAssembly: Assembly {
     
     func assemble(container: Container) {
-        container.register(EmplesStackedViewModel.self) { _ in EmplesStackedViewModel() }.initCompleted { (r, presenter) in
-            presenter.view = r.resolve(CollectionViewProtocol.self,
-                                       name: String(describing: MenuScreen.Stack))
+        container.register(EmplesStackedViewModel.self) { _ in EmplesStackedViewModel(container.resolve(DisplayAreaCollectionUseCase.self)!) }
+            .initCompleted { (r, presenter) in
             presenter.router = r.resolve(EmplesItemRouter.self)
-            presenter.displayCollectionUseCase = r.resolve(DisplayAreaCollectionUseCase.self)
         }
     }
 }
-*/

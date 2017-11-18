@@ -28,8 +28,14 @@ class EmplesMenuRouter : BaseRouter {
             }
             break
         case .Stack:
+            if let view = assembler.resolver.resolve(EmplesStackedView.self, name: String(describing: item)) {
+                self.viewController?.pushViewController(view, animated: true)
+            }
             break
         case .Gallery:
+            if let view = assembler.resolver.resolve(EmplesGalleryView.self, name: String(describing: item)) {
+                self.viewController?.pushViewController(view, animated: true)
+            }
             break
         case .Carousel:
             break
