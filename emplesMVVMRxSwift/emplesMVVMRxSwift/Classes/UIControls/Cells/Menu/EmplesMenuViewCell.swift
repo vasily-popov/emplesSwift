@@ -29,11 +29,11 @@ class EmplesMenuViewCell: UITableViewCell {
 extension EmplesMenuViewCell : NibLoadableView {
     
 }
-
-extension EmplesMenuViewCell : ViewCellProtocol {
+        
+extension EmplesMenuViewCell : ConfigurableCell {
     
-    func update(with newModel: ViewCellModelProtocol) {
-        if let item = newModel as? EmplesMenuCellViewModel {
+    func configure(_ model: ViewCellModelProtocol) {
+        if let item = model as? EmplesMenuCellViewModel {
             self.viewModel = item
         }
     }

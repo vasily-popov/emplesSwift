@@ -45,7 +45,7 @@ extension CarouselViewSource: iCarouselDataSource {
         }
         
         let source = items.value![index]
-        itemView.update(with: source.model)
+        itemView.configure(source.model)
         return itemView
     }
     

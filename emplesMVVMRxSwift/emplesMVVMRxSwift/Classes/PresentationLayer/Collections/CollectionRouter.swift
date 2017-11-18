@@ -21,6 +21,5 @@ class CollectionRouter: BaseRouter {
                 self.viewController?.pushViewController(view, animated: true)
         }
     }
-    
 }
 

@@ -13,19 +13,21 @@ import Then
 
 class EmplesMenuView: UIViewController {
     
+    typealias T = EmplesMenuViewCell
+    
     //MARK: - Input
     public var viewModel :EmplesMenuViewModelProtocol!
     
     // MARK: - Init
     private let bag = DisposeBag()
     
-    private lazy var delegate: MenuDelegate = {
-        var _delegate = MenuDelegate(with: self.dataSource)
+    private lazy var delegate: GenericTableDelegate<T> = {
+        var _delegate = GenericTableDelegate<T>(with: self.dataSource)
         return _delegate
     }()
     
-    private lazy var dataSource: MenuDataSource = {
-        var _dataSource = MenuDataSource(with: self.viewModel.menuItems)
+    private lazy var dataSource: GenericTableDataSource<T> = {
+        var _dataSource = GenericTableDataSource<T>(with: self.viewModel.menuItems)
         return _dataSource
     }()
     
@@ -34,7 +36,7 @@ class EmplesMenuView: UIViewController {
         view.separatorStyle = .none
         view.backgroundColor = UIColor(named: ColorStrings.lightWhiteColor)
         view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        view.register(EmplesMenuViewCell.self)
+        view.register(T.self)
         view.delegate = delegate
         view.dataSource = dataSource
         return view

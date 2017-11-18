@@ -28,7 +28,7 @@ extension StackedViewSource:KolodaViewDataSource {
             return UIView()
         }
         let source = items.value![index]
-        view.update(with: source.model)
+        view.configure(source.model)
         return view
     }
     

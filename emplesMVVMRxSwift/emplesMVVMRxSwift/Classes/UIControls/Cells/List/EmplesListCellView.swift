@@ -44,10 +44,10 @@ extension EmplesListCellView : NibLoadableView {
 
 }
 
-extension EmplesListCellView : ViewCellProtocol {
+extension EmplesListCellView : ConfigurableCell {
     
-    func update(with newModel: ViewCellModelProtocol) {
-        if let item = newModel as? EmplesListCellViewModel {
+    func configure(_ model: ViewCellModelProtocol) {
+        if let item = model as? EmplesListCellViewModel {
             self.viewModel = item
         }
     }

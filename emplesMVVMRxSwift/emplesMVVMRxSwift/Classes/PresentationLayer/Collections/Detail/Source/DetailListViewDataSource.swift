@@ -27,8 +27,8 @@ class DetailListViewDataSource: NSObject, UITableViewDataSource {
         let item = items.value![indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: item.model.cellClassName, for: indexPath)
-        if let cell = cell as? ViewCellProtocol {
-            cell.update(with: item.model)
+        if let cell = cell as? ConfigurableCell {
+            cell.configure(item.model)
         }
         return cell
     }

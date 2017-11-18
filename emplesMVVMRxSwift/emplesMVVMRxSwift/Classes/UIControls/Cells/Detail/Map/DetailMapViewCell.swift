@@ -58,9 +58,9 @@ class DetailMapViewCell: UITableViewCell {
 
 
 
-extension DetailMapViewCell : ViewCellProtocol {
+extension DetailMapViewCell : ConfigurableCell {
     
-    func update(with model: ViewCellModelProtocol) {
+    func configure(_ model: ViewCellModelProtocol) {
         
         if let item = model as? DetailMapCellViewModel {
             self.viewModel = item;

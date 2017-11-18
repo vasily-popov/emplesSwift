@@ -13,6 +13,9 @@ protocol ReusableView:class {
     static var defaultReuseIdentifier: String { get }
 }
 
+protocol ConfigurableCell: ReusableView {
+    func configure(_ model: ViewCellModelProtocol)
+}
 
 protocol NibLoadableView: class {
     static var nibName: String { get }
@@ -90,3 +93,5 @@ extension UICollectionView {
         return dequeueReusableCell(withReuseIdentifier: String(describing: T.self), for: indexPath) as! T
     }
 }
+
+

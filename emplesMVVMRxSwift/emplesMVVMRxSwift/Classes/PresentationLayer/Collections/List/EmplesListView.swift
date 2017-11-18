@@ -12,19 +12,21 @@ import RxSwift
 
 class EmplesListView: UIViewController {
     
+    typealias T = EmplesListCellView
+    
     //MARK: - Input
     public var viewModel :EmplesListViewModelProtocol!
     
     // MARK: - Init
     private let bag = DisposeBag()
     
-    private lazy var delegate: ListViewDelegate = {
-        var _delegate = ListViewDelegate(with: self.dataSource)
+    private lazy var delegate: GenericTableDelegate<T> = {
+        var _delegate = GenericTableDelegate<T>(with: self.dataSource)
         return _delegate
     }()
     
-    private lazy var dataSource: ListViewDataSource = {
-        var _dataSource = ListViewDataSource(with: self.viewModel.listItems)
+    private lazy var dataSource: GenericTableDataSource<T> = {
+        var _dataSource = GenericTableDataSource<T>(with: self.viewModel.listItems)
         return _dataSource
     }()
     
@@ -33,7 +35,7 @@ class EmplesListView: UIViewController {
         view.separatorStyle = .none
         view.backgroundColor = UIColor(named: ColorStrings.emplesGreenColor)
         view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        view.register(EmplesListCellView.self)
+        view.register(T.self)
         view.delegate = delegate
         view.dataSource = dataSource
         return view

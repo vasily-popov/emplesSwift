@@ -30,7 +30,7 @@ class GridViewDataSource: NSObject, UICollectionViewDataSource {
         
         return collectionView.dequeueCell(ofType: EmplesGridViewCell.self, indexPath:indexPath)
             .then { cell in
-            cell.update(with: items.value![indexPath.row].model)
+            cell.configure(items.value![indexPath.row].model)
         }
     }
 }

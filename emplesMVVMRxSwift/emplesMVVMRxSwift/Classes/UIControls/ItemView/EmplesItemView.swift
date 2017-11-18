@@ -38,9 +38,9 @@ extension EmplesItemView : NibLoadableView {
 
 }
 
-extension EmplesItemView : ViewCellProtocol {
+extension EmplesItemView : ConfigurableCell {
     
-    func update(with model: ViewCellModelProtocol) {
+    func configure(_ model: ViewCellModelProtocol) {
         
         if let item = model as? EmplesListCellViewModel {
             self.viewModel = item

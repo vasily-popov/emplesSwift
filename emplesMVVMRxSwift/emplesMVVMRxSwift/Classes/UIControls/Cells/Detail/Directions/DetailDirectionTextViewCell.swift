@@ -33,9 +33,9 @@ extension DetailDirectionTextViewCell : NibLoadableView {
     
 }
 
-extension DetailDirectionTextViewCell : ViewCellProtocol {
+extension DetailDirectionTextViewCell : ConfigurableCell {
     
-    func update(with model: ViewCellModelProtocol) {
+    func configure(_ model: ViewCellModelProtocol) {
         
         if let item = model as? DetailDirectionsCellViewModel {
             self.viewModel = item;

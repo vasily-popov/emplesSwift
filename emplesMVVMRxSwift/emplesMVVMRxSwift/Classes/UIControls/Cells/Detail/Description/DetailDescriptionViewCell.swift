@@ -38,9 +38,9 @@ extension DetailDescriptionViewCell : NibLoadableView {
     
 }
 
-extension DetailDescriptionViewCell : ViewCellProtocol {
+extension DetailDescriptionViewCell : ConfigurableCell {
     
-    func update(with model: ViewCellModelProtocol) {
+    func configure(_ model: ViewCellModelProtocol) {
         
         if let item = model as? DetailDescriptionCellViewModel {
             self.viewModel = item;

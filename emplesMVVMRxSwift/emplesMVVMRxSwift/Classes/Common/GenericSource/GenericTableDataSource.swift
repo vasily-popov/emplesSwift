@@ -9,7 +9,8 @@
 import UIKit
 import RxSwift
 
-class MenuDataSource: NSObject, UITableViewDataSource {
+class GenericTableDataSource<Cell: UITableViewCell>: NSObject, UITableViewDataSource
+                            where Cell: ConfigurableCell {
     
     let items: Variable<[DataSourceItem]?>
     
@@ -23,8 +24,9 @@ class MenuDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueCell(ofType: EmplesMenuViewCell.self).then { cell in
-            cell.update(with: items.value![indexPath.row].model)
+        
+        return tableView.dequeueCell(ofType: Cell.self).then { (cell) in
+            cell.configure(items.value![indexPath.row].model)
         }
     }
 }

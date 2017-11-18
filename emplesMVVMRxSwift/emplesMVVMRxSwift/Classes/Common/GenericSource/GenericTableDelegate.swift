@@ -1,5 +1,5 @@
 //
-//  ListViewDelegate.swift
+//  MenuDelegate.swift
 //  emplesMVVMRxSwift
 //
 //  Created by Vasily Popov on 11/18/17.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ListViewDelegate: NSObject, UITableViewDelegate {
+class GenericTableDelegate<T:UITableViewCell>: NSObject, UITableViewDelegate where T:ConfigurableCell{
     
-    private let source:ListViewDataSource!
+    private let source:GenericTableDataSource<T>!
     
-    init(with source:ListViewDataSource) {
+    init(with source:GenericTableDataSource<T>) {
         self.source = source
         super.init()
     }
@@ -27,3 +27,5 @@ class ListViewDelegate: NSObject, UITableViewDelegate {
     }
     
 }
+
+

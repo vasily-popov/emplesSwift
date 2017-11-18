@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		715750AA82547341189D48BA /* Pods_emplesMVVMRxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33934E79FDF140DB10DF689B /* Pods_emplesMVVMRxSwift.framework */; };
-		F036FB601FC0876400C07492 /* MenuDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036FB5F1FC0876400C07492 /* MenuDataSource.swift */; };
-		F036FB621FC0878D00C07492 /* MenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036FB611FC0878D00C07492 /* MenuDelegate.swift */; };
+		F036FB601FC0876400C07492 /* GenericTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036FB5F1FC0876400C07492 /* GenericTableDataSource.swift */; };
+		F036FB621FC0878D00C07492 /* GenericTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036FB611FC0878D00C07492 /* GenericTableDelegate.swift */; };
 		F036FB721FC0994200C07492 /* CollectionAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036FB641FC0994200C07492 /* CollectionAssembler.swift */; };
 		F036FB731FC0994200C07492 /* DetailAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036FB651FC0994200C07492 /* DetailAssembler.swift */; };
 		F036FB761FC0997500C07492 /* EmplesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036FB741FC0997500C07492 /* EmplesListView.swift */; };
@@ -18,8 +18,6 @@
 		F036FB8C1FC09C4B00C07492 /* EmplesListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036FB891FC09C4B00C07492 /* EmplesListCellViewModel.swift */; };
 		F036FB8D1FC09C4B00C07492 /* EmplesListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036FB8A1FC09C4B00C07492 /* EmplesListCellView.swift */; };
 		F036FB8E1FC09C4B00C07492 /* EmplesListCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F036FB8B1FC09C4B00C07492 /* EmplesListCellView.xib */; };
-		F036FB911FC09F7900C07492 /* ListViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036FB901FC09F7900C07492 /* ListViewDelegate.swift */; };
-		F036FB931FC09FB100C07492 /* ListViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036FB921FC09FB100C07492 /* ListViewDataSource.swift */; };
 		F036FB961FC0BD2500C07492 /* EmplesGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036FB941FC0BD2500C07492 /* EmplesGridViewModel.swift */; };
 		F036FB971FC0BD2500C07492 /* EmplesGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036FB951FC0BD2500C07492 /* EmplesGridView.swift */; };
 		F036FB9C1FC0BDAB00C07492 /* EmplesGridCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036FB991FC0BDAB00C07492 /* EmplesGridCellViewModel.swift */; };
@@ -85,7 +83,6 @@
 		F0EC6E681FBCE623000B2B3B /* DataGridSourceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EC6DF41FBCE623000B2B3B /* DataGridSourceItem.swift */; };
 		F0EC6E691FBCE623000B2B3B /* DataSourceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EC6DF51FBCE623000B2B3B /* DataSourceItem.swift */; };
 		F0EC6E6A1FBCE623000B2B3B /* ViewCellModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EC6DF61FBCE623000B2B3B /* ViewCellModelProtocol.swift */; };
-		F0EC6E6B1FBCE623000B2B3B /* ViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EC6DF71FBCE623000B2B3B /* ViewCellProtocol.swift */; };
 		F0EC6E861FBCE623000B2B3B /* EmplesMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EC6E211FBCE623000B2B3B /* EmplesMenuModel.swift */; };
 		F0EC6E871FBCE623000B2B3B /* EmplesMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EC6E221FBCE623000B2B3B /* EmplesMenuRouter.swift */; };
 		F0EC6E881FBCE623000B2B3B /* EmplesMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EC6E231FBCE623000B2B3B /* EmplesMenuView.swift */; };
@@ -99,8 +96,8 @@
 /* Begin PBXFileReference section */
 		33934E79FDF140DB10DF689B /* Pods_emplesMVVMRxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_emplesMVVMRxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4603217A2342C5CA551CCFC /* Pods-emplesMVVMRxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emplesMVVMRxSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-emplesMVVMRxSwift/Pods-emplesMVVMRxSwift.debug.xcconfig"; sourceTree = "<group>"; };
-		F036FB5F1FC0876400C07492 /* MenuDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDataSource.swift; sourceTree = "<group>"; };
-		F036FB611FC0878D00C07492 /* MenuDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDelegate.swift; sourceTree = "<group>"; };
+		F036FB5F1FC0876400C07492 /* GenericTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableDataSource.swift; sourceTree = "<group>"; };
+		F036FB611FC0878D00C07492 /* GenericTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableDelegate.swift; sourceTree = "<group>"; };
 		F036FB641FC0994200C07492 /* CollectionAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionAssembler.swift; sourceTree = "<group>"; };
 		F036FB651FC0994200C07492 /* DetailAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailAssembler.swift; sourceTree = "<group>"; };
 		F036FB741FC0997500C07492 /* EmplesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesListView.swift; sourceTree = "<group>"; };
@@ -109,8 +106,6 @@
 		F036FB891FC09C4B00C07492 /* EmplesListCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesListCellViewModel.swift; sourceTree = "<group>"; };
 		F036FB8A1FC09C4B00C07492 /* EmplesListCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesListCellView.swift; sourceTree = "<group>"; };
 		F036FB8B1FC09C4B00C07492 /* EmplesListCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmplesListCellView.xib; sourceTree = "<group>"; };
-		F036FB901FC09F7900C07492 /* ListViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewDelegate.swift; sourceTree = "<group>"; };
-		F036FB921FC09FB100C07492 /* ListViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewDataSource.swift; sourceTree = "<group>"; };
 		F036FB941FC0BD2500C07492 /* EmplesGridViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesGridViewModel.swift; sourceTree = "<group>"; };
 		F036FB951FC0BD2500C07492 /* EmplesGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesGridView.swift; sourceTree = "<group>"; };
 		F036FB991FC0BDAB00C07492 /* EmplesGridCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesGridCellViewModel.swift; sourceTree = "<group>"; };
@@ -180,7 +175,6 @@
 		F0EC6DF41FBCE623000B2B3B /* DataGridSourceItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataGridSourceItem.swift; sourceTree = "<group>"; };
 		F0EC6DF51FBCE623000B2B3B /* DataSourceItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceItem.swift; sourceTree = "<group>"; };
 		F0EC6DF61FBCE623000B2B3B /* ViewCellModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCellModelProtocol.swift; sourceTree = "<group>"; };
-		F0EC6DF71FBCE623000B2B3B /* ViewCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCellProtocol.swift; sourceTree = "<group>"; };
 		F0EC6E211FBCE623000B2B3B /* EmplesMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesMenuModel.swift; sourceTree = "<group>"; };
 		F0EC6E221FBCE623000B2B3B /* EmplesMenuRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesMenuRouter.swift; sourceTree = "<group>"; };
 		F0EC6E231FBCE623000B2B3B /* EmplesMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesMenuView.swift; sourceTree = "<group>"; };
@@ -221,13 +215,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		F036FB5E1FC0874600C07492 /* MenuSource */ = {
+		F036FB5E1FC0874600C07492 /* GenericSource */ = {
 			isa = PBXGroup;
 			children = (
-				F036FB5F1FC0876400C07492 /* MenuDataSource.swift */,
-				F036FB611FC0878D00C07492 /* MenuDelegate.swift */,
+				F036FB5F1FC0876400C07492 /* GenericTableDataSource.swift */,
+				F036FB611FC0878D00C07492 /* GenericTableDelegate.swift */,
 			);
-			path = MenuSource;
+			path = GenericSource;
 			sourceTree = "<group>";
 		};
 		F036FB631FC0994200C07492 /* Assembler */ = {
@@ -297,7 +291,6 @@
 		F036FB6E1FC0994200C07492 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				F036FB8F1FC09CE800C07492 /* DataSource */,
 				F036FB741FC0997500C07492 /* EmplesListView.swift */,
 				F036FB751FC0997500C07492 /* EmplesListViewModel.swift */,
 			);
@@ -340,15 +333,6 @@
 				F036FB8B1FC09C4B00C07492 /* EmplesListCellView.xib */,
 			);
 			path = List;
-			sourceTree = "<group>";
-		};
-		F036FB8F1FC09CE800C07492 /* DataSource */ = {
-			isa = PBXGroup;
-			children = (
-				F036FB901FC09F7900C07492 /* ListViewDelegate.swift */,
-				F036FB921FC09FB100C07492 /* ListViewDataSource.swift */,
-			);
-			path = DataSource;
 			sourceTree = "<group>";
 		};
 		F036FB981FC0BDAB00C07492 /* Grid */ = {
@@ -672,9 +656,9 @@
 			isa = PBXGroup;
 			children = (
 				F0EC6DEB1FBCE623000B2B3B /* BaseRouter */,
+				F036FB5E1FC0874600C07492 /* GenericSource */,
 				F0EC6DF31FBCE623000B2B3B /* SourceItems */,
 				F0EC6DF61FBCE623000B2B3B /* ViewCellModelProtocol.swift */,
-				F0EC6DF71FBCE623000B2B3B /* ViewCellProtocol.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -709,7 +693,6 @@
 		F0EC6E201FBCE623000B2B3B /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				F036FB5E1FC0874600C07492 /* MenuSource */,
 				F0EC6E211FBCE623000B2B3B /* EmplesMenuModel.swift */,
 				F0EC6E221FBCE623000B2B3B /* EmplesMenuRouter.swift */,
 				F0EC6E231FBCE623000B2B3B /* EmplesMenuView.swift */,
@@ -939,7 +922,6 @@
 				F036FBDC1FC0DF3700C07492 /* DetailMapViewCell.swift in Sources */,
 				F0EC6E5C1FBCE623000B2B3B /* EmplesFSJsonReader.swift in Sources */,
 				F036FBB01FC0D61B00C07492 /* StackedViewSource.swift in Sources */,
-				F0EC6E6B1FBCE623000B2B3B /* ViewCellProtocol.swift in Sources */,
 				F036FBAA1FC0D3E200C07492 /* EmplesGalleryView.swift in Sources */,
 				F036FBD91FC0DF3700C07492 /* DetailDirectionTextViewCell.swift in Sources */,
 				F0EC6E611FBCE623000B2B3B /* DisplayAreaCollectionUseCase.swift in Sources */,
@@ -966,11 +948,10 @@
 				F036FB9D1FC0BDAB00C07492 /* EmplesGridViewCell.swift in Sources */,
 				F036FBC11FC0DAAC00C07492 /* CarouselViewDelegate.swift in Sources */,
 				F0EC6E5A1FBCE623000B2B3B /* RecArea.swift in Sources */,
-				F036FB601FC0876400C07492 /* MenuDataSource.swift in Sources */,
+				F036FB601FC0876400C07492 /* GenericTableDataSource.swift in Sources */,
 				F0EC6E881FBCE623000B2B3B /* EmplesMenuView.swift in Sources */,
 				F036FBC61FC0DE7800C07492 /* DetailAreaModel.swift in Sources */,
 				F0EC6E991FBCE623000B2B3B /* EmplesMenuViewCell.swift in Sources */,
-				F036FB911FC09F7900C07492 /* ListViewDelegate.swift in Sources */,
 				F0EC6E4C1FBCE623000B2B3B /* FileNamesStrings.swift in Sources */,
 				F036FBD61FC0DF3700C07492 /* DetailDescriptionViewCell.swift in Sources */,
 				F0EC6E5B1FBCE623000B2B3B /* DataFilePersistenceGateway.swift in Sources */,
@@ -985,8 +966,7 @@
 				F036FBA11FC0CCD700C07492 /* GridViewDataSource.swift in Sources */,
 				F0EC6E551FBCE623000B2B3B /* GoogleService.swift in Sources */,
 				F0EC6E591FBCE623000B2B3B /* BusinessLayerAssembly.swift in Sources */,
-				F036FB931FC09FB100C07492 /* ListViewDataSource.swift in Sources */,
-				F036FB621FC0878D00C07492 /* MenuDelegate.swift in Sources */,
+				F036FB621FC0878D00C07492 /* GenericTableDelegate.swift in Sources */,
 				F036FB731FC0994200C07492 /* DetailAssembler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

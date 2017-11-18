@@ -37,9 +37,9 @@ extension EmplesGridViewCell : NibLoadableView {
 
 }
 
-extension EmplesGridViewCell : ViewCellProtocol {
+extension EmplesGridViewCell : ConfigurableCell {
     
-    func update(with model: ViewCellModelProtocol) {
+    func configure(_ model: ViewCellModelProtocol) {
         
         if let item = model as? EmplesGridCellViewModel {
             self.viewModel = item
