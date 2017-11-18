@@ -1,0 +1,31 @@
+platform :ios, '9.0'
+inhibit_all_warnings!
+use_frameworks!
+
+# Disable sending stats
+ENV['COCOAPODS_DISABLE_STATS'] = 'true'
+
+target 'emplesMVVMRxSwift' do
+    pod 'RxSwift', '~> 4.0'
+    pod 'RxCocoa', '~> 4.0'
+    pod 'Swinject'
+    pod 'Kingfisher', '~>4.2.0'
+    pod 'GoogleMaps'
+    pod 'iCarousel'
+    pod 'Koloda'
+    pod 'Then', '2.3.0'
+    pod 'RxDataSources'
+
+end
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        if target.name == 'RxSwift'
+            target.build_configurations.each do |config|
+                if config.name == 'Debug'
+                    config.build_settings['OTHER_SWIFT_FLAGS'] ||= ['-D','TRACE_RESOURCES']
+                end
+            end
+        end
+    end
+end
