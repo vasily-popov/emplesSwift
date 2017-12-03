@@ -8,7 +8,7 @@
 
 import UIKit
 
-@UIApplicationMain
+//@UIApplicationMain
 
 class AppDelegate: BaseAppDelegate {
     

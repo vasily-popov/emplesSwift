@@ -20,9 +20,14 @@ extension UIColor {
     
     static func color(fromString hexString:String) -> UIColor? { //#AABBCC
         
+        guard hexString.count > 0 else { return nil }
+        
         var rgbValue :UInt32 = 0
         let scanner = Scanner(string: hexString)
-        scanner.scanLocation = 1
+        
+        if (hexString.hasPrefix("#")) {
+            scanner.scanLocation = 1
+        }
         if scanner.scanHexInt32(&rgbValue) {
             return UIColor.color(fromHex:rgbValue)
         }
