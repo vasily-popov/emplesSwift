@@ -22,7 +22,7 @@ protocol EmplesMenuSelectProtocol : class {
 }
 
 class EmplesMenuModel {
-    var dataSource: Array<String> = {
+    var dataSource: [String] = {
         return [LocalizedStrings.kListString.localized,
                 LocalizedStrings.kGridString.localized,
                 LocalizedStrings.kStackString.localized,

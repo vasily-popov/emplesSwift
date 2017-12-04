@@ -33,7 +33,7 @@ class EmplesStackedView: BaseCollectionView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Stack".localized.localizedUppercase;
+        self.title = "Stack".localized.localizedUppercase
         self.view.backgroundColor = UIColor(named: ColorStrings.emplesGreenColor)
         self.view.addSubview(self.stack)
         self.stack.dataSource = self.dataSource

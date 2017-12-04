@@ -21,8 +21,8 @@ class AppDelegate: BaseAppDelegate {
         ]
     }
     
-    override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool
-    {
+    override func application(_ application: UIApplication,
+                              didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         _ = super.application(application, didFinishLaunchingWithOptions: launchOptions)
         factory = AppDelegateFactory()
         factory.application().launch()

@@ -20,7 +20,7 @@ class DetailMapViewCell: UITableViewCell {
         __map.translatesAutoresizingMaskIntoConstraints = false
         return __map
     }()
-    var model : DetailMapCellModel? = nil
+    var model : DetailMapCellModel?
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -42,8 +42,8 @@ class DetailMapViewCell: UITableViewCell {
     
     private func updateMap(_ coordinate:CLLocationCoordinate2D) {
         let marker = GMSMarker()
-        marker.position = coordinate;
-        marker.map = self.map;
+        marker.position = coordinate
+        marker.map = self.map
         
         self.map.camera = GMSCameraPosition.camera(withLatitude: coordinate.latitude,
                                                    longitude: coordinate.longitude,
@@ -58,8 +58,8 @@ extension DetailMapViewCell : ViewCellProtocol {
     func configureModel(_ newModel: ViewCellModelProtocol) {
         
         if let item = newModel as? DetailMapCellModel {
-            self.model = item;
-            self.updateMap(self.model!.coordinate);
+            self.model = item
+            self.updateMap(self.model!.coordinate)
         }
     }
 }

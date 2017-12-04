@@ -17,7 +17,7 @@ class DetailAreaModel {
         }
     }
     
-    var dataSource: Array<DataSourceItem> = []
+    var dataSource: [DataSourceItem] = []
     
     let model: RecArea
     required init(_ model: RecArea) {
@@ -28,7 +28,7 @@ class DetailAreaModel {
     func createDataSource() {
         
         let screenHeight = UIScreen.main.bounds.height
-        var array = Array<DataSourceItem>()
+        var array = [DataSourceItem]()
         if let lat = self.model.latitude, let long = self.model.longitude {
             let coordinate = CLLocationCoordinate2DMake(Double(lat), Double(long))
             let item = DetailMapCellModel(coordinate)

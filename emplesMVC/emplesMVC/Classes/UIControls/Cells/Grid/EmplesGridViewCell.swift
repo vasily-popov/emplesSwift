@@ -12,7 +12,7 @@ class EmplesGridViewCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var iconView: UIImageView!
-    var model : EmplesGridCellModel? = nil
+    var model : EmplesGridCellModel?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,11 +29,11 @@ extension EmplesGridViewCell : ViewCellProtocol {
     func configureModel(_ newModel: ViewCellModelProtocol) {
         
         if let item = newModel as? EmplesGridCellModel {
-            self.model = item;
+            self.model = item
             self.titleLabel.text = self.model!.text
             self.titleLabel.font = self.model!.font
             self.titleLabel.textColor = self.model!.textColor
-            self.contentView.backgroundColor = self.model!.bgColor;
+            self.contentView.backgroundColor = self.model!.bgColor
             
             if let url = self.model?.imageURL {
                 self.iconView.kf.setImage(with: URL(string: url))

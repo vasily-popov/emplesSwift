@@ -39,7 +39,7 @@ class AppDelegateFactory : DependencyFactory {
     func rootViewController() -> UIViewController {
         return scoped(MainNavigationController()) { vc in
             vc.viewControllers = [
-                self.menuComponent.view(),
+                self.menuComponent.view()
             ]
         }
     }

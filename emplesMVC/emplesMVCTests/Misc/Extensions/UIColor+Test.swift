@@ -17,7 +17,7 @@ class UIColorSpec: QuickSpec {
         describe("HexColor") {
             
             it("should exist") {
-                let color = UIColor.color(fromHex:0xFFFFFF)
+                let color = UIColor.color(fromHex: 0xFFFFFF)
                 expect(color).notTo(beNil())
             }
             

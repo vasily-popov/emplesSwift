@@ -32,7 +32,7 @@ class EmplesGalleryView: BaseCollectionView {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Gallery".localized.localizedUppercase;
+        self.title = "Gallery".localized.localizedUppercase
         self.view.addSubview(self.collection)
         self.collection.delegate = self.delegate
         self.collection.dataSource = self.dataSource

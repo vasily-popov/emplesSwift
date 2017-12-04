@@ -14,7 +14,7 @@ protocol RouterProtocol {
     func setRootViewController(vc:UIViewController)
     func popViewControllerAnimated(animated:Bool)
     func popToRootViewControllerAnimated(animated:Bool)
-    func dismissViewControllerAnimated(animated:Bool, completion:(()-> Void)?)
+    func dismissViewControllerAnimated(animated:Bool, completion:(() -> Void)?)
     func showAlertWithTitle(title: String, message:String)
 
 }
@@ -53,17 +53,17 @@ extension BaseRouter : RouterProtocol {
         self.viewController?.popToRootViewController(animated: animated)
     }
     
-    func dismissViewControllerAnimated(animated:Bool, completion:(()-> Void)?) {
+    func dismissViewControllerAnimated(animated:Bool, completion:(() -> Void)?) {
         self.viewController?.dismiss(animated: true, completion: completion)
     }
     
     func showAlertWithTitle(title: String, message:String) {
         
         let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
-        alert.modalPresentationStyle = .overCurrentContext;
-        alert.providesPresentationContextTransitionStyle = true;
-        alert.definesPresentationContext = true;
-        alert.modalTransitionStyle = .crossDissolve;
+        alert.modalPresentationStyle = .overCurrentContext
+        alert.providesPresentationContextTransitionStyle = true
+        alert.definesPresentationContext = true
+        alert.modalTransitionStyle = .crossDissolve
         self.viewController?.present(alert, animated: true, completion: nil)
     }
     

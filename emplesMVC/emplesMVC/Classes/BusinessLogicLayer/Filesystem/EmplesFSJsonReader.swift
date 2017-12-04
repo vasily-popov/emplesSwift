@@ -32,8 +32,7 @@ class EmplesFSJsonReader {
         do {
             let content = try String(contentsOfFile: path, encoding: String.Encoding.utf8)
             return Result(content)
-        }
-        catch {
+        } catch {
             return Result(error: error)
         }
     }
@@ -46,13 +45,12 @@ extension EmplesFSJsonReader: DataRequestProtocol {
         
         let result = self.readFile(name: FileNamesStrings.kRecAreaFileName)
         switch result {
-            case .failure(let error):
+        case .failure(let error):
                 response(Result(error: error))
-            case .success(let jsonString):
+        case .success(let jsonString):
                 if let areas = Mapper<EmplesRecAreaMappable>().mapArray(JSONString: jsonString) {
                     response(Result(areas))
-                }
-                else {
+                } else {
                     response(Result(error: EmplesFileReaderError.parseError))
                 }
         }

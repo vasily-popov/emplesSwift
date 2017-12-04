@@ -1,0 +1,29 @@
+
+excluded:
+  - Pods
+
+line_length: 140
+# they can set both implicitly with an array
+type_body_length:
+  - 300 # warning
+  - 400 # error
+# or they can set both explicitly
+file_length:
+  warning: 500
+  error: 1200
+# naming rules can set warnings/errors for min_length and max_length
+# additionally they can set excluded names
+type_name:
+  min_length: 1
+  max_length: # warning and error
+    warning: 40
+    error: 50
+
+disabled_rules: 
+   - identifier_name
+   - colon
+   - trailing_whitespace
+   - trailing_newline
+   - vertical_whitespace
+   - implicit_getter
+   - weak_delegate   

@@ -11,13 +11,13 @@ import UIKit
 class EmplesGridModelDecorator : DecoratorModelProtocol {
     
     typealias T = DataGridSourceItem
-    var dataSource : Array<T> {
+    var dataSource : [T] {
         get {
             let __dataSource = self.model.dataSource.map { (item) -> T in
                 let cellModel = EmplesGridCellModel()
                 cellModel.text = item.recAreaName
                 cellModel.imageURL = item.imageURL
-                return T(model: cellModel, { [weak self] (model, index) in
+                return T(model: cellModel, { [weak self] (model, _) in
                     self?.model.delegate?.select(item)
                 })
             }

@@ -11,6 +11,5 @@ import Foundation
 protocol DecoratorModelProtocol {
     
     associatedtype T
-    var dataSource: Array<T> {get}
-    
+    var dataSource: [T] {get}
 }

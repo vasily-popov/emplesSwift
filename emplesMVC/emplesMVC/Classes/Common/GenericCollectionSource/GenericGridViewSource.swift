@@ -10,25 +10,25 @@ import UIKit
 
 protocol GenericGridViewSourceProtocol {
     
-    var elements: Array<DataGridSourceItem> {get}
+    var elements: [DataGridSourceItem] {get}
 }
 
-class GenericGridViewSource: NSObject,GenericGridViewSourceProtocol {
+class GenericGridViewSource: NSObject, GenericGridViewSourceProtocol {
     
-    var elements: Array<DataGridSourceItem> = []
+    var elements: [DataGridSourceItem] = []
     
-    convenience init(with source:Array<DataGridSourceItem>?) {
+    convenience init(with source:[DataGridSourceItem]?) {
         self.init()
         if let source = source {
             self.elements += source
         }
     }
     
-    public func setDataSource(_ dataSource:Array<DataGridSourceItem>) {
+    public func setDataSource(_ dataSource:[DataGridSourceItem]) {
         self.elements = Array(dataSource)
     }
     
-    public func appendItems(_ items:Array<DataGridSourceItem>) {
+    public func appendItems(_ items:[DataGridSourceItem]) {
         self.elements += items
     }
 }
@@ -43,14 +43,16 @@ extension GenericGridViewSource:UICollectionViewDataSource {
         return self.elements.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let item = self.elements[indexPath.row];
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: item.model.cellClassName, for: indexPath)
+        let item = self.elements[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: item.model.cellClassName,
+                                                      for: indexPath)
         if let cell = cell as? ViewCellProtocol {
             cell.configureModel(item.model)
         }
-        return cell;
+        return cell
     }
     
 }

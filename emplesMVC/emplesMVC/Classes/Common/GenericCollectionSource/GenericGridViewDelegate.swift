@@ -16,6 +16,10 @@ class GenericGridViewDelegate: NSObject {
         self.init()
         self.dataSource = source
     }
+    
+    deinit {
+        print("GenericGridViewDelegate deinit")
+    }
 }
 extension GenericGridViewDelegate: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

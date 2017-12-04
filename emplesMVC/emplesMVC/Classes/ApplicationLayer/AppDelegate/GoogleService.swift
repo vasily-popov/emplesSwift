@@ -9,13 +9,13 @@
 import UIKit
 import GoogleMaps
 
-class GoogleService: NSObject,ApplicationService {
+class GoogleService: NSObject, ApplicationService {
 
     static var GOOGLE_MAPS_APIKEY = "AIzaSyBq67F_e2PQEWtKgCDDkHBpnVH1r383nQo"
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool
-    {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         GMSServices.provideAPIKey(GoogleService.GOOGLE_MAPS_APIKEY)
-        return true;
+        return true
     }
     
 }

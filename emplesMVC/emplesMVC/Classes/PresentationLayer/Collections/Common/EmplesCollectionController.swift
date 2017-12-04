@@ -38,8 +38,7 @@ extension EmplesCollectionController :EmplesAreaProtocolDelegate {
         switch result {
         case .failure(let error):
             self.router?.showAlertWithTitle(title: "Error", message: error.localizedDescription)
-            break
-        case .success(_):
+        case .success:
             self.view?.showData()
         }
     }

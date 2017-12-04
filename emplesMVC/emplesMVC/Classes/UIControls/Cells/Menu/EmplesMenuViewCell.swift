@@ -11,7 +11,7 @@ import UIKit
 class EmplesMenuViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
-    var model : EmplesMenuCellModel? = nil
+    var model : EmplesMenuCellModel?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,11 +27,11 @@ extension EmplesMenuViewCell : ViewCellProtocol {
     
     func configureModel(_ newModel: ViewCellModelProtocol) {
         if let item = newModel as? EmplesMenuCellModel {
-            self.model = item;
-            self.titleLabel.text = self.model!.text;
-            self.titleLabel.font = self.model!.font;
-            self.titleLabel.textColor = self.model!.textColor;
-            self.contentView.backgroundColor = self.model!.bgColor;
+            self.model = item
+            self.titleLabel.text = self.model!.text
+            self.titleLabel.font = self.model!.font
+            self.titleLabel.textColor = self.model!.textColor
+            self.contentView.backgroundColor = self.model!.bgColor
         }
     }
 }

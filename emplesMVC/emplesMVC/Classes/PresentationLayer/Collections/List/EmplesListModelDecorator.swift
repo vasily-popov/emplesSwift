@@ -11,7 +11,7 @@ import UIKit
 class EmplesListModelDecorator : DecoratorModelProtocol {
     
     typealias T = DataSourceItem
-    var dataSource : Array<T> {
+    var dataSource : [T] {
         get {
             
             let __dataSource = self.model.dataSource.map { (item) -> T in
@@ -19,7 +19,7 @@ class EmplesListModelDecorator : DecoratorModelProtocol {
                 cellModel.text = item.recAreaName
                 cellModel.phone = item.recAreaPhone
                 cellModel.imageURL = item.imageURL
-                return T(model: cellModel, rowHeight: 50.0, { [weak self] (model, index) in
+                return T(model: cellModel, rowHeight: 50.0, { [weak self] (model, _) in
                     self?.model.delegate?.select(item)
                 })
             }

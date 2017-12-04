@@ -19,7 +19,7 @@ class BaseCollectionView: UIViewController {
         super.viewDidLoad()
         if let navVC = self.navigationController {
             navVC.view.addSubview(self.progressView)
-            self.progressView.translatesAutoresizingMaskIntoConstraints = false;
+            self.progressView.translatesAutoresizingMaskIntoConstraints = false
             self.progressView.leftAnchor.constraint(equalTo: navVC.view.leftAnchor, constant: 0).isActive = true
             self.progressView.rightAnchor.constraint(equalTo: navVC.view.rightAnchor, constant: 0).isActive = true
             self.progressView.topAnchor.constraint(equalTo: navVC.view.topAnchor, constant: 0).isActive = true

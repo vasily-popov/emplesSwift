@@ -14,9 +14,9 @@ protocol EmplesAreaProtocolDelegate:class {
     func select(_ item:RecArea)
 }
 
-class EmplesAreasModel: NSObject{
+class EmplesAreasModel: NSObject {
     weak var delegate :EmplesAreaProtocolDelegate?
-    var dataSource: Array<RecArea> = []
+    var dataSource: [RecArea] = []
     private let client:DataAreaRequestClient!
     required init(_ client:DataAreaRequestClient) {
         self.client = client

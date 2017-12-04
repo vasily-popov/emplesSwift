@@ -32,7 +32,7 @@ class EmplesListView: BaseCollectionView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "List".localized.localizedUppercase;
+        self.title = "List".localized.localizedUppercase
         self.view.addSubview(self.table)
         self.table.delegate = self.delegate
         self.table.dataSource = self.dataSource

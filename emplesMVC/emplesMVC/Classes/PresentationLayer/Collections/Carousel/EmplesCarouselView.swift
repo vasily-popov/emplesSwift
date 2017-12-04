@@ -32,7 +32,7 @@ class EmplesCarouselView: BaseCollectionView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Carousel".localized.localizedUppercase;
+        self.title = "Carousel".localized.localizedUppercase
         self.view.backgroundColor = UIColor(named: ColorStrings.emplesGreenColor)
         self.view.addSubview(self.carousel)
         self.carousel.delegate = self.delegate
@@ -45,7 +45,7 @@ class EmplesCarouselView: BaseCollectionView {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super .viewWillTransition(to: size, with: coordinator)
-        coordinator.animate(alongsideTransition: { (context) in
+        coordinator.animate(alongsideTransition: { (_) in
             self.carousel.reloadData()
         })
     }

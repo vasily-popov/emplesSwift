@@ -16,7 +16,7 @@ class StackKolodaView: KolodaView {
 
     override func frameForCard(at index: Int) -> CGRect {
         
-        if(self.frame.width > self.frame.height) {
+        if self.frame.width > self.frame.height {
             
             let yOffset = defaultTopOffset * (1.0 + CGFloat(index) * 0.2)
             let xOffset = self.frame.width/4 + defaultHorizontalOffset*(CGFloat(index) * 0.1)
@@ -24,8 +24,7 @@ class StackKolodaView: KolodaView {
             let height = self.frame.height * 0.9
             let frame = CGRect(x: xOffset, y: yOffset, width: width, height: height)
             return frame
-        }
-        else {
+        } else {
             let yOffset = defaultTopOffset * (1.0 + CGFloat(index) * 0.2)
             let xOffset = defaultHorizontalOffset * (1.0 + CGFloat(index) * 0.2)
             let width = self.frame.width - 2 * defaultHorizontalOffset

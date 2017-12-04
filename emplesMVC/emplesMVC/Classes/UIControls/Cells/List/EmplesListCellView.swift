@@ -14,7 +14,7 @@ class EmplesListCellView: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var iconView: UIImageView!
-    var model : EmplesListCellModel? = nil
+    var model : EmplesListCellModel?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,7 +31,7 @@ extension EmplesListCellView : ViewCellProtocol {
     func configureModel(_ newModel: ViewCellModelProtocol) {
         
         if let item = newModel as? EmplesListCellModel {
-            self.model = item;
+            self.model = item
             self.titleLabel.text = self.model!.text
             self.titleLabel.font = self.model!.font
             self.titleLabel.textColor = self.model!.textColor
@@ -39,7 +39,7 @@ extension EmplesListCellView : ViewCellProtocol {
             self.phoneLabel.text = self.model!.phone
             self.phoneLabel.font = self.model!.secondFont
             self.phoneLabel.textColor = self.model!.secondColor
-            self.contentView.backgroundColor = self.model!.bgColor;
+            self.contentView.backgroundColor = self.model!.bgColor
             
             if let url = self.model?.imageURL {
                 self.iconView.kf.setImage(with: URL(string: url))

@@ -25,7 +25,7 @@ extension UIColor {
         var rgbValue :UInt32 = 0
         let scanner = Scanner(string: hexString)
         
-        if (hexString.hasPrefix("#")) {
+        if hexString.hasPrefix("#") {
             scanner.scanLocation = 1
         }
         if scanner.scanHexInt32(&rgbValue) {

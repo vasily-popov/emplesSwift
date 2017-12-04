@@ -10,20 +10,20 @@ import UIKit
 import Koloda
 
 class StackedViewSource: NSObject, GenericTableViewSourceProtocol {
-    var elements: Array<DataSourceItem> = []
+    var elements: [DataSourceItem] = []
     
-    convenience init(with source:Array<DataSourceItem>?) {
+    convenience init(with source:[DataSourceItem]?) {
         self.init()
         if let source = source {
             self.elements += source
         }
     }
     
-    public func setDataSource(_ dataSource:Array<DataSourceItem>) {
+    public func setDataSource(_ dataSource:[DataSourceItem]) {
         self.elements = Array(dataSource)
     }
     
-    public func appendItems(_ items:Array<DataSourceItem>) {
+    public func appendItems(_ items:[DataSourceItem]) {
         self.elements += items
     }
 }

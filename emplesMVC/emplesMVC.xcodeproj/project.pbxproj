@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1ECD5A8860EACD6E3E33C0D7 /* Pods_emplesMVC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85ED08A17320CB7DB04E0B3C /* Pods_emplesMVC.framework */; };
+		4DEFC598EC7F1EC1C2647E9D /* Pods_emplesMVC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0CDBA811FD4954D004AC82D /* Pods_emplesMVC.framework */; };
 		D22D753014A9498B50357CE4 /* Pods_emplesMVC_Tests_emplesMVCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E36BA147EB56FB801E68EC9 /* Pods_emplesMVC_Tests_emplesMVCTests.framework */; };
 		F02A6F001FB390C700B523B3 /* ViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02A6EFF1FB390C700B523B3 /* ViewCellProtocol.swift */; };
 		F02A6F021FB3911C00B523B3 /* ViewCellModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02A6F011FB3911C00B523B3 /* ViewCellModelProtocol.swift */; };
@@ -241,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ECD5A8860EACD6E3E33C0D7 /* Pods_emplesMVC.framework in Frameworks */,
+				4DEFC598EC7F1EC1C2647E9D /* Pods_emplesMVC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -824,6 +826,7 @@
 				F08A4DC21FB0532A0035B8F4 /* Resources */,
 				B614CE602FD29901569F42F3 /* [CP] Embed Pods Frameworks */,
 				C098E884D166D5ABE8C341F3 /* [CP] Copy Pods Resources */,
+				F035D1FA1FD546F300967AEE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1047,6 +1050,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		F035D1FA1FD546F300967AEE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
 		F6D77FA2A7564582635D091B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;

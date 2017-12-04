@@ -12,6 +12,7 @@ target 'emplesMVC' do
     pod 'GoogleMaps'
     pod 'iCarousel'
     pod 'Koloda'
+    pod 'SwiftLint'    
     
     abstract_target 'Tests' do
         target "emplesMVCTests"

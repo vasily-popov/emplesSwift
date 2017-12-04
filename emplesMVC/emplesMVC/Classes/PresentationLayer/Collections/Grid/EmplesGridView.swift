@@ -17,7 +17,7 @@ class EmplesGridView: BaseCollectionView {
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 4
         layout.minimumInteritemSpacing = 4
-        layout.sectionInset = UIEdgeInsetsMake(2, 2, 2, 2)
+        layout.sectionInset = UIEdgeInsets(top:2, left:2, bottom:2, right:2)
         layout.itemSize = CGSize(width: (self.view.bounds.size.width-8)/2, height: 150)
         let view = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         view.backgroundColor = UIColor(named: ColorStrings.emplesGreenColor)
@@ -39,7 +39,7 @@ class EmplesGridView: BaseCollectionView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Grid".localized.localizedUppercase;
+        self.title = "Grid".localized.localizedUppercase
         self.view.addSubview(self.collection)
         self.collection.delegate = self.delegate
         self.collection.dataSource = self.dataSource

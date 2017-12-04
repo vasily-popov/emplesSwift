@@ -33,11 +33,10 @@ class EProgressView: UIView {
     override public var isHidden: Bool {
         set {
             super.isHidden = newValue
-            if (newValue) {
-                self.indicator.stopAnimating();
-            }
-            else {
-                self.indicator.startAnimating();
+            if newValue {
+                self.indicator.stopAnimating()
+            } else {
+                self.indicator.startAnimating()
             }
         }
         get {

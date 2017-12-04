@@ -33,7 +33,7 @@ class DetailView: BaseCollectionView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = model?.titleName;
+        self.title = model?.titleName
         self.view.addSubview(self.table)
         self.table.delegate = self.delegate
         self.table.dataSource = self.dataSource

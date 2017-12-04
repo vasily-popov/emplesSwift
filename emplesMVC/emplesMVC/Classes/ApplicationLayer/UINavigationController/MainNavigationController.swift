@@ -38,14 +38,14 @@ class MainNavigationController: UINavigationController {
     }
 }
 
-extension MainNavigationController : UINavigationControllerDelegate
-{
+extension MainNavigationController : UINavigationControllerDelegate {
     static let kBackButton = "back-arrow"
-    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+    func navigationController(_ navigationController: UINavigationController,
+                              willShow viewController: UIViewController, animated: Bool) {
         if self.viewControllers.count > 1 {
             let image = UIImage(named: MainNavigationController.kBackButton)
             let backItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(backButtonClicked(_:)))
-            viewController.navigationItem.leftBarButtonItem = backItem;
+            viewController.navigationItem.leftBarButtonItem = backItem
             self.interactivePopGestureRecognizer?.delegate = viewController as? UIGestureRecognizerDelegate
         }
     }

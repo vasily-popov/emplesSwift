@@ -12,7 +12,7 @@ import Foundation
 class EmplesMenuModelDecorator : DecoratorModelProtocol {
     
     typealias T = DataSourceItem
-    var dataSource : Array<T> {
+    var dataSource : [T] {
         get {
             let __dataSource = self.model.dataSource.map { (text) -> T in
                 let item = EmplesMenuCellModel()

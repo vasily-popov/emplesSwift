@@ -11,7 +11,7 @@ import UIKit
 class DetailDirectionTextViewCell: UITableViewCell {
     
     @IBOutlet weak var textView: UITextView!
-    var model : DetailDirectionsCellModel? = nil
+    var model : DetailDirectionsCellModel?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,12 +28,12 @@ extension DetailDirectionTextViewCell : ViewCellProtocol {
     func configureModel(_ newModel: ViewCellModelProtocol) {
         
         if let item = newModel as? DetailDirectionsCellModel {
-            self.model = item;
+            self.model = item
             self.textView.text = self.model!.directionText
             self.textView.font = self.model!.font
             self.textView.textColor = self.model!.textColor
             
-            self.contentView.backgroundColor = self.model!.bgColor;
+            self.contentView.backgroundColor = self.model!.bgColor
         }
     }
 }
