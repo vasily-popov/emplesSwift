@@ -8,11 +8,11 @@
 
 import UIKit
 import RxSwift
-
+import RxCocoa
 
 protocol EmplesGalleryViewModelProtocol {
     var title: String? {get}
-    var galleryItems: Variable<[DataGridSourceItem]?> {get}
+    var galleryItems: BehaviorRelay<[DataGridSourceItem]?> {get}
 }
 
 class EmplesGalleryViewModel: EmplesGalleryViewModelProtocol {
@@ -23,7 +23,7 @@ class EmplesGalleryViewModel: EmplesGalleryViewModelProtocol {
     private var model: DisplayAreaCollectionUseCase!
     
     // MARK: - Outout
-    internal let galleryItems = Variable<[DataGridSourceItem]?>(nil)
+    internal let galleryItems = BehaviorRelay<[DataGridSourceItem]?>(value: nil)
     internal var title : String? { return "Gallery".uppercased() }
     
     // MARK: - Init

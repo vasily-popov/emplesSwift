@@ -7,10 +7,11 @@
 //
 
 import RxSwift
+import RxCocoa
 
 protocol EmplesStackViewModelProtocol {
     var title: String? {get}
-    var stackItems: Variable<[DataSourceItem]?> {get}
+    var stackItems: BehaviorRelay<[DataSourceItem]?> {get}
 }
 
 class EmplesStackedViewModel: EmplesStackViewModelProtocol {
@@ -20,7 +21,7 @@ class EmplesStackedViewModel: EmplesStackViewModelProtocol {
     private var model: DisplayAreaCollectionUseCase!
     
     // MARK: - Outout
-    internal let stackItems = Variable<[DataSourceItem]?>(nil)
+    internal let stackItems = BehaviorRelay<[DataSourceItem]?>(value: nil)
     internal var title : String? { return "Stack".uppercased() }
     
     // MARK: - Init

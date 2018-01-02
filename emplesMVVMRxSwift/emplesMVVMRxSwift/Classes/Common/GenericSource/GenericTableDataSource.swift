@@ -7,14 +7,14 @@
 //
 
 import UIKit
-import RxSwift
+import RxCocoa
 
 class GenericTableDataSource<Cell: UITableViewCell>: NSObject, UITableViewDataSource
                             where Cell: ConfigurableCell {
     
-    let items: Variable<[DataSourceItem]?>
+    let items: BehaviorRelay<[DataSourceItem]?>
     
-    init(with source: Variable<[DataSourceItem]?>) {
+    init(with source: BehaviorRelay<[DataSourceItem]?>) {
         self.items = source
         super.init()
     }

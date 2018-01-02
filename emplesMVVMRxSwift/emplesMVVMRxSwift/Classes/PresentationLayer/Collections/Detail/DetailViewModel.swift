@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
 class DetailViewModel {
     
@@ -16,7 +17,7 @@ class DetailViewModel {
     private var model: DetailAreaModel!
     
     // MARK: - Outout
-    let listItems = Variable<[DataSourceItem]?>(nil)
+    let listItems = BehaviorRelay<[DataSourceItem]?>(value: nil)
     lazy var title:String? = {
         return self.model.titleName?.uppercased()
     }()

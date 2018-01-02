@@ -8,10 +8,11 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 protocol EmplesGridViewModelProtocol {
     var title: String? {get}
-    var collectionItems: Variable<[DataGridSourceItem]?> {get}
+    var collectionItems: BehaviorRelay<[DataGridSourceItem]?> {get}
 }
 
 class EmplesGridViewModel: EmplesGridViewModelProtocol {
@@ -22,7 +23,7 @@ class EmplesGridViewModel: EmplesGridViewModelProtocol {
     private var model: DisplayAreaCollectionUseCase!
     
     // MARK: - Outout
-    internal let collectionItems = Variable<[DataGridSourceItem]?>(nil)
+    internal let collectionItems = BehaviorRelay<[DataGridSourceItem]?>(value: nil)
     internal var title : String? { return "Grid".uppercased() }
     
     // MARK: - Init

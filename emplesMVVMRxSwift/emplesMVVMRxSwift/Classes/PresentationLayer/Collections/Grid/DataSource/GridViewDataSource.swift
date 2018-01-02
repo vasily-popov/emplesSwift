@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import RxSwift
+import RxCocoa
 
 class GridViewDataSource: NSObject, UICollectionViewDataSource {
     
-    let items: Variable<[DataGridSourceItem]?>
+    let items: BehaviorRelay<[DataGridSourceItem]?>
     
-    init(with source: Variable<[DataGridSourceItem]?>) {
+    init(with source: BehaviorRelay<[DataGridSourceItem]?>) {
         self.items = source
         super.init()
     }

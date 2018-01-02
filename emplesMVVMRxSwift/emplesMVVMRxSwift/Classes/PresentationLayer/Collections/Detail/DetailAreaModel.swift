@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import RxSwift
+import RxCocoa
 
 class DetailAreaModel {
     
@@ -18,7 +19,7 @@ class DetailAreaModel {
         }
     }
     
-    let dataSource = Variable<[DataSourceItem]?>(nil)
+    let dataSource = BehaviorRelay<[DataSourceItem]?>(value: nil)
     
     lazy var source: Array<DataSourceItem> = {
         let screenHeight = UIScreen.main.bounds.height
@@ -47,7 +48,7 @@ class DetailAreaModel {
     
     var model: RecArea! {
         didSet {
-            self.dataSource.value = source
+            self.dataSource.accept(source)
         }
     }
     

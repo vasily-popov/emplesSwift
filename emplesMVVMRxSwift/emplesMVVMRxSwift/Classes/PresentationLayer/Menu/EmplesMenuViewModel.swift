@@ -12,7 +12,7 @@ import RxCocoa
 
 protocol EmplesMenuViewModelProtocol {
     var title: String? {get}
-    var menuItems: Variable<[DataSourceItem]?> {get}
+    var menuItems: BehaviorRelay<[DataSourceItem]?> {get}
 }
 
 class EmplesMenuViewModel :EmplesMenuViewModelProtocol {
@@ -22,7 +22,7 @@ class EmplesMenuViewModel :EmplesMenuViewModelProtocol {
     private var model: EmplesMenuModel!
     
     // MARK: - Outout
-    internal let menuItems = Variable<[DataSourceItem]?>(nil)
+    internal let menuItems = BehaviorRelay<[DataSourceItem]?>(value: nil)
     internal var title : String? { return "Menu".uppercased() }
     
     // MARK: - Init
@@ -45,7 +45,8 @@ class EmplesMenuViewModel :EmplesMenuViewModelProtocol {
                 })
             }.reduce([DataSourceItem](), accumulator: { (accumulation: [DataSourceItem], model) -> [DataSourceItem] in
                 return accumulation + [model]
-            }).bind(to: menuItems)
+            })
+            .bind(to: menuItems)
             .disposed(by: bag)
     }
     deinit {

@@ -8,10 +8,11 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 protocol EmplesCarouselViewModelProtocol {
     var title: String? {get}
-    var carouselItems: Variable<[DataSourceItem]?> {get}
+    var carouselItems: BehaviorRelay<[DataSourceItem]?> {get}
 }
 
 class EmplesCarouselViewModel: EmplesCarouselViewModelProtocol {
@@ -21,7 +22,7 @@ class EmplesCarouselViewModel: EmplesCarouselViewModelProtocol {
     private var model: DisplayAreaCollectionUseCase!
     
     // MARK: - Outout
-    internal let carouselItems = Variable<[DataSourceItem]?>(nil)
+    internal let carouselItems = BehaviorRelay<[DataSourceItem]?>(value: nil)
     internal var title : String? { return "Carousel".uppercased() }
     
     // MARK: - Init

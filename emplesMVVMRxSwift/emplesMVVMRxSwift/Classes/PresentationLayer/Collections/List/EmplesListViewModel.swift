@@ -8,10 +8,11 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 protocol EmplesListViewModelProtocol {
     var title: String? {get}
-    var listItems: Variable<[DataSourceItem]?> {get}
+    var listItems: BehaviorRelay<[DataSourceItem]?> {get}
 }
 
 class EmplesListViewModel: EmplesListViewModelProtocol {
@@ -21,7 +22,9 @@ class EmplesListViewModel: EmplesListViewModelProtocol {
     private var model: DisplayAreaCollectionUseCase!
     
     // MARK: - Outout
-    internal let listItems = Variable<[DataSourceItem]?>(nil)
+    
+    
+    internal let listItems = BehaviorRelay<[DataSourceItem]?>(value: nil)
     internal var title : String? { return "List".uppercased() }
     
     // MARK: - Init
@@ -32,7 +35,8 @@ class EmplesListViewModel: EmplesListViewModelProtocol {
     }
     
     func bindOutput() {
-        model.displayAreaCollection().flatMap{ objects in
+        model.displayAreaCollection()
+            .flatMap{ objects in
                 Observable.from(objects)
             }.map({ (recArea) -> DataSourceItem in
                 let model = EmplesListCellViewModel()

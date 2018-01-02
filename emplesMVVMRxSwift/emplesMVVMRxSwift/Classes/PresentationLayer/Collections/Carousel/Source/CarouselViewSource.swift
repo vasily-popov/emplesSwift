@@ -8,13 +8,13 @@
 
 import UIKit
 import iCarousel
-import RxSwift
+import RxCocoa
 
 class CarouselViewSource: NSObject {
     
-    let items: Variable<[DataSourceItem]?>
+    let items: BehaviorRelay<[DataSourceItem]?>
     
-    init(with source: Variable<[DataSourceItem]?>) {
+    init(with source: BehaviorRelay<[DataSourceItem]?>) {
         self.items = source
         super.init()
     }
