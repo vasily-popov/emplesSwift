@@ -50,5 +50,8 @@ class DetailView: BaseCollectionView {
         self.dataSource.setDataSource(items)
         self.table.reloadData()
     }
+    deinit {
+        print("DetailView deinit")
+    }
 }
 

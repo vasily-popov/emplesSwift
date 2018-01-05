@@ -17,9 +17,17 @@ class DetailPresenter {
         self.model = model
     }
     
+    public func setItem(_ item: RecArea) {
+        self.model.model = item
+    }
+    
     func viewDidLoad() {
         self.view?.setTitleLabel(model.titleName?.uppercased())
         self.view?.showSourceItems(model.dataSource)
+    }
+    
+    deinit {
+        print("DetailPresenter deinit")
     }
 
 }

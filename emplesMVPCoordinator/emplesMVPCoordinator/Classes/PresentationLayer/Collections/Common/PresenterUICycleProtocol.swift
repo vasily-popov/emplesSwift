@@ -9,5 +9,9 @@
 import Foundation
 
 protocol PresenterUICycleProtocol {
+    
+    var onItemSelected: ((RecArea) -> ())? {get set}
+    var onShowError: ((String) -> ())? {get set}
+    
     func viewDidLoad()
 }

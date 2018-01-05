@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol CollectionViewProtocol : class {
+protocol CollectionViewProtocol : class, Presentable {
 
     var presenter :PresenterUICycleProtocol? {get set}
     func showProgressView()

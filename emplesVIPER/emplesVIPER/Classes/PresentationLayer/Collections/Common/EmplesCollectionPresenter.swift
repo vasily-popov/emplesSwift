@@ -13,7 +13,7 @@ class EmplesCollectionPresenter: NSObject, PresenterUICycleProtocol {
     weak var view: CollectionViewProtocol?
     var router: EmplesItemRouter?
     var displayCollectionUseCase:DisplayAreaCollectionUseCase!
-
+    
     func viewDidLoad() {
         
         self.view?.showProgressView()

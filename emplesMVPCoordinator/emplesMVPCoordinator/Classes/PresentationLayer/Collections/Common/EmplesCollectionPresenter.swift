@@ -9,9 +9,11 @@
 import UIKit
 
 class EmplesCollectionPresenter: NSObject, PresenterUICycleProtocol {
+    
+    var onItemSelected: ((RecArea) -> ())?
+    var onShowError: ((String) -> ())?
 
     weak var view: CollectionViewProtocol?
-    var router: EmplesItemRouter?
     private var model: EmplesAreasModel
     
     required init(_ model:EmplesAreasModel) {
@@ -38,7 +40,7 @@ extension EmplesCollectionPresenter :EmplesAreaProtocolDelegate {
         self.view?.hideProgressView()
         switch result {
         case .failure(let error):
-            self.router?.showAlertWithTitle(title: "Error", message: error.localizedDescription)
+            onShowError?(error.localizedDescription)
             break
         case .success( _):
             if let preparedArray = self.prepareArray() {
@@ -48,6 +50,6 @@ extension EmplesCollectionPresenter :EmplesAreaProtocolDelegate {
     }
     
     func select(_ item:RecArea) {
-        self.router?.showDetail(of: item)
+        onItemSelected?(item)
     }
 }

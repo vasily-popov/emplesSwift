@@ -9,9 +9,14 @@
 import Foundation
 
 class EmplesMenuPresenter :PresenterUICycleProtocol {
+    var onItemSelected: ((RecArea) -> ())?
+    
+    var onShowError: ((String) -> ())?
+    
+    
+    public var onSelectMenuItem: ((MenuSelectedItem) -> ())?
     
     public weak var view :EmplesMenuView?
-    public var router :EmplesMenuRouter?
     private var model: EmplesMenuModel!
     private var decorator :EmplesMenuModelDecorator!
     
@@ -29,7 +34,7 @@ class EmplesMenuPresenter :PresenterUICycleProtocol {
 extension EmplesMenuPresenter :EmplesMenuSelectProtocol {
 
     func select(_ item: MenuSelectedItem) {
-        self.router?.navigate(item: item)
+        onSelectMenuItem?(item)
     }
 }
 

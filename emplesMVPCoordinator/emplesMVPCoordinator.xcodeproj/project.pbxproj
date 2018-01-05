@@ -30,8 +30,6 @@
 		F0BE3F091FFEE0D600D15EFE /* GenericGridViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3E871FFEE0D600D15EFE /* GenericGridViewDelegate.swift */; };
 		F0BE3F0A1FFEE0D600D15EFE /* ViewCellModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3E881FFEE0D600D15EFE /* ViewCellModelProtocol.swift */; };
 		F0BE3F0B1FFEE0D600D15EFE /* ViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3E891FFEE0D600D15EFE /* ViewCellProtocol.swift */; };
-		F0BE3F0C1FFEE0D600D15EFE /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3E8B1FFEE0D600D15EFE /* BaseRouter.swift */; };
-		F0BE3F0D1FFEE0D600D15EFE /* DataSourceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3E8D1FFEE0D600D15EFE /* DataSourceItem.swift */; };
 		F0BE3F0E1FFEE0D600D15EFE /* GenericTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3E8E1FFEE0D600D15EFE /* GenericTableViewDelegate.swift */; };
 		F0BE3F0F1FFEE0D600D15EFE /* GenericTableViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3E8F1FFEE0D600D15EFE /* GenericTableViewSource.swift */; };
 		F0BE3F101FFEE0D600D15EFE /* DecoratorModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3E901FFEE0D600D15EFE /* DecoratorModelProtocol.swift */; };
@@ -62,7 +60,6 @@
 		F0BE3F291FFEE0D600D15EFE /* EProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3EB71FFEE0D600D15EFE /* EProgressView.swift */; };
 		F0BE3F2A1FFEE0D600D15EFE /* EmplesMenuModelDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3EBB1FFEE0D600D15EFE /* EmplesMenuModelDecorator.swift */; };
 		F0BE3F2B1FFEE0D600D15EFE /* EmplesMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3EBC1FFEE0D600D15EFE /* EmplesMenuView.swift */; };
-		F0BE3F2C1FFEE0D600D15EFE /* EmplesMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3EBD1FFEE0D600D15EFE /* EmplesMenuRouter.swift */; };
 		F0BE3F2D1FFEE0D600D15EFE /* EmplesMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3EBE1FFEE0D600D15EFE /* EmplesMenuModel.swift */; };
 		F0BE3F2E1FFEE0D600D15EFE /* EmplesMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3EBF1FFEE0D600D15EFE /* EmplesMenuPresenter.swift */; };
 		F0BE3F2F1FFEE0D600D15EFE /* EmplesGalleryCollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3EC31FFEE0D600D15EFE /* EmplesGalleryCollectionFlowLayout.swift */; };
@@ -77,7 +74,6 @@
 		F0BE3F381FFEE0D600D15EFE /* PresenterUICycleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3ECF1FFEE0D600D15EFE /* PresenterUICycleProtocol.swift */; };
 		F0BE3F391FFEE0D600D15EFE /* CollectionViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3ED01FFEE0D600D15EFE /* CollectionViewProtocol.swift */; };
 		F0BE3F3A1FFEE0D600D15EFE /* EmplesAreasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3ED11FFEE0D600D15EFE /* EmplesAreasModel.swift */; };
-		F0BE3F3B1FFEE0D600D15EFE /* EmplesItemRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3ED21FFEE0D600D15EFE /* EmplesItemRouter.swift */; };
 		F0BE3F3C1FFEE0D600D15EFE /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3ED41FFEE0D600D15EFE /* DetailView.swift */; };
 		F0BE3F3D1FFEE0D600D15EFE /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3ED51FFEE0D600D15EFE /* DetailPresenter.swift */; };
 		F0BE3F3E1FFEE0D600D15EFE /* DetailAreaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3ED61FFEE0D600D15EFE /* DetailAreaModel.swift */; };
@@ -98,6 +94,13 @@
 		F0BE3F4D1FFEE0D600D15EFE /* RecArea.json in Resources */ = {isa = PBXBuildFile; fileRef = F0BE3EF01FFEE0D600D15EFE /* RecArea.json */; };
 		F0BE3F4E1FFEE0D600D15EFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0BE3EF21FFEE0D600D15EFE /* LaunchScreen.storyboard */; };
 		F0BE3F4F1FFEE0D600D15EFE /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = F0BE3EF41FFEE0D600D15EFE /* background.png */; };
+		F0BE3F521FFF569C00D15EFE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3F511FFF569C00D15EFE /* Coordinator.swift */; };
+		F0BE3F551FFF572600D15EFE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3F541FFF572600D15EFE /* AppCoordinator.swift */; };
+		F0BE3F571FFF7A9F00D15EFE /* AppCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3F561FFF7A9F00D15EFE /* AppCoordinatorFactory.swift */; };
+		F0BE3F591FFF823200D15EFE /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3F581FFF823200D15EFE /* MenuCoordinator.swift */; };
+		F0BE3F5B1FFF890700D15EFE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3F5A1FFF890700D15EFE /* Router.swift */; };
+		F0BE3F5D1FFFB23300D15EFE /* CollectionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3F5C1FFFB23300D15EFE /* CollectionCoordinator.swift */; };
+		F0BE3F5F1FFFE05C00D15EFE /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3F5E1FFFE05C00D15EFE /* DetailCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,8 +129,6 @@
 		F0BE3E871FFEE0D600D15EFE /* GenericGridViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericGridViewDelegate.swift; sourceTree = "<group>"; };
 		F0BE3E881FFEE0D600D15EFE /* ViewCellModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCellModelProtocol.swift; sourceTree = "<group>"; };
 		F0BE3E891FFEE0D600D15EFE /* ViewCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCellProtocol.swift; sourceTree = "<group>"; };
-		F0BE3E8B1FFEE0D600D15EFE /* BaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
-		F0BE3E8D1FFEE0D600D15EFE /* DataSourceItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceItem.swift; sourceTree = "<group>"; };
 		F0BE3E8E1FFEE0D600D15EFE /* GenericTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTableViewDelegate.swift; sourceTree = "<group>"; };
 		F0BE3E8F1FFEE0D600D15EFE /* GenericTableViewSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTableViewSource.swift; sourceTree = "<group>"; };
 		F0BE3E901FFEE0D600D15EFE /* DecoratorModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecoratorModelProtocol.swift; sourceTree = "<group>"; };
@@ -158,7 +159,6 @@
 		F0BE3EB71FFEE0D600D15EFE /* EProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EProgressView.swift; sourceTree = "<group>"; };
 		F0BE3EBB1FFEE0D600D15EFE /* EmplesMenuModelDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesMenuModelDecorator.swift; sourceTree = "<group>"; };
 		F0BE3EBC1FFEE0D600D15EFE /* EmplesMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesMenuView.swift; sourceTree = "<group>"; };
-		F0BE3EBD1FFEE0D600D15EFE /* EmplesMenuRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesMenuRouter.swift; sourceTree = "<group>"; };
 		F0BE3EBE1FFEE0D600D15EFE /* EmplesMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesMenuModel.swift; sourceTree = "<group>"; };
 		F0BE3EBF1FFEE0D600D15EFE /* EmplesMenuPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesMenuPresenter.swift; sourceTree = "<group>"; };
 		F0BE3EC31FFEE0D600D15EFE /* EmplesGalleryCollectionFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesGalleryCollectionFlowLayout.swift; sourceTree = "<group>"; };
@@ -173,7 +173,6 @@
 		F0BE3ECF1FFEE0D600D15EFE /* PresenterUICycleProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterUICycleProtocol.swift; sourceTree = "<group>"; };
 		F0BE3ED01FFEE0D600D15EFE /* CollectionViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewProtocol.swift; sourceTree = "<group>"; };
 		F0BE3ED11FFEE0D600D15EFE /* EmplesAreasModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesAreasModel.swift; sourceTree = "<group>"; };
-		F0BE3ED21FFEE0D600D15EFE /* EmplesItemRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplesItemRouter.swift; sourceTree = "<group>"; };
 		F0BE3ED41FFEE0D600D15EFE /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		F0BE3ED51FFEE0D600D15EFE /* DetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		F0BE3ED61FFEE0D600D15EFE /* DetailAreaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailAreaModel.swift; sourceTree = "<group>"; };
@@ -197,6 +196,13 @@
 		F0BE3EF31FFEE0D600D15EFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0BE3EF41FFEE0D600D15EFE /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		F0BE3EF51FFEE0D600D15EFE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0BE3F511FFF569C00D15EFE /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F0BE3F541FFF572600D15EFE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		F0BE3F561FFF7A9F00D15EFE /* AppCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorFactory.swift; sourceTree = "<group>"; };
+		F0BE3F581FFF823200D15EFE /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
+		F0BE3F5A1FFF890700D15EFE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		F0BE3F5C1FFFB23300D15EFE /* CollectionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCoordinator.swift; sourceTree = "<group>"; };
+		F0BE3F5E1FFFE05C00D15EFE /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
 		F39DE4548DF9BBCC545B40B4 /* Pods_emplesMVPCoordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_emplesMVPCoordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -351,12 +357,13 @@
 		F0BE3E811FFEE0D600D15EFE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F0BE3F531FFF56C500D15EFE /* Coordinator */,
+				F0BE3E8A1FFEE0D600D15EFE /* Router */,
 				F0BE3E821FFEE0D600D15EFE /* SourceItems */,
 				F0BE3E851FFEE0D600D15EFE /* GenericCollectionSource */,
+				F0BE3E8C1FFEE0D600D15EFE /* GenericTableSource */,
 				F0BE3E881FFEE0D600D15EFE /* ViewCellModelProtocol.swift */,
 				F0BE3E891FFEE0D600D15EFE /* ViewCellProtocol.swift */,
-				F0BE3E8A1FFEE0D600D15EFE /* BaseRouter */,
-				F0BE3E8C1FFEE0D600D15EFE /* GenericTableSource */,
 				F0BE3E901FFEE0D600D15EFE /* DecoratorModelProtocol.swift */,
 			);
 			path = Common;
@@ -380,18 +387,17 @@
 			path = GenericCollectionSource;
 			sourceTree = "<group>";
 		};
-		F0BE3E8A1FFEE0D600D15EFE /* BaseRouter */ = {
+		F0BE3E8A1FFEE0D600D15EFE /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				F0BE3E8B1FFEE0D600D15EFE /* BaseRouter.swift */,
+				F0BE3F5A1FFF890700D15EFE /* Router.swift */,
 			);
-			path = BaseRouter;
+			path = Router;
 			sourceTree = "<group>";
 		};
 		F0BE3E8C1FFEE0D600D15EFE /* GenericTableSource */ = {
 			isa = PBXGroup;
 			children = (
-				F0BE3E8D1FFEE0D600D15EFE /* DataSourceItem.swift */,
 				F0BE3E8E1FFEE0D600D15EFE /* GenericTableViewDelegate.swift */,
 				F0BE3E8F1FFEE0D600D15EFE /* GenericTableViewSource.swift */,
 			);
@@ -547,7 +553,6 @@
 			children = (
 				F0BE3EBA1FFEE0D600D15EFE /* Decorator */,
 				F0BE3EBC1FFEE0D600D15EFE /* EmplesMenuView.swift */,
-				F0BE3EBD1FFEE0D600D15EFE /* EmplesMenuRouter.swift */,
 				F0BE3EBE1FFEE0D600D15EFE /* EmplesMenuModel.swift */,
 				F0BE3EBF1FFEE0D600D15EFE /* EmplesMenuPresenter.swift */,
 			);
@@ -621,7 +626,6 @@
 				F0BE3ECF1FFEE0D600D15EFE /* PresenterUICycleProtocol.swift */,
 				F0BE3ED01FFEE0D600D15EFE /* CollectionViewProtocol.swift */,
 				F0BE3ED11FFEE0D600D15EFE /* EmplesAreasModel.swift */,
-				F0BE3ED21FFEE0D600D15EFE /* EmplesItemRouter.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -719,6 +723,19 @@
 				F0BE3EF51FFEE0D600D15EFE /* Info.plist */,
 			);
 			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		F0BE3F531FFF56C500D15EFE /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F0BE3F511FFF569C00D15EFE /* Coordinator.swift */,
+				F0BE3F541FFF572600D15EFE /* AppCoordinator.swift */,
+				F0BE3F561FFF7A9F00D15EFE /* AppCoordinatorFactory.swift */,
+				F0BE3F581FFF823200D15EFE /* MenuCoordinator.swift */,
+				F0BE3F5C1FFFB23300D15EFE /* CollectionCoordinator.swift */,
+				F0BE3F5E1FFFE05C00D15EFE /* DetailCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -878,8 +895,11 @@
 				F0BE3EF61FFEE0D600D15EFE /* LocalizedStrings.swift in Sources */,
 				F0BE3F251FFEE0D600D15EFE /* EmplesGridCellModel.swift in Sources */,
 				F0BE3F391FFEE0D600D15EFE /* CollectionViewProtocol.swift in Sources */,
+				F0BE3F5B1FFF890700D15EFE /* Router.swift in Sources */,
 				F0BE3F301FFEE0D600D15EFE /* EmplesGalleryPresenter.swift in Sources */,
+				F0BE3F571FFF7A9F00D15EFE /* AppCoordinatorFactory.swift in Sources */,
 				F0BE3F131FFEE0D600D15EFE /* AppearanceService.swift in Sources */,
+				F0BE3F591FFF823200D15EFE /* MenuCoordinator.swift in Sources */,
 				F0BE3F351FFEE0D600D15EFE /* EmplesCarouselView.swift in Sources */,
 				F0BE3F181FFEE0D600D15EFE /* DetailDirectionsCellModel.swift in Sources */,
 				F0BE3F1B1FFEE0D600D15EFE /* DetailDescriptionCellModel.swift in Sources */,
@@ -889,8 +909,8 @@
 				F0BE3F261FFEE0D600D15EFE /* EmplesGridViewCell.swift in Sources */,
 				F0BE3F021FFEE0D600D15EFE /* Result.swift in Sources */,
 				F0BE3EF71FFEE0D600D15EFE /* FileNamesStrings.swift in Sources */,
-				F0BE3F0C1FFEE0D600D15EFE /* BaseRouter.swift in Sources */,
 				F0BE3F041FFEE0D600D15EFE /* RecArea.swift in Sources */,
+				F0BE3F5D1FFFB23300D15EFE /* CollectionCoordinator.swift in Sources */,
 				F0BE3F291FFEE0D600D15EFE /* EProgressView.swift in Sources */,
 				F0BE3F321FFEE0D600D15EFE /* CarouselViewSource.swift in Sources */,
 				F0BE3F151FFEE0D600D15EFE /* BaseAppDelegate.swift in Sources */,
@@ -902,6 +922,7 @@
 				F0BE3F081FFEE0D600D15EFE /* GenericGridViewSource.swift in Sources */,
 				F0BE3EFE1FFEE0D600D15EFE /* CollectionModule.swift in Sources */,
 				F0BE3F2A1FFEE0D600D15EFE /* EmplesMenuModelDecorator.swift in Sources */,
+				F0BE3F521FFF569C00D15EFE /* Coordinator.swift in Sources */,
 				F0BE3F441FFEE0D600D15EFE /* StackedViewDelegate.swift in Sources */,
 				F0BE3F0F1FFEE0D600D15EFE /* GenericTableViewSource.swift in Sources */,
 				F0BE3F401FFEE0D600D15EFE /* EmplesListModelDecorator.swift in Sources */,
@@ -920,12 +941,13 @@
 				F0BE3F1F1FFEE0D600D15EFE /* EmplesListCellView.swift in Sources */,
 				F0BE3EFF1FFEE0D600D15EFE /* DetailModule.swift in Sources */,
 				F0BE3F0B1FFEE0D600D15EFE /* ViewCellProtocol.swift in Sources */,
-				F0BE3F3B1FFEE0D600D15EFE /* EmplesItemRouter.swift in Sources */,
 				F0BE3F201FFEE0D600D15EFE /* EmplesListCellModel.swift in Sources */,
 				F0BE3F2D1FFEE0D600D15EFE /* EmplesMenuModel.swift in Sources */,
 				F0BE3EFB1FFEE0D600D15EFE /* NSObject+Name.swift in Sources */,
 				F0BE3F421FFEE0D600D15EFE /* EmplesStackedView.swift in Sources */,
+				F0BE3F551FFF572600D15EFE /* AppCoordinator.swift in Sources */,
 				F0BE3EFC1FFEE0D600D15EFE /* ReusableView.swift in Sources */,
+				F0BE3F5F1FFFE05C00D15EFE /* DetailCoordinator.swift in Sources */,
 				F0BE3F1A1FFEE0D600D15EFE /* DetailMapViewCell.swift in Sources */,
 				F0BE3F381FFEE0D600D15EFE /* PresenterUICycleProtocol.swift in Sources */,
 				F0BE3F111FFEE0D600D15EFE /* MainNavigationController.swift in Sources */,
@@ -934,14 +956,12 @@
 				F0BE3F0A1FFEE0D600D15EFE /* ViewCellModelProtocol.swift in Sources */,
 				F0BE3F3F1FFEE0D600D15EFE /* EmplesListPresenter.swift in Sources */,
 				F0BE3F331FFEE0D600D15EFE /* CarouselViewDelegate.swift in Sources */,
-				F0BE3F0D1FFEE0D600D15EFE /* DataSourceItem.swift in Sources */,
 				F0BE3F451FFEE0D600D15EFE /* EmplesStackedPresenter.swift in Sources */,
 				F0BE3F141FFEE0D600D15EFE /* AppDelegate.swift in Sources */,
 				F0BE3F221FFEE0D600D15EFE /* EmplesMenuViewCell.swift in Sources */,
 				F0BE3F361FFEE0D600D15EFE /* BaseCollectionView.swift in Sources */,
 				F0BE3F011FFEE0D600D15EFE /* DataAreaRequestClient.swift in Sources */,
 				F0BE3F031FFEE0D600D15EFE /* EmplesFSJsonReader.swift in Sources */,
-				F0BE3F2C1FFEE0D600D15EFE /* EmplesMenuRouter.swift in Sources */,
 				F0BE3F461FFEE0D600D15EFE /* StackKolodaView.swift in Sources */,
 				F0BE3F231FFEE0D600D15EFE /* EmplesMenuCellModel.swift in Sources */,
 				F0BE3EFA1FFEE0D600D15EFE /* UIColor+Hex.swift in Sources */,
