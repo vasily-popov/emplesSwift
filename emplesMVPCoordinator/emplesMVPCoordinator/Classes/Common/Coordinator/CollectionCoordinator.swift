@@ -26,7 +26,7 @@ final class CollectionCoordinator: Coordinator {
         
         view.presenter?.onShowError = { [weak self] message in
             
-            let alert = UIAlertController.init(title: "Error", message: message, preferredStyle: .alert)
+            let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
             alert.modalPresentationStyle = .overCurrentContext;
             alert.providesPresentationContextTransitionStyle = true;
             alert.definesPresentationContext = true;

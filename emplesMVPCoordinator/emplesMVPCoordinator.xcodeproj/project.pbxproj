@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3A00A5B4010EDE1025737330 /* Pods_emplesMVPCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F39DE4548DF9BBCC545B40B4 /* Pods_emplesMVPCoordinator.framework */; };
+		F053274A2000C38B007511A7 /* DeepLinkOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05327492000C38B007511A7 /* DeepLinkOption.swift */; };
+		F053274C20012A89007511A7 /* PushNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F053274B20012A89007511A7 /* PushNotificationService.swift */; };
+		F053274E20012AF5007511A7 /* DeepLinkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F053274D20012AF5007511A7 /* DeepLinkService.swift */; };
+		F053275020012BB6007511A7 /* ShortcutsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F053274F20012BB6007511A7 /* ShortcutsService.swift */; };
 		F0BE3EF61FFEE0D600D15EFE /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3E6A1FFEE0D600D15EFE /* LocalizedStrings.swift */; };
 		F0BE3EF71FFEE0D600D15EFE /* FileNamesStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3E6B1FFEE0D600D15EFE /* FileNamesStrings.swift */; };
 		F0BE3EF81FFEE0D600D15EFE /* ColorStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3E6C1FFEE0D600D15EFE /* ColorStrings.swift */; };
@@ -106,6 +110,10 @@
 /* Begin PBXFileReference section */
 		66FF2C46B43C1A9120143151 /* Pods-emplesMVPCoordinator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emplesMVPCoordinator.release.xcconfig"; path = "Pods/Target Support Files/Pods-emplesMVPCoordinator/Pods-emplesMVPCoordinator.release.xcconfig"; sourceTree = "<group>"; };
 		D7AD83D82D6BF6E4A66647B5 /* Pods-emplesMVPCoordinator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emplesMVPCoordinator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-emplesMVPCoordinator/Pods-emplesMVPCoordinator.debug.xcconfig"; sourceTree = "<group>"; };
+		F05327492000C38B007511A7 /* DeepLinkOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkOption.swift; sourceTree = "<group>"; };
+		F053274B20012A89007511A7 /* PushNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationService.swift; sourceTree = "<group>"; };
+		F053274D20012AF5007511A7 /* DeepLinkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkService.swift; sourceTree = "<group>"; };
+		F053274F20012BB6007511A7 /* ShortcutsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsService.swift; sourceTree = "<group>"; };
 		F0BE3E521FFEE07500D15EFE /* emplesMVPCoordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emplesMVPCoordinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0BE3E6A1FFEE0D600D15EFE /* LocalizedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
 		F0BE3E6B1FFEE0D600D15EFE /* FileNamesStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileNamesStrings.swift; sourceTree = "<group>"; };
@@ -235,6 +243,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F05327482000C377007511A7 /* DeepLink */ = {
+			isa = PBXGroup;
+			children = (
+				F05327492000C38B007511A7 /* DeepLinkOption.swift */,
+			);
+			path = DeepLink;
+			sourceTree = "<group>";
+		};
 		F0BE3E491FFEE07500D15EFE = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +373,7 @@
 		F0BE3E811FFEE0D600D15EFE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F05327482000C377007511A7 /* DeepLink */,
 				F0BE3F531FFF56C500D15EFE /* Coordinator */,
 				F0BE3E8A1FFEE0D600D15EFE /* Router */,
 				F0BE3E821FFEE0D600D15EFE /* SourceItems */,
@@ -428,6 +445,9 @@
 				F0BE3E961FFEE0D600D15EFE /* AppearanceService.swift */,
 				F0BE3E971FFEE0D600D15EFE /* AppDelegate.swift */,
 				F0BE3E981FFEE0D600D15EFE /* BaseAppDelegate.swift */,
+				F053274B20012A89007511A7 /* PushNotificationService.swift */,
+				F053274D20012AF5007511A7 /* DeepLinkService.swift */,
+				F053274F20012BB6007511A7 /* ShortcutsService.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -914,6 +934,7 @@
 				F0BE3F291FFEE0D600D15EFE /* EProgressView.swift in Sources */,
 				F0BE3F321FFEE0D600D15EFE /* CarouselViewSource.swift in Sources */,
 				F0BE3F151FFEE0D600D15EFE /* BaseAppDelegate.swift in Sources */,
+				F053275020012BB6007511A7 /* ShortcutsService.swift in Sources */,
 				F0BE3F091FFEE0D600D15EFE /* GenericGridViewDelegate.swift in Sources */,
 				F0BE3EF81FFEE0D600D15EFE /* ColorStrings.swift in Sources */,
 				F0BE3F431FFEE0D600D15EFE /* StackedViewSource.swift in Sources */,
@@ -922,6 +943,7 @@
 				F0BE3F081FFEE0D600D15EFE /* GenericGridViewSource.swift in Sources */,
 				F0BE3EFE1FFEE0D600D15EFE /* CollectionModule.swift in Sources */,
 				F0BE3F2A1FFEE0D600D15EFE /* EmplesMenuModelDecorator.swift in Sources */,
+				F053274A2000C38B007511A7 /* DeepLinkOption.swift in Sources */,
 				F0BE3F521FFF569C00D15EFE /* Coordinator.swift in Sources */,
 				F0BE3F441FFEE0D600D15EFE /* StackedViewDelegate.swift in Sources */,
 				F0BE3F0F1FFEE0D600D15EFE /* GenericTableViewSource.swift in Sources */,
@@ -953,11 +975,13 @@
 				F0BE3F111FFEE0D600D15EFE /* MainNavigationController.swift in Sources */,
 				F0BE3F3E1FFEE0D600D15EFE /* DetailAreaModel.swift in Sources */,
 				F0BE3F411FFEE0D600D15EFE /* EmplesListView.swift in Sources */,
+				F053274C20012A89007511A7 /* PushNotificationService.swift in Sources */,
 				F0BE3F0A1FFEE0D600D15EFE /* ViewCellModelProtocol.swift in Sources */,
 				F0BE3F3F1FFEE0D600D15EFE /* EmplesListPresenter.swift in Sources */,
 				F0BE3F331FFEE0D600D15EFE /* CarouselViewDelegate.swift in Sources */,
 				F0BE3F451FFEE0D600D15EFE /* EmplesStackedPresenter.swift in Sources */,
 				F0BE3F141FFEE0D600D15EFE /* AppDelegate.swift in Sources */,
+				F053274E20012AF5007511A7 /* DeepLinkService.swift in Sources */,
 				F0BE3F221FFEE0D600D15EFE /* EmplesMenuViewCell.swift in Sources */,
 				F0BE3F361FFEE0D600D15EFE /* BaseCollectionView.swift in Sources */,
 				F0BE3F011FFEE0D600D15EFE /* DataAreaRequestClient.swift in Sources */,

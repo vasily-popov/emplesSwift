@@ -6,19 +6,21 @@
 //  Copyright © 2018 Vasily Popov. All rights reserved.
 //
 
+import UIKit
+
 final class MenuCoordinator: Coordinator {
     
     private let coordinatorFactory: AppCoordinatorFactory
-    private let presenter: EmplesMenuPresenter
+    private let view: EmplesMenuView
     
-    init(router: RouterType, coordinatorFactory: AppCoordinatorFactory, presenter: EmplesMenuPresenter) {
+    init(router: RouterType, coordinatorFactory: AppCoordinatorFactory, view: EmplesMenuView) {
         self.coordinatorFactory = coordinatorFactory
-        self.presenter = presenter
+        self.view = view
         super.init(router: router)
     }
     
     override func start() {
-        presenter.onSelectMenuItem = runListFlow()
+        view.presenter.onSelectMenuItem = runListFlow()
     }
     
     private func runListFlow() -> ((MenuSelectedItem) -> ()) {
@@ -36,6 +38,10 @@ final class MenuCoordinator: Coordinator {
             self?.removeChild(coordinator)
         }
         coordinator.start()
+    }
+    
+    override func toPresentable() -> UIViewController? {
+        return self.view
     }
 }
 

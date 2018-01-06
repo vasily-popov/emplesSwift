@@ -39,9 +39,9 @@ final class AppCoordinator: Coordinator {
     }
     
     private func runMenuFlow() {
-        let (coordinator, module) = coordinatorFactory.makeMenuCoordinator(router: router)
+        let coordinator = coordinatorFactory.makeMenuCoordinator(router: router)
         addChild(coordinator)
-        router.setRootModule(module, hideBar: false)
+        router.setRootModule(coordinator, hideBar: false)
         coordinator.start()
     }
 }

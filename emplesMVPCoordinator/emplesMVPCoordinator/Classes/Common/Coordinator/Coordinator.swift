@@ -8,40 +8,6 @@
 
 import UIKit
 
-struct DeepLinkURLConstants {
-    static let Carousel = "carousel"
-    static let List = "list"
-    static let Item = "item"
-}
-
-enum DeepLinkOption {
-    case list
-    case carousel
-    case item(RecArea)
-    
-    static func build(with params: [String : AnyObject]?) -> DeepLinkOption? {
-        let id = params?["id"] as? String
-        //let itemID = params?["item_id"] as? String
-        switch id {
-        case DeepLinkURLConstants.Carousel?: return .carousel
-        case DeepLinkURLConstants.List?: return .list
-        //case DeepLinkURLConstants.Item: return .item(itemID)
-        default: return nil
-        }
-    }
-    
-    static func build(with activity: NSUserActivity?) -> DeepLinkOption? {
-        let id = activity?.activityType
-        //let itemID = params?["item_id"] as? String
-        switch id {
-        case DeepLinkURLConstants.Carousel?: return .carousel
-        case DeepLinkURLConstants.List?: return .list
-        //case DeepLinkURLConstants.Item: return .item(itemID)
-        default: return nil
-        }
-    }
-}
-
 protocol CoordinatorProtocol: class, Presentable {
     var router: RouterType { get }
     var onCompletion: (() -> Void)? { get set }

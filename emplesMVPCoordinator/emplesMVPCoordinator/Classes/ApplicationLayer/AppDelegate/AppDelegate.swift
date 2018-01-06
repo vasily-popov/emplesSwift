@@ -15,12 +15,9 @@ class AppDelegate: BaseAppDelegate {
     
     private let container = DependencyContainer.configure()
     
-    override var services: [ApplicationService] {
-        return [
-            AppearanceService(),
-            GoogleService()
-        ]
-    }
+    override lazy var services: [ApplicationService]  = [
+                                                        AppearanceService(),
+                                                        GoogleService()]
     
     private lazy var applicationCoordinator: Coordinator = self.makeCoordinator()
     
@@ -40,27 +37,17 @@ class AppDelegate: BaseAppDelegate {
     {
         _ = super.application(application, didFinishLaunchingWithOptions: launchOptions)
         
-        let notification = launchOptions?[.remoteNotification] as? [String: AnyObject]
-        let deepLink = DeepLinkOption.build(with: notification)
-        
         self.window = try! container.resolve() as UIWindow
         self.window?.rootViewController = try! container.resolve() as MainNavigationController
-        applicationCoordinator.start(with: deepLink)
         self.window?.makeKeyAndVisible()
-        return true
-    }
-    
-    override func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Swift.Void) {
-        super.application(application, didReceiveRemoteNotification: userInfo, fetchCompletionHandler: completionHandler)
-        let dict = userInfo as? [String: AnyObject]
-        let deepLink = DeepLinkOption.build(with: dict)
+        
+        let notification = launchOptions?[.remoteNotification] as? [String: AnyObject]
+        let deepLink = DeepLinkOption.build(with: notification)
         applicationCoordinator.start(with: deepLink)
-    }
-    
-    override func application(_ application: UIApplication, continue userActivity: NSUserActivity,
-                     restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
-        let deepLink = DeepLinkOption.build(with: userActivity)
-        applicationCoordinator.start(with: deepLink)
+
+        services.append(contentsOf: [PushNotificationService(applicationCoordinator),
+                        DeepLinkService(applicationCoordinator),
+                        ShortcutsService(applicationCoordinator)])
         return true
     }
 }

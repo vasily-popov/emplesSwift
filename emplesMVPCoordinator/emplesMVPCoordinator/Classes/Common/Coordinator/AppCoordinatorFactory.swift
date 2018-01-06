@@ -10,8 +10,7 @@ import UIKit
 import Dip
 
 protocol AppCoordinatorFactory {
-    func makeMenuCoordinator(router: RouterType) ->
-        (configurator: Coordinator, toPresent: Presentable)
+    func makeMenuCoordinator(router: RouterType) -> Coordinator
     func makeCollectionCoordinator(router: RouterType, arg: MenuSelectedItem) -> Coordinator
     func makeDetailCoordinator(router: RouterType, item: RecArea) -> Coordinator
 }
@@ -24,13 +23,12 @@ final class AppCoordinatorFactoryImpl: AppCoordinatorFactory {
         self.container = container
     }
     
-    func makeMenuCoordinator(router: RouterType) ->
-        (configurator: Coordinator, toPresent: Presentable) {
-            let view = try! container.resolve() as EmplesMenuView
-            let coordinator = MenuCoordinator(router: router,
-                                              coordinatorFactory: self,
-                                              presenter:view.presenter)
-            return (coordinator, view)
+    func makeMenuCoordinator(router: RouterType) -> Coordinator {
+        let view = try! container.resolve() as EmplesMenuView
+        let coordinator = MenuCoordinator(router: router,
+                                          coordinatorFactory: self,
+                                          view:view)
+        return coordinator
     }
     
     func makeCollectionCoordinator(router: RouterType, arg: MenuSelectedItem) -> Coordinator {
