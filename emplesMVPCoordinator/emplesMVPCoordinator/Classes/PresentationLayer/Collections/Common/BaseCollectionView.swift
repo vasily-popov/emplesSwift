@@ -17,14 +17,12 @@ class BaseCollectionView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let navVC = self.navigationController {
-            navVC.view.addSubview(self.progressView)
-            self.progressView.translatesAutoresizingMaskIntoConstraints = false;
-            self.progressView.leftAnchor.constraint(equalTo: navVC.view.leftAnchor, constant: 0).isActive = true
-            self.progressView.rightAnchor.constraint(equalTo: navVC.view.rightAnchor, constant: 0).isActive = true
-            self.progressView.topAnchor.constraint(equalTo: navVC.view.topAnchor, constant: 0).isActive = true
-            self.progressView.bottomAnchor.constraint(equalTo: navVC.view.bottomAnchor, constant: 0).isActive = true
-        }
+        self.view.addSubview(self.progressView)
+        self.progressView.translatesAutoresizingMaskIntoConstraints = false
+        self.progressView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 0).isActive = true
+        self.progressView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: 0).isActive = true
+        self.progressView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 0).isActive = true
+        self.progressView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive = true
         // Do any additional setup after loading the view.
     }
 

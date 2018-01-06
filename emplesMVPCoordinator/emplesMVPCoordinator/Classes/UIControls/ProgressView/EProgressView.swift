@@ -11,7 +11,7 @@ import UIKit
 class EProgressView: UIView {
     
     private lazy var indicator: UIActivityIndicatorView = {
-        var item = UIActivityIndicatorView.init(frame: CGRect.init(x: 0, y: 0, width: 40.0, height: 40.0))
+        var item = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40.0, height: 40.0))
         item.translatesAutoresizingMaskIntoConstraints = false
         return item
     }()
@@ -44,6 +44,6 @@ class EProgressView: UIView {
             return super.isHidden
         }
     }
-
+    
     
 }
