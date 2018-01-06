@@ -9,12 +9,18 @@
 import Foundation
 import Dip
 
-enum MenuSelectedItem: Int, DependencyTagConvertible {
+enum MenuSelectedItem: Int {
     case List = 0
     case Grid
     case Stack
     case Gallery
     case Carousel
+}
+
+extension MenuSelectedItem: DependencyTagConvertible {
+    public var dependencyTag: DependencyContainer.Tag {
+        return .Int(self.rawValue)
+    }
 }
 
 protocol EmplesMenuSelectProtocol : class {

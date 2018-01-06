@@ -100,7 +100,6 @@
 		F0BE3F4F1FFEE0D600D15EFE /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = F0BE3EF41FFEE0D600D15EFE /* background.png */; };
 		F0BE3F521FFF569C00D15EFE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3F511FFF569C00D15EFE /* Coordinator.swift */; };
 		F0BE3F551FFF572600D15EFE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3F541FFF572600D15EFE /* AppCoordinator.swift */; };
-		F0BE3F571FFF7A9F00D15EFE /* AppCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3F561FFF7A9F00D15EFE /* AppCoordinatorFactory.swift */; };
 		F0BE3F591FFF823200D15EFE /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3F581FFF823200D15EFE /* MenuCoordinator.swift */; };
 		F0BE3F5B1FFF890700D15EFE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3F5A1FFF890700D15EFE /* Router.swift */; };
 		F0BE3F5D1FFFB23300D15EFE /* CollectionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE3F5C1FFFB23300D15EFE /* CollectionCoordinator.swift */; };
@@ -206,7 +205,6 @@
 		F0BE3EF51FFEE0D600D15EFE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0BE3F511FFF569C00D15EFE /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F0BE3F541FFF572600D15EFE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		F0BE3F561FFF7A9F00D15EFE /* AppCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorFactory.swift; sourceTree = "<group>"; };
 		F0BE3F581FFF823200D15EFE /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
 		F0BE3F5A1FFF890700D15EFE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		F0BE3F5C1FFFB23300D15EFE /* CollectionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCoordinator.swift; sourceTree = "<group>"; };
@@ -373,9 +371,6 @@
 		F0BE3E811FFEE0D600D15EFE /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				F05327482000C377007511A7 /* DeepLink */,
-				F0BE3F531FFF56C500D15EFE /* Coordinator */,
-				F0BE3E8A1FFEE0D600D15EFE /* Router */,
 				F0BE3E821FFEE0D600D15EFE /* SourceItems */,
 				F0BE3E851FFEE0D600D15EFE /* GenericCollectionSource */,
 				F0BE3E8C1FFEE0D600D15EFE /* GenericTableSource */,
@@ -424,6 +419,9 @@
 		F0BE3E911FFEE0D600D15EFE /* ApplicationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				F05327482000C377007511A7 /* DeepLink */,
+				F0BE3F531FFF56C500D15EFE /* Coordinator */,
+				F0BE3E8A1FFEE0D600D15EFE /* Router */,
 				F0BE3E921FFEE0D600D15EFE /* UINavigationController */,
 				F0BE3E941FFEE0D600D15EFE /* AppDelegate */,
 			);
@@ -750,7 +748,6 @@
 			children = (
 				F0BE3F511FFF569C00D15EFE /* Coordinator.swift */,
 				F0BE3F541FFF572600D15EFE /* AppCoordinator.swift */,
-				F0BE3F561FFF7A9F00D15EFE /* AppCoordinatorFactory.swift */,
 				F0BE3F581FFF823200D15EFE /* MenuCoordinator.swift */,
 				F0BE3F5C1FFFB23300D15EFE /* CollectionCoordinator.swift */,
 				F0BE3F5E1FFFE05C00D15EFE /* DetailCoordinator.swift */,
@@ -917,7 +914,6 @@
 				F0BE3F391FFEE0D600D15EFE /* CollectionViewProtocol.swift in Sources */,
 				F0BE3F5B1FFF890700D15EFE /* Router.swift in Sources */,
 				F0BE3F301FFEE0D600D15EFE /* EmplesGalleryPresenter.swift in Sources */,
-				F0BE3F571FFF7A9F00D15EFE /* AppCoordinatorFactory.swift in Sources */,
 				F0BE3F131FFEE0D600D15EFE /* AppearanceService.swift in Sources */,
 				F0BE3F591FFF823200D15EFE /* MenuCoordinator.swift in Sources */,
 				F0BE3F351FFEE0D600D15EFE /* EmplesCarouselView.swift in Sources */,

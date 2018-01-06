@@ -7,15 +7,14 @@
 //
 
 import UIKit
+import Dip
 
 final class MenuCoordinator: Coordinator {
     
-    private let coordinatorFactory: AppCoordinatorFactory
-    private let view: EmplesMenuView
+    public var view: EmplesMenuView!
+    public var container: DependencyContainer!
     
-    init(router: RouterType, coordinatorFactory: AppCoordinatorFactory, view: EmplesMenuView) {
-        self.coordinatorFactory = coordinatorFactory
-        self.view = view
+    override init(router: RouterType) {
         super.init(router: router)
     }
     
@@ -25,13 +24,13 @@ final class MenuCoordinator: Coordinator {
     
     private func runListFlow() -> ((MenuSelectedItem) -> ()) {
         return { [weak self] item in
-            self?.showList(item)
+            self?.showCollection(item)
         }
     }
     
-    private func showList(_ item:MenuSelectedItem) {
+    private func showCollection(_ item:MenuSelectedItem) {
         
-        let coordinator = coordinatorFactory.makeCollectionCoordinator(router:router, arg:item)
+        let coordinator = try! container.resolve(tag: item, arguments: router) as CollectionCoordinator
         addChild(coordinator)
         router.push(coordinator, animated: true) { [weak self, weak coordinator] in
             // This executes when the back button is pressed

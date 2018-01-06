@@ -15,7 +15,7 @@ protocol EmplesMenuViewProtocol {
 class EmplesMenuView: UIViewController {
     
     public var presenter :EmplesMenuPresenter!
-    
+     
     private lazy var table: UITableView = {
         var view = UITableView(frame: self.view.bounds, style: .plain)
         view.separatorStyle = .none

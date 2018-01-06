@@ -18,6 +18,10 @@ extension DependencyContainer {
             rootContainer.register(.singleton) {(UIApplication.shared.delegate as! AppDelegate) as AppDelegate}
             rootContainer.register(.singleton) {UIWindow(frame: UIScreen.main.bounds) as UIWindow}
             rootContainer.register(.singleton) {MainNavigationController() as MainNavigationController}
+            rootContainer.register(.singleton) { (router: RouterType) in AppCoordinator(router: router) as AppCoordinator}
+                .resolvingProperties { container, coordinator in
+                    coordinator.container = container
+            }
             menuModule.collaborate(with: rootContainer)
         }
     }
@@ -25,6 +29,11 @@ extension DependencyContainer {
 
 let menuModule = DependencyContainer() { container in
     
+    container.register() { (router: RouterType) in MenuCoordinator(router: router) as MenuCoordinator}
+        .resolvingProperties { container, coordinator in
+            coordinator.view = try container.resolve() as EmplesMenuView
+            coordinator.container = collectionModule
+    }
     container.register() {EmplesMenuView() as EmplesMenuView}
         .resolvingProperties { container, view in
             view.presenter = try container.resolve() as EmplesMenuPresenter

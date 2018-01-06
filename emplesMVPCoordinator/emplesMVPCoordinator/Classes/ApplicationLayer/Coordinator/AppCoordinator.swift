@@ -6,12 +6,13 @@
 //  Copyright © 2018 Vasily Popov. All rights reserved.
 //
 
+import Dip
+
 final class AppCoordinator: Coordinator {
     
-    private let coordinatorFactory: AppCoordinatorFactory
+    var container: DependencyContainer!
     
-    init(router: RouterType, coordinatorFactory: AppCoordinatorFactory) {
-        self.coordinatorFactory = coordinatorFactory
+    override init(router: RouterType) {
         super.init(router: router)
     }
     
@@ -39,7 +40,7 @@ final class AppCoordinator: Coordinator {
     }
     
     private func runMenuFlow() {
-        let coordinator = coordinatorFactory.makeMenuCoordinator(router: router)
+        let coordinator = try! container.resolve(arguments: router) as MenuCoordinator
         addChild(coordinator)
         router.setRootModule(coordinator, hideBar: false)
         coordinator.start()

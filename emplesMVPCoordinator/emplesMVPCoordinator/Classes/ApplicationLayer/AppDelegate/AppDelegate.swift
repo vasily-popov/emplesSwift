@@ -27,10 +27,10 @@ class AppDelegate: BaseAppDelegate {
     
     
     private func makeCoordinator() -> Coordinator {
-        return AppCoordinator(
-            router: Router(navigationController: self.rootController),
-            coordinatorFactory: AppCoordinatorFactoryImpl(container: container)
-        )
+        
+        let router = Router(navigationController: self.rootController) as RouterType
+        
+        return try! container.resolve(arguments: router) as AppCoordinator
     }
     
     override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool

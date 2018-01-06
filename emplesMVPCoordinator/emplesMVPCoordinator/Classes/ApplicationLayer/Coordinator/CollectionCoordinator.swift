@@ -7,15 +7,14 @@
 //
 
 import UIKit
+import Dip
 
 final class CollectionCoordinator: Coordinator {
     
-    private let coordinatorFactory: AppCoordinatorFactory
-    private let view: CollectionViewProtocol
+    public var view: CollectionViewProtocol!
+    public var container: DependencyContainer!
     
-    init(router: RouterType, coordinatorFactory: AppCoordinatorFactory, view: CollectionViewProtocol) {
-        self.coordinatorFactory = coordinatorFactory
-        self.view = view
+    override init(router: RouterType) {
         super.init(router: router)
     }
     
@@ -36,7 +35,8 @@ final class CollectionCoordinator: Coordinator {
     }
     
     private func showDetail(_ item : RecArea) {
-        let coordinator = coordinatorFactory.makeDetailCoordinator(router: router, item: item)
+        
+        let coordinator = try! container.resolve(arguments: router, item) as DetailCoordinator
         addChild(coordinator)
         router.push(coordinator, animated: true) { [weak self, weak coordinator] in
             // This executes when the back button is pressed
@@ -47,5 +47,9 @@ final class CollectionCoordinator: Coordinator {
     
     override func toPresentable() -> UIViewController {
         return view as! UIViewController
+    }
+    
+    deinit {
+        print("CollectionCoordinator deinit")
     }
 }

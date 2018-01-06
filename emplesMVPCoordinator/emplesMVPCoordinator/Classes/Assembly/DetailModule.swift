@@ -11,6 +11,12 @@ import Dip
 
 let detailModule = DependencyContainer() { container in
     
+    container.register() {
+        (router: RouterType, item: RecArea) in DetailCoordinator(router: router, item:item) as DetailCoordinator
+        }.resolvingProperties { container, coordinator in
+            coordinator.view = try container.resolve() as DetailView
+    }
+    
     container.register() { DetailView() }
         .resolvingProperties { container, view in
             view.presenter = try container.resolve() as DetailPresenter

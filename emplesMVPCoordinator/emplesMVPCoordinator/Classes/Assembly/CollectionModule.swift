@@ -12,13 +12,44 @@ let collectionModule = DependencyContainer() { container in
     
     container.register(.shared) {EmplesAreasModel($0) as EmplesAreasModel}
     
+    container.register(tag: MenuSelectedItem.List) { (router: RouterType) in CollectionCoordinator(router: router) as CollectionCoordinator}
+        .resolvingProperties { container, coordinator in
+            coordinator.view = try container.resolve(tag: container.context.tag) as CollectionViewProtocol
+            coordinator.container = detailModule
+    }
+    
+    container.register(tag: MenuSelectedItem.Grid) { (router: RouterType) in CollectionCoordinator(router: router) as CollectionCoordinator}
+        .resolvingProperties { container, coordinator in
+            coordinator.view = try container.resolve(tag: container.context.tag) as CollectionViewProtocol
+            coordinator.container = detailModule
+    }
+    
+    container.register(tag: MenuSelectedItem.Gallery) { (router: RouterType) in CollectionCoordinator(router: router) as CollectionCoordinator}
+        .resolvingProperties { container, coordinator in
+            coordinator.view = try container.resolve(tag: container.context.tag) as CollectionViewProtocol
+            coordinator.container = detailModule
+    }
+    
+    
+    container.register(tag: MenuSelectedItem.Stack) { (router: RouterType) in CollectionCoordinator(router: router) as CollectionCoordinator}
+        .resolvingProperties { container, coordinator in
+            coordinator.view = try container.resolve(tag: container.context.tag) as CollectionViewProtocol
+            coordinator.container = detailModule
+    }
+    
+    container.register(tag: MenuSelectedItem.Carousel) { (router: RouterType) in CollectionCoordinator(router: router) as CollectionCoordinator}
+        .resolvingProperties { container, coordinator in
+            coordinator.view = try container.resolve(tag: container.context.tag) as CollectionViewProtocol
+            coordinator.container = detailModule
+    }
+    
     container.register(tag: MenuSelectedItem.List) { try listModule.resolve() as CollectionViewProtocol as CollectionViewProtocol }
     container.register(tag: MenuSelectedItem.Grid) { try gridModule.resolve() as CollectionViewProtocol as CollectionViewProtocol }
     container.register(tag: MenuSelectedItem.Gallery) { try galleryModule.resolve() as CollectionViewProtocol as CollectionViewProtocol }
     container.register(tag: MenuSelectedItem.Stack) { try stackModule.resolve() as CollectionViewProtocol as CollectionViewProtocol }
     container.register(tag: MenuSelectedItem.Carousel) { try carouselModule.resolve() as CollectionViewProtocol as CollectionViewProtocol }
     
-    let _ = [listModule, gridModule, stackModule, galleryModule, carouselModule, dataLayerModule, detailModule]
+    let _ = [listModule, gridModule, stackModule, galleryModule, carouselModule, dataLayerModule]
         .map{$0.collaborate(with:container)}
 }
 
